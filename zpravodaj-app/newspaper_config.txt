@@ -1,0 +1,12 @@
+[Database]
+database_url=https://orechov-app-new-default-rtdb.europe-west1.firebasedatabase.app/
+credentials_path=key/orechov-app-new-firebase-adminsdk-o7jy3-076dabe85e.json
+
+[Application]
+url=https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+firebase_route=newspapers
+scrape_element=li
+
+[Logging]
+directory=logs
+filename=newspapers_sync.log
