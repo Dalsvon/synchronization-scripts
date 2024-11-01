@@ -157,17 +157,16 @@ class ContactDataUpdater:
         ref = db.reference(self.data_config['firebase_route'])
         new_data_list = [contact.to_dict() for contact in new_contacts]
         
-        # Create lookup dictionaries
+        # Create dictionaries with title as key
         existing_dict = {item.get('title'): item for item in (existing_contacts[1:] if existing_contacts else [])}
         new_dict = {item.get('title'): item for item in new_data_list}
         
-        # Track changes
         changes = {
-            'detected': False,
+            'detected': False, # If there where any changes made during update
             'updates': [None],  # Initialize with None as first element
-            'added': [],
-            'modified': [],
-            'removed': []
+            'added': [], # Added contacts
+            'modified': [], # Contacts with changes
+            'removed': [] # Contacts with titles not in contacts from API 
         }
         
         # Process all contacts from API
@@ -181,7 +180,7 @@ class ContactDataUpdater:
             else:
                 # Existing contact - merge with existing data
                 existing_item = existing_dict[title]
-                merged_item = existing_item.copy()  # Start with existing data
+                merged_item = existing_item.copy()
                 
                 # Track modifications
                 item_changes = {}
@@ -293,7 +292,8 @@ def main():
         
         for contact_type in config_loader.data_config.keys():
             if updater.set_contact_type(contact_type):
-                updater.update()
+                if not updater.update():
+                    main_logger.error(f"The contacts from {contact_type} could not be updated.")
                 
     except Exception as e:
         main_logger.error(f"Error during update of database: {str(e)}")

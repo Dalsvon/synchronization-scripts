@@ -46,11 +46,5 @@
         "log_name": "drug_store_api.log",
         "api_url": "https://www.orechovubrna.cz/api/lekari/",
         "parser_function": "parse_drug_store_data"
-    },
-    "drfdssdfug_store": {
-        "firebase_route": "contact_item/drug_store",
-        "log_name": "drugggg_store_api.log",
-        "api_url": "https://www.orechovubrna.cz/api/lekdssdari/",
-        "parser_function": "parse_drug_store_data"
     }
 }

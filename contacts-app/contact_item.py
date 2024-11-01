@@ -5,9 +5,11 @@ uses this class to synchronize the database of the app with the data in Orechov 
 If the class in Orechov app is changed, this class should be changed too.
 """
 class ContactItem:
-    def __init__(self, title=None, subtitle=None, address=None, coordinates=None, 
+    def __init__(self, title, subtitle=None, address=None, coordinates=None, 
                  phone=None, phone2=None, mail=None, web=None, facebook=None, 
                  fbId=None, fbUrl=None, maintenance=None):
+        if title is None:
+            raise ValueError("Title cannot be None")
         self.title = title
         self.subtitle = subtitle
         self.address = address
