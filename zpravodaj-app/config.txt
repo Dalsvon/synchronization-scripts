@@ -9,4 +9,4 @@ scrape_element=li
 
 [Logging]
 directory=logs
-filename=newspapers_sync.log
+filename=zpravodaj.log

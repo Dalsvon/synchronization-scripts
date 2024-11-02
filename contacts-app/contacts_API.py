@@ -21,18 +21,27 @@ class ConfigLoader:
         self.base_path = Path(config_path).parent
         self._load_configurations()
 
+    def _resolve_path(self, path_str):
+        # Helper method to resolve paths based on whether they're absolute or relative
+        if path_str.startswith('/'):
+            return Path(path_str)
+        return self.base_path / path_str
+
     def _load_configurations(self):
         # Database and credentials configurations
         self.database_url = self.config['Database']['database_url']
-        self.credentials_path = self.base_path / self.config['Database']['credentials_path']
+        self.credentials_path = self._resolve_path(self.config['Database']['credentials_path'])
 
         # File paths for configurations and parsers
-        self.data_config_path = self.base_path / self.config['Files']['data_config']
-        self.parsers_module_path = self.base_path / self.config['Files']['parsers_module']
+        self.data_config_path = self._resolve_path(self.config['Files']['data_config'])
+        self.parsers_module_path = self._resolve_path(self.config['Files']['parsers_module'])
 
         # Logs directory and main log file path
-        self.logs_directory = self.base_path / self.config['Logs']['directory']
+        self.logs_directory = self._resolve_path(self.config['Logs']['directory'])
+        
         self.main_log = self.logs_directory / self.config['Logs']['main']
+        
+        self.main_log.parent.mkdir(parents=True, exist_ok=True)
 
         # Load contact configurations for each type of contact in use for App
         with open(self.data_config_path) as f:
@@ -266,7 +275,7 @@ class ContactDataUpdater:
             return False
 
 def setup_main_logger(main_log_path):
-    """Set up the main logger for high-level program status."""
+    # Set up the main logger for high-level program status.
     logger = logging.getLogger('main')
     logger.setLevel(logging.INFO)
     logger.handlers = []
