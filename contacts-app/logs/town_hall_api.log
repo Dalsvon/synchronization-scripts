@@ -1,2 +1,74 @@
 2024-11-02 14:01:34,312 - INFO - Starting contact update process for contact_item/town_hall
 2024-11-02 14:01:36,232 - INFO - No changes detected in contacts
+2024-11-03 02:26:27,386 - INFO - Starting contact update process for contact_item/town_hall
+2024-11-03 02:26:29,094 - ERROR - Error during contact update: name 'content' is not defined
+2024-11-03 02:27:16,011 - INFO - Starting contact update process for contact_item/town_hall
+2024-11-03 02:27:17,697 - INFO - New contact added: SMIŠTÍK Pavel
+2024-11-03 02:27:17,698 - INFO - New contact added: Ing. PROKEŠ Pavel
+2024-11-03 02:27:17,698 - INFO - New contact added: RAŠTICA Michal
+2024-11-03 02:27:17,698 - INFO - Changes summary:
+2024-11-03 02:27:17,698 - INFO - Added contacts: ["SMIŠTÍK Pavel", "Ing. PROKEŠ Pavel", "RAŠTICA Michal"]
+2024-11-03 02:27:17,698 - INFO - Updated data structure: [
+  null,
+  {
+    "mail": "starosta@orechovubrna.cz",
+    "phone": "+420 736 537 231",
+    "subtitle": "starosta",
+    "title": "DUDÍK Tomáš"
+  },
+  {
+    "title": "SMIŠTÍK Pavel",
+    "subtitle": "místostarosta obce",
+    "phone": "+420 731 521 787",
+    "mail": "mistostarosta@orechovubrna.cz"
+  },
+  {
+    "mail": "ekonom@orechovubrna.cz",
+    "phone": "+420 547 225 131",
+    "subtitle": "evidence obyvatel",
+    "title": "HRUBÁ Ivona"
+  },
+  {
+    "mail": "ucetni@orechovubrna.cz",
+    "phone": "+420 547 225 131",
+    "subtitle": "účtárna",
+    "title": "BERÁNKOVÁ Ilona"
+  },
+  {
+    "mail": "matrika@orechovubrna.cz",
+    "phone": "+420 547 225 131",
+    "subtitle": "matrika",
+    "title": "SMUTNÁ Taťána"
+  },
+  {
+    "mail": "fakturace@orechovubrna.cz",
+    "phone": "+420 547 225 131",
+    "subtitle": "fakturace",
+    "title": "PALACKOVÁ Marie"
+  },
+  {
+    "mail": "knihovna@orechovubrna.cz",
+    "phone": "+420 732 822 748",
+    "subtitle": "knihovna",
+    "title": "ADÁMKOVÁ Naděžda"
+  },
+  {
+    "mail": "kronikar@orechovubrna.cz",
+    "phone": "+420 733 192 884",
+    "subtitle": "kronikář",
+    "title": "Bc. CIHLÁŘ Zdeněk"
+  },
+  {
+    "title": "Ing. PROKEŠ Pavel",
+    "subtitle": "lesní hospodář",
+    "phone": "+420 602 413 550",
+    "mail": "pav.prokes@tiscali.cz"
+  },
+  {
+    "title": "RAŠTICA Michal",
+    "subtitle": "pověřenec",
+    "phone": "+420 605 549 652",
+    "mail": "poverenec@orechovubrna.cz"
+  }
+]
+2024-11-03 02:27:17,745 - INFO - Successfully updated contacts at 2024-11-03T02:27:17.745661

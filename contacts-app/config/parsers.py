@@ -57,7 +57,7 @@ def parse_town_hall_contact(raw_data, main_logger, logger):
     # Parser function for town hall contact data
     contacts = []
     # Parse individual contacts (staff)
-    staff_data = re.findall(r'\| \*\*(.+?)\*\*\| (.+?) \| (.+?) \| (.+)', raw_data)
+    staff_data = re.findall(r'\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+)', raw_data)
     for name, position, phone, email in staff_data:
         contact = ContactItem(
             title=name.strip(),

@@ -1,0 +1,10 @@
+2024-11-03 12:54:37,048 - INFO - Starting contact data update process
+2024-11-03 12:54:37,048 - INFO - Checking if required database tables exist
+2024-11-03 12:54:37,100 - INFO - All required database tables exist
+2024-11-03 12:54:37,101 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-03 12:54:39,961 - INFO - Successfully parsed all contact data
+2024-11-03 12:54:39,961 - INFO - Found 3 office hours and 10 employees
+2024-11-03 12:54:39,962 - INFO - Starting database update
+2024-11-03 12:54:39,993 - INFO - Successfully updated contacts
+2024-11-03 12:54:39,993 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-03 12:54:39,993 - INFO - Contact data update completed successfully
