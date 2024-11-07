@@ -36,56 +36,71 @@ website of Orechov with use of provided API.
 class NewspaperSynchronizer:
     def __init__(self, config_path='config.txt'):
         try:
-            self.config = self._load_config(config_path)
+            # Get the directory where the script is located
+            self.script_dir = Path(__file__).parent.absolute()
+            
+            # Convert to Path object and make relative to script directory if not absolute
+            config_path = Path(config_path)
+            if not config_path.is_absolute():
+                config_path = self.script_dir / config_path
+
+            if not config_path.exists():
+                raise FileNotFoundError(f"Configuration file not found at: {config_path}")
+
+            self.config = configparser.ConfigParser()
+            self.config.read(str(config_path))
+            self.base_path = config_path.parent
+            self._load_configurations()
             self.logger = self._setup_logging()
             self._initialize_firebase()
         except Exception as e:
             print(f"Initialization error: {str(e)}")
             raise
 
-    def _resolve_path(self, base_path, path_str):
-        # Helper method to resolve paths based on whether they're absolute or relative.
-        if path_str.startswith('/'):
-            return Path(path_str)
-        return base_path / path_str
+    def _resolve_path(self, path_str):
+        # Helper method to resolve paths based on whether they're absolute or relative
+        path = Path(path_str)
+        if path.is_absolute():
+            return path
+        return self.base_path / path
 
-    def _load_config(self, config_path):
-        # Load and validate configuration from file
-        if not os.path.exists(config_path):
-            raise FileNotFoundError(f"Configuration file not found at: {config_path}")
-        
-        config = configparser.ConfigParser()
-        config.read(config_path)
-        
-        required_sections = ['Database', 'Application', 'Logging']
-        missing_sections = [section for section in required_sections if section not in config.sections()]
-        if missing_sections:
-            raise ValueError(f"Missing required sections in config file: {', '.join(missing_sections)}")
-        
-        # Convert config to dictionary with path objects where needed
-        base_path = Path(config_path).parent
-        
-        return {
-            'database_url': config['Database']['database_url'],
-            'credentials_path': self._resolve_path(base_path, config['Database']['credentials_path']),
-            'logs_directory': self._resolve_path(base_path, config['Logging']['directory']),
-            'log_filename': config['Logging']['filename'],
-            'newspapers_url': config['Application']['url'],
-            'firebase_route': config['Application']['firebase_route'],
-            'scrape_element': config['Application']['scrape_element']
-        }
+    def _load_configurations(self):
+        # Database configurations
+        self.database_url = self.config['Database']['database_url']
+        self.credentials_path = self._resolve_path(self.config['Database']['credentials_path'])
+
+        # Application configurations
+        self.newspapers_url = self.config['Application']['url']
+        self.firebase_route = self.config['Application']['firebase_route']
+        self.scrape_element = self.config['Application']['scrape_element']
+
+        # Logs directory and file
+        self.logs_directory = self._resolve_path(self.config['Logging']['directory'])
+        self.log_filename = self.config['Logging']['filename']
+
+    def _initialize_firebase(self):
+        try:
+            if not firebase_admin._apps:
+                if not self.credentials_path.exists():
+                    raise FileNotFoundError(f"Credentials file not found at: {self.credentials_path}")
+                
+                cred = credentials.Certificate(str(self.credentials_path))
+                firebase_admin.initialize_app(cred, {
+                    'databaseURL': self.database_url
+                })
+        except Exception as e:
+            raise ValueError(f"Failure to initialize database connection: {str(e)}")
 
     def _setup_logging(self):
-        # Set up logging to file.
         try:
-            os.makedirs(self.config['logs_directory'], exist_ok=True)
+            os.makedirs(self.logs_directory, exist_ok=True)
             
             logger = logging.getLogger('newspapers_sync')
             logger.setLevel(logging.INFO)
             logger.handlers = []
             
             handler = logging.FileHandler(
-                self.config['logs_directory'] / self.config['log_filename'],
+                self.logs_directory / self.log_filename,
                 encoding='utf-8'
             )
             formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
@@ -95,18 +110,6 @@ class NewspaperSynchronizer:
             return logger
         except Exception as e:
             raise ValueError(f"Failure to set up logging for program: {e}")
-
-    def _initialize_firebase(self):
-        # Initialize Firebase connection.
-        try:
-            if not firebase_admin._apps:
-                cred = credentials.Certificate(str(self.config['credentials_path']))
-                firebase_admin.initialize_app(cred, {
-                    'databaseURL': self.config['database_url']
-                })
-        except Exception as e:
-            self.logger.error(f"Firebase initialization error: {str(e)}")
-            raise ValueError(f"Failure to initialize database connection: {e}")
 
     def _parse_newspaper_item(self, li_element):
         # Parse a single newspaper item from an HTML li element.
@@ -162,15 +165,15 @@ class NewspaperSynchronizer:
     def fetch_newspapers(self):
         # Fetch and parse newspapers from the website.
         try:
-            self.logger.info(f"Fetching newspapers from {self.config['newspapers_url']}")
-            response = requests.get(self.config['newspapers_url'])
+            self.logger.info(f"Fetching newspapers from {self.newspapers_url}")
+            response = requests.get(self.newspapers_url)
             response.raise_for_status()
             
             soup = BeautifulSoup(response.text, 'html.parser')
             newspaper_items = []
             
             # Find all li elements containing newspaper links
-            for li in soup.find_all(self.config['scrape_element']):
+            for li in soup.find_all(self.scrape_element):
                 if 'oåechovskã½ zpravodaj ' in li.text.lower():
                     item = self._parse_newspaper_item(li)
                     if item:
@@ -191,7 +194,7 @@ class NewspaperSynchronizer:
     def get_existing_data(self):
         # Retrieve existing newspaper data from Firebase.
         try:
-            ref = db.reference(self.config['firebase_route'])
+            ref = db.reference(self.firebase_route)
             data = ref.get()
             
             # Convert string keys to integers if they exist
@@ -202,12 +205,12 @@ class NewspaperSynchronizer:
             return {}
 
     def compare_and_update(self, new_items, existing_data):
-        # Compare and update newspaper data in Firebase, only checking for link changes.
+        # Compare and update newspaper data in Firebase.
         if not new_items:
             self.logger.error("No new items to process, probably change in website content")
             return
 
-        ref = db.reference(self.config['firebase_route'])
+        ref = db.reference(self.firebase_route)
         new_dict = {item.id: item.to_dict() for item in new_items}
         
         changes_detected = False
@@ -243,7 +246,7 @@ class NewspaperSynchronizer:
 
     def synchronize(self):
         try:
-            self.logger.info(f"Starting newspaper synchronization process for {self.config['firebase_route']}")
+            self.logger.info(f"Starting newspaper synchronization process for {self.firebase_route}")
             
             new_items = self.fetch_newspapers()
             if new_items:
@@ -256,6 +259,7 @@ class NewspaperSynchronizer:
         except Exception as e:
             self.logger.error(f"Error during synchronization: {str(e)}")
             raise
+        
 
 def main():
     try:

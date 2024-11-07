@@ -1,6 +1,78 @@
-2024-11-02 14:01:32,493 - INFO - Starting contact update process for contact_item/general
-2024-11-02 14:01:34,311 - INFO - No changes detected in contacts
-2024-11-03 02:26:25,500 - INFO - Starting contact update process for contact_item/general
-2024-11-03 02:26:27,386 - INFO - No changes detected in contacts
-2024-11-03 02:27:14,128 - INFO - Starting contact update process for contact_item/general
-2024-11-03 02:27:16,010 - INFO - No changes detected in contacts
+2024-11-05 21:26:11,828 - INFO - Starting contact update process for contact_item/general
+2024-11-05 21:26:13,877 - INFO - New contact added: Obec Ořec
+2024-11-05 21:26:13,877 - INFO - Removed contact: Obec Ořechov
+2024-11-05 21:26:13,877 - INFO - Changes summary:
+2024-11-05 21:26:13,877 - INFO - Added contacts: ["Obec Ořec"]
+2024-11-05 21:26:13,877 - INFO - Removed contacts: ["Obec Ořechov"]
+2024-11-05 21:26:13,877 - INFO - Updated data structure: [
+  null,
+  {
+    "title": "Obec Ořec",
+    "phone": "+420 547 225 131",
+    "phone2": "+420 731 414 473",
+    "mail": "obec@orechovubrna.cz",
+    "maintenance": "udrzba@orechovubrna.cz"
+  }
+]
+2024-11-05 21:26:13,940 - INFO - Successfully updated contacts at 2024-11-05T21:26:13.940829
+2024-11-05 21:38:03,967 - INFO - Starting contact update process for contact_item/general
+2024-11-05 21:38:05,786 - INFO - New contact added: Obec Oředsfsfdc
+2024-11-05 21:38:05,786 - INFO - Removed contact: Obec Ořec
+2024-11-05 21:38:05,786 - INFO - Changes summary:
+2024-11-05 21:38:05,786 - INFO - Added contacts: ["Obec Oředsfsfdc"]
+2024-11-05 21:38:05,786 - INFO - Removed contacts: ["Obec Ořec"]
+2024-11-05 21:38:05,786 - INFO - Updated data structure: [
+  null,
+  {
+    "title": "Obec Oředsfsfdc",
+    "phone": "+420 547 225 131",
+    "phone2": "+420 731 414 473",
+    "mail": "obec@orechovubrna.cz",
+    "maintenance": "udrzba@orechovubrna.cz"
+  }
+]
+2024-11-05 21:38:05,843 - INFO - Successfully updated contacts at 2024-11-05T21:38:05.843566
+2024-11-05 21:39:04,560 - INFO - Starting contact update process for contact_item/general
+2024-11-05 21:39:06,643 - INFO - No changes detected in contacts
+2024-11-05 21:59:52,815 - INFO - Starting contact update process for contact_item/general
+2024-11-05 21:59:54,900 - INFO - New contact added: Obec Oředsfsfdsasdadc
+2024-11-05 21:59:54,900 - INFO - Removed contact: Obec Oředsfsfdc
+2024-11-05 21:59:54,900 - INFO - Changes summary:
+2024-11-05 21:59:54,900 - INFO - Added contacts: ["Obec Oředsfsfdsasdadc"]
+2024-11-05 21:59:54,901 - INFO - Removed contacts: ["Obec Oředsfsfdc"]
+2024-11-05 21:59:54,901 - INFO - Updated data structure: [
+  null,
+  {
+    "title": "Obec Oředsfsfdsasdadc",
+    "phone": "+420 547 225 131",
+    "phone2": "+420 731 414 473",
+    "mail": "obec@orechovubrna.cz",
+    "maintenance": "udrzba@orechovubrna.cz"
+  }
+]
+2024-11-05 21:59:54,964 - INFO - Successfully updated contacts at 2024-11-05T21:59:54.964711
+2024-11-05 22:01:03,769 - INFO - Starting contact update process for contact_item/general
+2024-11-05 22:01:05,553 - INFO - No changes detected in contacts
+2024-11-05 22:02:04,284 - INFO - Starting contact update process for contact_item/general
+2024-11-05 22:02:05,999 - INFO - New contact added: Obec Oře
+2024-11-05 22:02:05,999 - INFO - Removed contact: Obec Oředsfsfdsasdadc
+2024-11-05 22:02:05,999 - INFO - Changes summary:
+2024-11-05 22:02:05,999 - INFO - Added contacts: ["Obec Oře"]
+2024-11-05 22:02:06,000 - INFO - Removed contacts: ["Obec Oředsfsfdsasdadc"]
+2024-11-05 22:02:06,000 - INFO - Updated data structure: [
+  null,
+  {
+    "title": "Obec Oře",
+    "phone": "+420 547 225 131",
+    "phone2": "+420 731 414 473",
+    "mail": "obec@orechovubrna.cz",
+    "maintenance": "udrzba@orechovubrna.cz"
+  }
+]
+2024-11-05 22:02:06,094 - INFO - Successfully updated contacts at 2024-11-05T22:02:06.094905
+2024-11-05 23:01:03,656 - INFO - Starting contact update process for contact_item/general
+2024-11-05 23:01:05,468 - INFO - No changes detected in contacts
+2024-11-06 00:01:08,141 - INFO - Starting contact update process for contact_item/general
+2024-11-06 00:01:12,203 - INFO - No changes detected in contacts
+2024-11-06 01:01:04,380 - INFO - Starting contact update process for contact_item/general
+2024-11-06 01:01:06,051 - INFO - No changes detected in contacts

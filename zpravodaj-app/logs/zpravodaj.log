@@ -1,0 +1,79 @@
+2024-11-05 22:13:59,975 - ERROR - Firebase initialization error: 'credentials_path'
+2024-11-05 22:14:43,779 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 22:14:43,779 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 22:14:46,347 - INFO - Found 55 newspaper items
+2024-11-05 22:14:46,648 - INFO - No changes detected in newspapers data
+2024-11-05 22:14:46,648 - INFO - Synchronization completed successfully
+2024-11-05 22:18:56,007 - ERROR - Error during synchronization: 'firebase_route'
+2024-11-05 22:18:56,007 - ERROR - Synchronization error: 'firebase_route'
+2024-11-05 22:36:52,836 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 22:36:52,837 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 22:36:55,047 - INFO - Found 0 newspaper items
+2024-11-05 22:36:55,048 - ERROR - Failed to fetch newspapers data
+2024-11-05 22:38:49,233 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 22:38:49,233 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 22:38:51,858 - INFO - Found 55 newspaper items
+2024-11-05 22:38:52,288 - INFO - No changes detected in newspapers data
+2024-11-05 22:38:52,289 - INFO - Synchronization completed successfully
+2024-11-05 22:56:19,215 - ERROR - Error during synchronization: 'firebase_route'
+2024-11-05 22:56:19,215 - ERROR - Synchronization error: 'firebase_route'
+2024-11-05 23:03:09,726 - ERROR - Error during synchronization: 'firebase_route'
+2024-11-05 23:03:09,726 - ERROR - Synchronization error: 'firebase_route'
+2024-11-05 23:06:27,159 - ERROR - Error during synchronization: 'firebase_route'
+2024-11-05 23:06:27,160 - ERROR - Synchronization error: 'firebase_route'
+2024-11-05 23:07:10,487 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:07:10,487 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:07:12,959 - INFO - Found 0 newspaper items
+2024-11-05 23:07:12,959 - ERROR - Failed to fetch newspapers data
+2024-11-05 23:07:55,011 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:07:55,011 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:07:57,461 - INFO - Found 55 newspaper items
+2024-11-05 23:07:57,781 - INFO - No changes detected in newspapers data
+2024-11-05 23:07:57,781 - INFO - Synchronization completed successfully
+2024-11-05 23:11:01,927 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:11:01,927 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:11:04,733 - INFO - Found 55 newspaper items
+2024-11-05 23:11:05,124 - INFO - No changes detected in newspapers data
+2024-11-05 23:11:05,124 - INFO - Synchronization completed successfully
+2024-11-05 23:12:01,494 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:12:01,494 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:12:04,377 - INFO - Found 55 newspaper items
+2024-11-05 23:12:04,652 - INFO - No changes detected in newspapers data
+2024-11-05 23:12:04,652 - INFO - Synchronization completed successfully
+2024-11-05 23:13:02,043 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:13:02,043 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:13:04,700 - INFO - Found 55 newspaper items
+2024-11-05 23:13:05,009 - INFO - No changes detected in newspapers data
+2024-11-05 23:13:05,009 - INFO - Synchronization completed successfully
+2024-11-05 23:14:01,382 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:14:01,382 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:14:04,055 - INFO - Found 55 newspaper items
+2024-11-05 23:14:04,379 - INFO - No changes detected in newspapers data
+2024-11-05 23:14:04,379 - INFO - Synchronization completed successfully
+2024-11-05 23:15:01,763 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:15:01,763 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:15:04,744 - INFO - Found 55 newspaper items
+2024-11-05 23:15:05,034 - INFO - New newspaper detected: 202101
+2024-11-05 23:15:05,093 - INFO - Summary of changes:
+2024-11-05 23:15:05,093 - INFO - Added new newspapers: [202101]
+2024-11-05 23:15:05,093 - INFO - Synchronization completed successfully
+2024-11-05 23:16:01,481 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-05 23:16:01,481 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-05 23:16:04,091 - INFO - Found 55 newspaper items
+2024-11-05 23:16:04,355 - INFO - No changes detected in newspapers data
+2024-11-05 23:16:04,355 - INFO - Synchronization completed successfully
+2024-11-06 00:01:02,165 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-06 00:01:02,165 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-06 00:01:09,103 - INFO - Found 55 newspaper items
+2024-11-06 00:01:09,380 - INFO - No changes detected in newspapers data
+2024-11-06 00:01:09,380 - INFO - Synchronization completed successfully
+2024-11-06 01:01:01,597 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-06 01:01:01,597 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-06 01:01:04,795 - INFO - Found 55 newspaper items
+2024-11-06 01:01:05,106 - INFO - No changes detected in newspapers data
+2024-11-06 01:01:05,106 - INFO - Synchronization completed successfully
+2024-11-07 13:57:47,766 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-07 13:57:47,767 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-07 13:57:50,275 - INFO - Found 55 newspaper items
+2024-11-07 13:57:50,500 - INFO - No changes detected in newspapers data
+2024-11-07 13:57:50,500 - INFO - Synchronization completed successfully

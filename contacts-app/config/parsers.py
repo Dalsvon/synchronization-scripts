@@ -44,7 +44,7 @@ def parse_general_contact(raw_data, main_logger, logger):
     web = re.search(r'Web: (.+)', raw_data)
     
     main_contact = ContactItem(
-        title="Obec Ořechov",
+        title="Obec Oře",
         phone=phone.group(1).strip() if phone else None,
         phone2=phone2.group(1).strip() if phone2 else None,
         mail=email.group(1).strip() if email else None,

@@ -16,9 +16,24 @@ Class for loading the configuration of the program from file named config.txt.
 """
 class ConfigLoader:
     def __init__(self, config_path='config.txt'):
+        # Convert to Path object if it's a string
+        config_path = Path(config_path)
+        
+        # Get the directory where the script is located
+        self.script_dir = Path(__file__).parent.absolute()
+        
+        # If config_path is relative, make it relative to script directory
+        if not config_path.is_absolute():
+            config_path = self.script_dir / config_path
+
+        # Check if file exists before trying to read it
+        if not config_path.exists():
+            raise FileNotFoundError(f"Configuration file not found at: {config_path}")
+
         self.config = configparser.ConfigParser()
-        self.config.read(config_path)
-        self.base_path = Path(config_path).parent
+        # Convert Path to string for configparser
+        self.config.read(str(config_path))
+        self.base_path = config_path.parent
         self._load_configurations()
 
     def _resolve_path(self, path_str):

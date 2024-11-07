@@ -9,6 +9,7 @@ import logging
 import json
 from pathlib import Path
 import configparser
+import sys
 
 class Employee(TypedDict):
     name: str
@@ -37,9 +38,21 @@ class Contact(TypedDict):
 class ContactUpdater:
     def __init__(self, config_path='config/postgres_config.ini'):
         load_dotenv()
+    
+        self.script_dir = Path(__file__).parent.absolute()
         
+        # Convert to Path object if string
+        config_path = Path(config_path)
+        
+        # If path is not absolute, make it relative to script directory
+        if not config_path.is_absolute():
+            config_path = self.script_dir / config_path
+            
+        if not config_path.exists():
+            raise FileNotFoundError(f"Configuration file not found at: {config_path}")
+            
         self.config = configparser.ConfigParser()
-        self.config.read(config_path)
+        self.config.read(str(config_path))
         
         # Setup logging
         self.setup_logging()
@@ -61,21 +74,25 @@ class ContactUpdater:
             raise ValueError("Missing required database configuration")
 
     def setup_logging(self) -> None:
-        # Configure logging for the application.
-        log_dir = Path(self.config['Logging']['directory'])
-        log_dir.mkdir(parents=True, exist_ok=True)
-        
-        log_file = log_dir / self.config['Logging']['filename']
-        
-        logging.basicConfig(
-            level=getattr(logging, self.config['Logging']['level']),
-            format=self.config['Logging']['format'],
-            handlers=[
-                logging.FileHandler(log_file, encoding='utf-8')
-            ]
-        )
-        
-        self.logger = logging.getLogger(__name__)
+        try:
+            # Configure logging for the application.
+            log_dir = Path('logs')  # Use fixed logs directory
+            log_dir.mkdir(parents=True, exist_ok=True)
+            
+            log_file = log_dir / 'postgres_contact_updater.log'  # Use fixed log filename
+            
+            logging.basicConfig(
+                level=logging.INFO,  # Use fixed logging level
+                format='%(asctime)s - %(levelname)s - %(message)s',
+                handlers=[
+                    logging.FileHandler(log_file, encoding='utf-8')
+                ]
+            )
+            
+            self.logger = logging.getLogger(__name__)
+        except Exception as e:
+            print(f"Error setting up logging: {str(e)}", file=sys.stderr)
+            raise
 
     def parse_office_hours(self, content: str) -> List[OfficeHours]:
         # Extract office hours from the content.
