@@ -77,3 +77,50 @@
 2024-11-07 13:57:50,275 - INFO - Found 55 newspaper items
 2024-11-07 13:57:50,500 - INFO - No changes detected in newspapers data
 2024-11-07 13:57:50,500 - INFO - Synchronization completed successfully
+2024-11-07 18:48:57,357 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-07 18:48:57,357 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-07 18:49:00,088 - INFO - Found 55 newspaper items
+2024-11-07 18:49:00,266 - INFO - No changes detected in newspapers data
+2024-11-07 18:49:00,266 - INFO - Synchronization completed successfully
+2024-11-07 22:00:02,068 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-07 22:00:02,069 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-07 22:00:05,220 - INFO - Found 55 newspaper items
+2024-11-07 22:00:05,477 - INFO - No changes detected in newspapers data
+2024-11-07 22:00:05,477 - INFO - Synchronization completed successfully
+2024-11-07 23:00:01,711 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-07 23:00:01,711 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-07 23:00:05,677 - INFO - Found 55 newspaper items
+2024-11-07 23:00:05,918 - INFO - No changes detected in newspapers data
+2024-11-07 23:00:05,918 - INFO - Synchronization completed successfully
+2024-11-08 00:00:02,196 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-08 00:00:02,196 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-08 00:00:04,796 - INFO - Found 55 newspaper items
+2024-11-08 00:00:05,454 - INFO - No changes detected in newspapers data
+2024-11-08 00:00:05,454 - INFO - Synchronization completed successfully
+2024-11-08 00:41:14,665 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-08 00:41:14,665 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-08 00:41:17,313 - INFO - Found 55 newspaper items
+2024-11-08 00:41:17,547 - INFO - No changes detected in newspapers data
+2024-11-08 00:41:17,547 - INFO - Synchronization completed successfully
+2024-11-08 01:00:01,740 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-08 01:00:01,740 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-08 01:00:04,622 - INFO - Found 55 newspaper items
+2024-11-08 01:00:04,852 - INFO - No changes detected in newspapers data
+2024-11-08 01:00:04,852 - INFO - Synchronization completed successfully
+2024-11-08 01:25:46,823 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-08 01:25:46,823 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-08 01:25:49,279 - INFO - Found 55 newspaper items
+2024-11-08 01:25:49,510 - INFO - No changes detected in newspapers data
+2024-11-08 01:25:49,510 - INFO - Synchronization completed successfully
+2024-11-08 01:25:59,978 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-08 01:25:59,978 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-08 01:26:02,321 - INFO - Found 55 newspaper items
+2024-11-08 01:26:02,491 - INFO - No changes detected in newspapers data
+2024-11-08 01:26:02,491 - INFO - Synchronization completed successfully
+2024-11-08 01:26:02,491 - ERROR - Synchronization error: local variable 'e' referenced before assignment
+2024-11-08 01:26:30,853 - INFO - Starting newspaper synchronization process for newspapers
+2024-11-08 01:26:30,853 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-08 01:26:33,205 - INFO - Found 55 newspaper items
+2024-11-08 01:26:33,364 - INFO - No changes detected in newspapers data
+2024-11-08 01:26:33,364 - INFO - Synchronization completed successfully
+2024-11-08 01:26:33,364 - ERROR - Synchronization error: local variable 'e' referenced before assignment

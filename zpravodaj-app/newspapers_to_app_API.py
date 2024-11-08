@@ -265,13 +265,16 @@ def main():
     try:
         synchronizer = NewspaperSynchronizer()
     except Exception as e:
-        print(f"Configuration error in updating newspapers for Orechov app: {str(e)}", file=sys.stderr)
-        return
+        print(f"Synchronizace selhala. Konfigurační chyba: {str(e)}", file=sys.stderr)
+        return 1
     
     try:
         synchronizer.synchronize()
+        return 0
     except Exception as e:
         synchronizer.logger.error(f"Synchronization error: {str(e)}")
+        print(f"Synchronizace selhala. Pro více informací si přečtěte log na adrese {synchronizer.logs_directory / synchronizer.log_filename}", file=sys.stderr)
+        return 1
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

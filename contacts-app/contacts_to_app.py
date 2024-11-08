@@ -308,8 +308,8 @@ def main():
         config_loader = ConfigLoader()
         main_logger = setup_main_logger(config_loader.main_log)
     except Exception as e:
-        print(f"Configuration error in updating contacts for Orechov app: {str(e)}", file=sys.stderr)
-        return
+        print(f"Synchronizace selhala. Konfigurační chyba: {str(e)}", file=sys.stderr)
+        return 1
 
     try:
         updater = ContactDataUpdater(config_loader, main_logger)
@@ -318,9 +318,13 @@ def main():
             if updater.set_contact_type(contact_type):
                 if not updater.update():
                     main_logger.error(f"The contacts from {contact_type} could not be updated.")
+        return 0
                 
     except Exception as e:
         main_logger.error(f"Error during update of database: {str(e)}")
+        print(f"Synchronizace selhala. Pro více informací si přečtěte log na adrese {config_loader.main_log}", file=sys.stderr)
+        return 1
+        
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

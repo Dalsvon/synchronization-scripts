@@ -37,12 +37,10 @@ class Contact(TypedDict):
 
 class ContactUpdater:
     def __init__(self, config_path='config/postgres_config.ini'):
-        load_dotenv()
     
-        self.script_dir = Path(__file__).parent.absolute()
-        
-        # Convert to Path object if string
         config_path = Path(config_path)
+        
+        self.script_dir = Path(__file__).parent.absolute()
         
         # If path is not absolute, make it relative to script directory
         if not config_path.is_absolute():
@@ -54,11 +52,13 @@ class ContactUpdater:
         self.config = configparser.ConfigParser()
         self.config.read(str(config_path))
         
+        self.base_path = self.script_dir
+        self._load_configurations()
+        
         # Setup logging
         self.setup_logging()
         
-        # API configuration
-        self.api_url = self.config['API']['url']
+        load_dotenv()
         
         # Database configuration from environment variables
         self.db_params = {
@@ -72,17 +72,34 @@ class ContactUpdater:
         if not all(self.db_params.values()):
             self.logger.error("Missing required database configuration in environment variables")
             raise ValueError("Missing required database configuration")
+    
+    def _resolve_path(self, path_str):
+        # Helper method to resolve paths based on whether they're absolute or relative
+        if path_str.startswith('/'):
+            return Path(path_str)
+        return self.base_path / path_str
+        
+    def _load_configurations(self):
+        # API configuration
+        self.api_url = self.config['API']['url']
+
+        # Logs directory and main log file path
+        self.logs_directory = self._resolve_path(self.config['Logs']['directory'])
+        
+        self.log_file = self.logs_directory / self.config['Logs']['filename']
+        
+        self.log_file.parent.mkdir(parents=True, exist_ok=True)
 
     def setup_logging(self) -> None:
         try:
             # Configure logging for the application.
-            log_dir = Path('logs')  # Use fixed logs directory
+            log_dir = self.logs_directory
             log_dir.mkdir(parents=True, exist_ok=True)
             
-            log_file = log_dir / 'postgres_contact_updater.log'  # Use fixed log filename
+            log_file = log_dir / self.log_file
             
             logging.basicConfig(
-                level=logging.INFO,  # Use fixed logging level
+                level=logging.INFO,
                 format='%(asctime)s - %(levelname)s - %(message)s',
                 handlers=[
                     logging.FileHandler(log_file, encoding='utf-8')
@@ -358,12 +375,15 @@ def main():
     try:
         updater = ContactUpdater()
     except Exception as e:
-        print(f"Configuration error in updating contacts for Portal obcana: {str(e)}", file=sys.stderr)
-        return
+        print(f"Synchronizace selhala. Konfigurační chyba: {str(e)}", file=sys.stderr)
+        return 1
     try:
         updater.synchronize()
+        return 0
     except Exception as e:
-        updater.logging.error(f"Update of contacts failed: {str(e)}")
+        updater.logger.error(f"Update of contacts failed: {str(e)}")
+        print(f"Synchronizace selhala. Pro více informací si přečtěte log na adrese {updater.log_file}", file=sys.stderr)
+        return 1
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

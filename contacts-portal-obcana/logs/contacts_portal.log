@@ -1,0 +1,117 @@
+2024-11-07 19:20:14,198 - INFO - Starting contact data update process
+2024-11-07 19:20:14,198 - INFO - Checking if required database tables exist
+2024-11-07 19:20:14,214 - INFO - All required database tables exist
+2024-11-07 19:20:14,215 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-07 19:20:16,295 - INFO - Successfully parsed all contact data
+2024-11-07 19:20:16,295 - INFO - Found 3 office hours and 10 employees
+2024-11-07 19:20:16,295 - INFO - Starting database update
+2024-11-07 19:20:16,318 - INFO - Successfully updated contacts
+2024-11-07 19:20:16,318 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-07 19:20:16,319 - INFO - Contact data update completed successfully
+2024-11-07 19:21:01,297 - INFO - Starting contact data update process
+2024-11-07 19:21:01,297 - INFO - Checking if required database tables exist
+2024-11-07 19:21:01,311 - INFO - All required database tables exist
+2024-11-07 19:21:01,312 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-07 19:21:03,420 - INFO - Successfully parsed all contact data
+2024-11-07 19:21:03,420 - INFO - Found 3 office hours and 10 employees
+2024-11-07 19:21:03,420 - INFO - Starting database update
+2024-11-07 19:21:03,444 - INFO - Successfully updated contacts
+2024-11-07 19:21:03,444 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-07 19:21:03,444 - INFO - Contact data update completed successfully
+2024-11-07 19:30:07,737 - INFO - Starting contact data update process
+2024-11-07 19:30:07,737 - INFO - Checking if required database tables exist
+2024-11-07 19:30:07,751 - INFO - All required database tables exist
+2024-11-07 19:30:07,752 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-07 19:30:09,622 - INFO - Successfully parsed all contact data
+2024-11-07 19:30:09,622 - INFO - Found 3 office hours and 10 employees
+2024-11-07 19:30:09,622 - INFO - Starting database update
+2024-11-07 19:30:09,648 - INFO - Successfully updated contacts
+2024-11-07 19:30:09,648 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-07 19:30:09,648 - INFO - Contact data update completed successfully
+2024-11-07 23:56:09,143 - INFO - Starting contact data update process
+2024-11-07 23:56:09,143 - INFO - Checking if required database tables exist
+2024-11-07 23:56:09,143 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-07 23:57:58,411 - INFO - Starting contact data update process
+2024-11-07 23:57:58,411 - INFO - Checking if required database tables exist
+2024-11-07 23:57:58,411 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 00:01:57,631 - INFO - Starting contact data update process
+2024-11-08 00:01:57,631 - INFO - Checking if required database tables exist
+2024-11-08 00:01:57,631 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 00:04:25,557 - INFO - Starting contact data update process
+2024-11-08 00:04:25,557 - INFO - Checking if required database tables exist
+2024-11-08 00:04:25,557 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 00:04:25,557 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 00:41:07,069 - INFO - Starting contact data update process
+2024-11-08 00:41:07,069 - INFO - Checking if required database tables exist
+2024-11-08 00:41:07,070 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 00:41:07,070 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 00:48:50,371 - INFO - Starting contact data update process
+2024-11-08 00:48:50,371 - INFO - Checking if required database tables exist
+2024-11-08 00:48:50,371 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 00:48:50,371 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:01:15,077 - INFO - Starting contact data update process
+2024-11-08 01:01:15,077 - INFO - Checking if required database tables exist
+2024-11-08 01:01:15,078 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:01:15,078 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:02:25,726 - INFO - Starting contact data update process
+2024-11-08 01:02:25,726 - INFO - Checking if required database tables exist
+2024-11-08 01:02:25,726 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:02:25,727 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:03:03,395 - INFO - Starting contact data update process
+2024-11-08 01:03:03,396 - INFO - Checking if required database tables exist
+2024-11-08 01:03:03,396 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:03:03,396 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:03:42,527 - INFO - Starting contact data update process
+2024-11-08 01:03:42,527 - INFO - Checking if required database tables exist
+2024-11-08 01:03:42,527 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:03:42,527 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:03:51,342 - INFO - Starting contact data update process
+2024-11-08 01:03:51,342 - INFO - Checking if required database tables exist
+2024-11-08 01:03:51,342 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:03:51,342 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:05:25,244 - INFO - Starting contact data update process
+2024-11-08 01:05:25,244 - INFO - Checking if required database tables exist
+2024-11-08 01:05:25,244 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 01:05:25,244 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
