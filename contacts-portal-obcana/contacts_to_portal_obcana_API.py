@@ -94,7 +94,6 @@ class ContactUpdater:
         try:
             # Configure logging for the application.
             log_dir = self.logs_directory
-            log_dir.mkdir(parents=True, exist_ok=True)
             
             log_file = log_dir / self.log_file
             

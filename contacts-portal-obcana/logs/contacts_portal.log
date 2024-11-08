@@ -115,3 +115,11 @@
 2024-11-08 01:05:25,244 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
 	Is the server running on that host and accepting TCP/IP connections?
 
+2024-11-08 14:07:16,532 - INFO - Starting contact data update process
+2024-11-08 14:07:16,533 - INFO - Checking if required database tables exist
+2024-11-08 14:07:16,533 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-08 14:07:16,533 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+

@@ -1,0 +1,12 @@
+[Database]
+database_url = https://test-db.example.com
+credentials_path = test_service_account.json
+
+[Application]
+url = https://www.orechovubrna.cz/api/zpravodaj
+firebase_route = newspapers
+scrape_element = li
+
+[Logging]
+directory = test_logs
+filename = test_newspaper_sync.log
