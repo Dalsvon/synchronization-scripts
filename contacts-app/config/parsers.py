@@ -44,13 +44,18 @@ def parse_general_contact(raw_data, main_logger, logger):
     web = re.search(r'Web: (.+)', raw_data)
     
     main_contact = ContactItem(
-        title="Obec Oře",
+        title="Obec Ořechov",
         phone=phone.group(1).strip() if phone else None,
         phone2=phone2.group(1).strip() if phone2 else None,
         mail=email.group(1).strip() if email else None,
         maintenance=maintenance.group(1).strip() if maintenance else None,
         web=web.group(1).strip() if web else None
     )
+    
+    if (main_contact.phone is None and main_contact.phone2 is None and main_contact.web is None
+        and main_contact.mail is None and main_contact.maintenance is None):
+        raise ValueError(f"Error during parsing of data: No general data found")
+    
     return [main_contact]
 
 def parse_town_hall_contact(raw_data, main_logger, logger):
@@ -207,7 +212,7 @@ def parse_drug_store_data(raw_data, main_logger, logger):
             web=web.group(1).strip() if web else None
         )
         contacts.append(pharmacy)
-    
+    # There may not be any pharmacies and so we do not throw exception for no data found
     return contacts
 
 # Dictionary mapping parser function names to actual functions

@@ -35,24 +35,22 @@ website of Orechov with use of provided API.
 """
 class NewspaperUpdater:
     def __init__(self, config_path='config.txt'):
-        try:
-            self.script_dir = Path(__file__).parent.absolute()
-            
-            # Convert to Path object and make relative to script directory if not absolute
-            config_path = Path(config_path)
-            if not config_path.is_absolute():
-                config_path = self.script_dir / config_path
+        # Convert to Path object
+        config_path = Path(config_path)
+        
+        self.script_dir = Path(__file__).parent.absolute()
+        
+        if not config_path.is_absolute():
+            config_path = self.script_dir / config_path
 
-            if not config_path.exists():
-                raise FileNotFoundError(f"Configuration file not found at: {config_path}")
+        if not config_path.exists():
+            raise FileNotFoundError(f"Configuration file not found at: {config_path}")
 
-            self.config = configparser.ConfigParser()
-            self.config.read(str(config_path))
-            self._load_configurations()
-            self.logger = self._setup_logging()
-            self._initialize_firebase()
-        except Exception as e:
-            raise
+        self.config = configparser.ConfigParser()
+        self.config.read(str(config_path))
+        self._load_configurations()
+        self.logger = self._setup_logging()
+        self._initialize_firebase()
 
     def _resolve_path(self, path_str):
         # Helper method to resolve paths based on whether they're absolute or relative

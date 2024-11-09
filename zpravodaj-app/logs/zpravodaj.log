@@ -28,3 +28,8 @@
 2024-11-08 22:27:57,187 - INFO - Found 55 newspaper items
 2024-11-08 22:27:57,444 - INFO - No changes detected in newspapers data
 2024-11-08 22:27:57,444 - INFO - Synchronization completed successfully
+2024-11-09 00:04:40,545 - INFO - Starting synchronization process for newspapers
+2024-11-09 00:04:40,546 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-09 00:04:44,084 - INFO - Found 55 newspaper items
+2024-11-09 00:04:44,321 - INFO - No changes detected in newspapers data
+2024-11-09 00:04:44,321 - INFO - Synchronization completed successfully

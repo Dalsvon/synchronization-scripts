@@ -31,16 +31,14 @@ class ConfigLoader:
             raise FileNotFoundError(f"Configuration file not found at: {config_path}")
 
         self.config = configparser.ConfigParser()
-        # Convert Path to string for configparser
         self.config.read(str(config_path))
-        self.base_path = config_path.parent
         self._load_configurations()
 
     def _resolve_path(self, path_str):
         # Helper method to resolve paths based on whether they're absolute or relative
         if path_str.startswith('/'):
             return Path(path_str)
-        return self.base_path / path_str
+        return self.script_dir / path_str
 
     def _load_configurations(self):
         # Database and credentials configurations
@@ -56,7 +54,7 @@ class ConfigLoader:
         
         self.main_log = self.logs_directory / self.config['Logs']['main']
         
-        self.main_log.parent.mkdir(parents=True, exist_ok=True)
+        self.logs_directory.mkdir(parents=True, exist_ok=True)
 
         # Load contact configurations for each type of contact in use for App
         with open(self.data_config_path) as f:
@@ -66,7 +64,7 @@ class ConfigLoader:
         self.parser_functions = self._load_parser_functions()
 
     def _load_parser_functions(self):
-        # Load parser functions used to parse each of contacts categories
+        # Load parser functions used to parse each of contact categories
         spec = importlib.util.spec_from_file_location("parsers", self.parsers_module_path)
         parsers_module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(parsers_module)
@@ -86,45 +84,38 @@ class ContactDataUpdater:
         self.initialize_firebase()
 
     def initialize_firebase(self):
-        # Initialize Firebase connection
-        if not firebase_admin._apps:
-            try:
-                # Load credentials
-                cred = credentials.Certificate(str(self.config_loader.credentials_path))
+        # Function that initializes firebase service access
+        try:
+            if not firebase_admin._apps:
+                if not self.config_loader.credentials_path.exists():
+                    raise FileNotFoundError(f"Credentials file not found at: {self.config_loader.credentials_path}")
                 
-                # Initialize Firebase
+                cred = credentials.Certificate(str(self.config_loader.credentials_path))
                 firebase_admin.initialize_app(cred, {
                     'databaseURL': self.config_loader.database_url
                 })
-                
-            except ValueError as e:
-                raise FirebaseInitializationError(
-                    f"Invalid credentials format: {str(e)}"
-                ) from e
-                
-            except (firebase_admin.exceptions.FirebaseError,
-                   firebase_admin.exceptions.UnavailableError) as e:
-                raise FirebaseInitializationError(
-                    f"Firebase initialization failed: {str(e)}"
-                ) from e
+        except Exception as e:
+            raise ValueError(f"Failure to initialize database connection: {str(e)}")
 
     def setup_logging(self, log_name):
         # Set up logging for the current contact type.
-        os.makedirs(self.config_loader.logs_directory, exist_ok=True)
-        logger = logging.getLogger(log_name)
-        logger.setLevel(logging.INFO)
-        logger.handlers = []
-        
-        handler = logging.FileHandler(
-            self.config_loader.logs_directory / log_name,
-            encoding='utf-8'
-        )
-        handler.setLevel(logging.INFO)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        
-        return logger
+        try:
+            logger = logging.getLogger(log_name)
+            logger.setLevel(logging.INFO)
+            logger.handlers = []
+            
+            handler = logging.FileHandler(
+                self.config_loader.logs_directory / log_name,
+                encoding='utf-8'
+            )
+            handler.setLevel(logging.INFO)
+            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            handler.setFormatter(formatter)
+            logger.addHandler(handler)
+            
+            return logger
+        except Exception as e:
+            raise ValueError(f"Failure to set up {log_name} log for program: {e}")
 
     def set_contact_type(self, contact_type):
         # Set the contact type for subsequent operations.
@@ -149,7 +140,7 @@ class ContactDataUpdater:
             return True
             
         except Exception as e:
-            self.main_logger.error(f"Configuration error for {contact_type}: {str(e)}")
+            self.main_logger.error(f"Configuration error for {contact_type} when setting type: {str(e)}")
             return False
 
     def fetch_contact_data(self):
@@ -161,7 +152,7 @@ class ContactDataUpdater:
             return response_content
         except Exception as e:
             self.logger.error(f"Failed to fetch contact data from API: {e}")
-            self.main_logger.error(f"Failed to fetch contact data  from API: {e}")
+            self.main_logger.error(f"Failed to fetch contact data from API: {e}")
             return None
 
     def get_existing_contacts(self):
@@ -205,8 +196,6 @@ class ContactDataUpdater:
                 # Existing contact - merge with existing data
                 existing_item = existing_dict[title]
                 merged_item = existing_item.copy()
-                
-                # Track modifications
                 item_changes = {}
                 
                 # Update fields from new data
@@ -255,7 +244,7 @@ class ContactDataUpdater:
             return True
 
     def log_changes_summary(self, changes):
-        """Log detailed changes summary to type-specific log."""
+        # Log detailed changes summary to type-specific log.
         self.logger.info("Changes summary:")
         if changes['added']:
             self.logger.info(f"Added contacts: {json.dumps(changes['added'], ensure_ascii=False)}")
@@ -263,13 +252,12 @@ class ContactDataUpdater:
             self.logger.info(f"Modified contacts: {json.dumps(changes['modified'], ensure_ascii=False)}")
         if changes['removed']:
             self.logger.info(f"Removed contacts: {json.dumps(changes['removed'], ensure_ascii=False)}")
-        self.logger.info(f"Updated data structure: {json.dumps(changes['updates'], indent=2, ensure_ascii=False)}")
 
     def update(self):
         # Update the database for previously set contact type
         if not self.data_config:
             self.main_logger.error("No contact type set. Call set_contact_type() before updating.")
-            return False
+            raise ValueError(f"No contact type set before updating.")
 
         self.logger.info(f"Starting contact update process for {self.data_config['firebase_route']}")
         raw_data = self.fetch_contact_data()
@@ -284,24 +272,26 @@ class ContactDataUpdater:
                 self.main_logger.error(f"Error updating {self.data_config['firebase_route']}: {str(e)}")
                 return False
         else:
-            error_msg = "Failed to fetch contact data"
-            self.logger.error(error_msg)
-            self.main_logger.error(f"Error updating {self.data_config['firebase_route']}: {error_msg}")
+            self.main_logger.error(f"Error updating {self.data_config['firebase_route']}.")
             return False
 
 def setup_main_logger(main_log_path):
-    # Set up the main logger for high-level program status.
-    logger = logging.getLogger('main')
-    logger.setLevel(logging.INFO)
-    logger.handlers = []
+    # Set up the main logger for high-level program status
+    try:
+        logger = logging.getLogger('main')
+        logger.setLevel(logging.INFO)
+        logger.handlers = []
+        
+        handler = logging.FileHandler(main_log_path, encoding='utf-8')
+        handler.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        
+        return logger
     
-    handler = logging.FileHandler(main_log_path, encoding='utf-8')
-    handler.setLevel(logging.INFO)
-    formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    
-    return logger
+    except Exception as e:
+        raise ValueError(f"Failure to set up main log for program: {e}")
 
 def main():
     try:
@@ -313,11 +303,25 @@ def main():
 
     try:
         updater = ContactDataUpdater(config_loader, main_logger)
+        full_update = True
         
         for contact_type in config_loader.data_config.keys():
             if updater.set_contact_type(contact_type):
                 if not updater.update():
+                    full_update = False
                     main_logger.error(f"The contacts from {contact_type} could not be updated.")
+            else:
+                full_update = False
+                main_logger.error(f"The contacts from {contact_type} do not have correct type in data config.")
+        
+        if not full_update:
+            print(
+                f"""Synchronizace nemohla být zcela dokončena. \
+Některé kontakty pravděpodobně nebyly aktualizovány. \
+Pro více informací si přečtěte log soubor na adrese {config_loader.main_log}""",
+                file=sys.stderr
+            )
+            return 1
         return 0
                 
     except Exception as e:
