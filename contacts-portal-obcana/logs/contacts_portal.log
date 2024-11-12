@@ -1,125 +1,140 @@
-2024-11-07 19:20:14,198 - INFO - Starting contact data update process
-2024-11-07 19:20:14,198 - INFO - Checking if required database tables exist
-2024-11-07 19:20:14,214 - INFO - All required database tables exist
-2024-11-07 19:20:14,215 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-07 19:20:16,295 - INFO - Successfully parsed all contact data
-2024-11-07 19:20:16,295 - INFO - Found 3 office hours and 10 employees
-2024-11-07 19:20:16,295 - INFO - Starting database update
-2024-11-07 19:20:16,318 - INFO - Successfully updated contacts
-2024-11-07 19:20:16,318 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-07 19:20:16,319 - INFO - Contact data update completed successfully
-2024-11-07 19:21:01,297 - INFO - Starting contact data update process
-2024-11-07 19:21:01,297 - INFO - Checking if required database tables exist
-2024-11-07 19:21:01,311 - INFO - All required database tables exist
-2024-11-07 19:21:01,312 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-07 19:21:03,420 - INFO - Successfully parsed all contact data
-2024-11-07 19:21:03,420 - INFO - Found 3 office hours and 10 employees
-2024-11-07 19:21:03,420 - INFO - Starting database update
-2024-11-07 19:21:03,444 - INFO - Successfully updated contacts
-2024-11-07 19:21:03,444 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-07 19:21:03,444 - INFO - Contact data update completed successfully
-2024-11-07 19:30:07,737 - INFO - Starting contact data update process
-2024-11-07 19:30:07,737 - INFO - Checking if required database tables exist
-2024-11-07 19:30:07,751 - INFO - All required database tables exist
-2024-11-07 19:30:07,752 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-07 19:30:09,622 - INFO - Successfully parsed all contact data
-2024-11-07 19:30:09,622 - INFO - Found 3 office hours and 10 employees
-2024-11-07 19:30:09,622 - INFO - Starting database update
-2024-11-07 19:30:09,648 - INFO - Successfully updated contacts
-2024-11-07 19:30:09,648 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-07 19:30:09,648 - INFO - Contact data update completed successfully
-2024-11-07 23:56:09,143 - INFO - Starting contact data update process
-2024-11-07 23:56:09,143 - INFO - Checking if required database tables exist
-2024-11-07 23:56:09,143 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
+2024-11-10 01:27:45,291 - INFO - Starting contact data update process
+2024-11-10 01:27:45,291 - INFO - Checking if required database tables exist
+2024-11-10 01:27:45,308 - INFO - All required database tables exist
+2024-11-10 01:27:45,309 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 01:27:47,368 - INFO - Parsing of main contact was successful.
+2024-11-10 01:27:47,368 - INFO - Successfully parsed all contact data
+2024-11-10 01:27:47,368 - INFO - Found 3 office hours and 10 employees
+2024-11-10 01:27:47,368 - INFO - Starting database update
+2024-11-10 01:27:47,393 - INFO - Successfully updated contacts
+2024-11-10 01:27:47,393 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 01:27:47,393 - INFO - Contact data update completed successfully
+2024-11-10 01:45:00,611 - INFO - Starting contact data update process
+2024-11-10 01:45:00,611 - INFO - Checking if required database tables exist
+2024-11-10 01:45:00,628 - INFO - All required database tables exist
+2024-11-10 01:45:00,629 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 01:45:03,254 - INFO - Parsing of main contact was successful.
+2024-11-10 01:45:03,255 - INFO - Parsing of employee contacts was successful.
+2024-11-10 01:45:03,255 - INFO - Successfully parsed all contact data
+2024-11-10 01:45:03,255 - INFO - Found 3 office hours and 10 employees
+2024-11-10 01:45:03,255 - INFO - Starting database update
+2024-11-10 01:45:03,284 - INFO - Successfully updated contacts
+2024-11-10 01:45:03,285 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 01:45:03,285 - INFO - Contact data update completed successfully
+2024-11-10 01:46:43,577 - INFO - Starting contact data update process
+2024-11-10 01:46:43,578 - INFO - Checking if required database tables exist
+2024-11-10 01:46:43,593 - ERROR - Required table 'condasdastact' does not exist
+2024-11-10 01:46:43,595 - ERROR - Missing required tables: condasdastact
+2024-11-10 01:46:43,596 - ERROR - Unexpected error occurred: Missing required tables: condasdastact
+2024-11-10 01:46:43,596 - ERROR - Update of contacts failed: Missing required tables: condasdastact
+2024-11-10 01:47:29,558 - INFO - Starting contact data update process
+2024-11-10 01:47:29,558 - INFO - Checking if required database tables exist
+2024-11-10 01:47:29,572 - ERROR - Required table 'contacts' does not exist
+2024-11-10 01:47:29,574 - ERROR - Required table 'OfficeHousrs' does not exist
+2024-11-10 01:47:29,575 - ERROR - Missing required tables: contacts, OfficeHousrs
+2024-11-10 01:47:29,576 - ERROR - Unexpected error occurred: Missing required tables: contacts, OfficeHousrs
+2024-11-10 01:47:29,576 - ERROR - Update of contacts failed: Missing required tables: contacts, OfficeHousrs
+2024-11-10 16:03:17,452 - INFO - Starting contact data update process
+2024-11-10 16:03:17,453 - INFO - Checking if required database tables exist
+2024-11-10 16:03:17,496 - INFO - All required database tables exist
+2024-11-10 16:03:17,497 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 16:03:19,952 - INFO - Parsing of main contact was successful.
+2024-11-10 16:03:19,952 - INFO - Parsing of office hours was successful.
+2024-11-10 16:03:19,952 - INFO - Parsing of employee contacts was successful.
+2024-11-10 16:03:19,953 - INFO - Successfully parsed all contact data
+2024-11-10 16:03:19,953 - INFO - Found 3 office hours and 10 employees
+2024-11-10 16:03:19,953 - INFO - Starting database update
+2024-11-10 16:03:19,966 - ERROR - Database update failed: column "created_at" does not exist
+LINE 1: SELECT created_at FROM contact LIMIT 1
+               ^
+HINT:  Perhaps you meant to reference the column "contact.createdAt".
 
-2024-11-07 23:57:58,411 - INFO - Starting contact data update process
-2024-11-07 23:57:58,411 - INFO - Checking if required database tables exist
-2024-11-07 23:57:58,411 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
+2024-11-10 16:03:19,967 - ERROR - Database operation failed: column "created_at" does not exist
+LINE 1: SELECT created_at FROM contact LIMIT 1
+               ^
+HINT:  Perhaps you meant to reference the column "contact.createdAt".
 
-2024-11-08 00:01:57,631 - INFO - Starting contact data update process
-2024-11-08 00:01:57,631 - INFO - Checking if required database tables exist
-2024-11-08 00:01:57,631 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
+2024-11-10 16:03:19,967 - ERROR - Update of contacts failed: column "created_at" does not exist
+LINE 1: SELECT created_at FROM contact LIMIT 1
+               ^
+HINT:  Perhaps you meant to reference the column "contact.createdAt".
 
-2024-11-08 00:04:25,557 - INFO - Starting contact data update process
-2024-11-08 00:04:25,557 - INFO - Checking if required database tables exist
-2024-11-08 00:04:25,557 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
+2024-11-10 16:09:44,392 - INFO - Starting contact data update process
+2024-11-10 16:09:44,392 - INFO - Checking if required database tables exist
+2024-11-10 16:09:44,408 - INFO - All required database tables exist
+2024-11-10 16:09:44,409 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 16:09:46,456 - INFO - Parsing of main contact was successful.
+2024-11-10 16:09:46,457 - INFO - Parsing of office hours was successful.
+2024-11-10 16:09:46,457 - INFO - Parsing of employee contacts was successful.
+2024-11-10 16:09:46,457 - INFO - Successfully parsed all contact data
+2024-11-10 16:09:46,457 - INFO - Found 3 office hours and 10 employees
+2024-11-10 16:09:46,457 - INFO - Starting database update
+2024-11-10 16:09:46,470 - ERROR - Database update failed: column "createdat" does not exist
+LINE 1: SELECT createdAt FROM contact LIMIT 1
+               ^
+HINT:  Perhaps you meant to reference the column "contact.createdAt".
 
-2024-11-08 00:04:25,557 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
+2024-11-10 16:09:46,470 - ERROR - Database operation failed: column "createdat" does not exist
+LINE 1: SELECT createdAt FROM contact LIMIT 1
+               ^
+HINT:  Perhaps you meant to reference the column "contact.createdAt".
 
-2024-11-08 00:41:07,069 - INFO - Starting contact data update process
-2024-11-08 00:41:07,069 - INFO - Checking if required database tables exist
-2024-11-08 00:41:07,070 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
+2024-11-10 16:09:46,470 - ERROR - Update of contacts failed: column "createdat" does not exist
+LINE 1: SELECT createdAt FROM contact LIMIT 1
+               ^
+HINT:  Perhaps you meant to reference the column "contact.createdAt".
 
-2024-11-08 00:41:07,070 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 00:48:50,371 - INFO - Starting contact data update process
-2024-11-08 00:48:50,371 - INFO - Checking if required database tables exist
-2024-11-08 00:48:50,371 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 00:48:50,371 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:01:15,077 - INFO - Starting contact data update process
-2024-11-08 01:01:15,077 - INFO - Checking if required database tables exist
-2024-11-08 01:01:15,078 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:01:15,078 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:02:25,726 - INFO - Starting contact data update process
-2024-11-08 01:02:25,726 - INFO - Checking if required database tables exist
-2024-11-08 01:02:25,726 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:02:25,727 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:03:03,395 - INFO - Starting contact data update process
-2024-11-08 01:03:03,396 - INFO - Checking if required database tables exist
-2024-11-08 01:03:03,396 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:03:03,396 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:03:42,527 - INFO - Starting contact data update process
-2024-11-08 01:03:42,527 - INFO - Checking if required database tables exist
-2024-11-08 01:03:42,527 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:03:42,527 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:03:51,342 - INFO - Starting contact data update process
-2024-11-08 01:03:51,342 - INFO - Checking if required database tables exist
-2024-11-08 01:03:51,342 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:03:51,342 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:05:25,244 - INFO - Starting contact data update process
-2024-11-08 01:05:25,244 - INFO - Checking if required database tables exist
-2024-11-08 01:05:25,244 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 01:05:25,244 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 14:07:16,532 - INFO - Starting contact data update process
-2024-11-08 14:07:16,533 - INFO - Checking if required database tables exist
-2024-11-08 14:07:16,533 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
-2024-11-08 14:07:16,533 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
-	Is the server running on that host and accepting TCP/IP connections?
-
+2024-11-10 16:12:23,024 - INFO - Starting contact data update process
+2024-11-10 16:12:23,025 - INFO - Checking if required database tables exist
+2024-11-10 16:12:23,040 - INFO - All required database tables exist
+2024-11-10 16:12:23,041 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 16:12:24,664 - INFO - Parsing of main contact was successful.
+2024-11-10 16:12:24,664 - INFO - Parsing of office hours was successful.
+2024-11-10 16:12:24,664 - INFO - Parsing of employee contacts was successful.
+2024-11-10 16:12:24,665 - INFO - Successfully parsed all contact data
+2024-11-10 16:12:24,665 - INFO - Found 3 office hours and 10 employees
+2024-11-10 16:12:24,665 - INFO - Starting database update
+2024-11-10 16:12:24,677 - INFO - Creating new contact record.
+2024-11-10 16:12:24,695 - INFO - Successfully updated contact information
+2024-11-10 16:12:24,695 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 16:12:24,696 - INFO - Contact data update completed successfully
+2024-11-10 16:28:24,043 - INFO - Starting contact data update process
+2024-11-10 16:28:24,043 - INFO - Checking if required database tables exist
+2024-11-10 16:28:24,063 - INFO - All required database tables exist
+2024-11-10 16:28:24,065 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 16:28:25,902 - INFO - Parsing of main contact was successful.
+2024-11-10 16:28:25,902 - INFO - Parsing of office hours was successful.
+2024-11-10 16:28:25,902 - INFO - Parsing of employee contacts was successful.
+2024-11-10 16:28:25,902 - INFO - Successfully parsed all contact data
+2024-11-10 16:28:25,902 - INFO - Found 3 office hours and 10 employees
+2024-11-10 16:28:25,902 - INFO - Starting database update
+2024-11-10 16:28:25,914 - INFO - Creating new contact record.
+2024-11-10 16:28:25,931 - INFO - Successfully updated contact information
+2024-11-10 16:28:25,932 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 16:28:25,932 - INFO - Contact data update completed successfully
+2024-11-10 17:20:22,154 - INFO - Starting contact data update process
+2024-11-10 17:20:22,154 - INFO - Checking if required database tables exist
+2024-11-10 17:20:22,193 - INFO - All required database tables exist
+2024-11-10 17:20:22,194 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 17:20:23,819 - INFO - Parsing of main contact was successful.
+2024-11-10 17:20:23,819 - INFO - Parsing of office hours was successful.
+2024-11-10 17:20:23,819 - INFO - Parsing of employee contacts was successful.
+2024-11-10 17:20:23,819 - INFO - Successfully parsed all contact data
+2024-11-10 17:20:23,819 - INFO - Found 3 office hours and 10 employees
+2024-11-10 17:20:23,819 - INFO - Starting database update
+2024-11-10 17:20:23,849 - INFO - Successfully updated contact information
+2024-11-10 17:20:23,849 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 17:20:23,849 - INFO - Contact data update completed successfully
+2024-11-10 20:42:37,991 - INFO - Starting contact data update process
+2024-11-10 20:42:37,992 - INFO - Checking if required database tables exist
+2024-11-10 20:42:38,028 - INFO - All required database tables exist
+2024-11-10 20:42:38,029 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 20:42:47,603 - INFO - Parsing of main contact was successful.
+2024-11-10 20:42:47,603 - INFO - Parsing of office hours was successful.
+2024-11-10 20:42:47,603 - INFO - Parsing of employee contacts was successful.
+2024-11-10 20:42:47,603 - INFO - Successfully parsed all contact data
+2024-11-10 20:42:47,603 - INFO - Found 3 office hours and 10 employees
+2024-11-10 20:42:47,603 - INFO - Starting database update
+2024-11-10 20:42:47,636 - INFO - Successfully updated contact information
+2024-11-10 20:42:47,637 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 20:42:47,637 - INFO - Contact data update completed successfully

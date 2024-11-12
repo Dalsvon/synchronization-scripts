@@ -11,16 +11,25 @@ from pathlib import Path
 import configparser
 import sys
 
+"""
+Class representing contact for one employee of the municipality.
+"""
 class Employee(TypedDict):
     name: str
     position: Optional[str]
     phone: Optional[str]
     email: Optional[str]
 
+"""
+Class representing days and time when municipality is open.
+"""
 class OfficeHours(TypedDict):
     days: str
     time: str
-
+    
+"""
+Class representing contact on municipality itself.
+"""
 class Contact(TypedDict):
     name: str
     address: Optional[str]
@@ -35,8 +44,11 @@ class Contact(TypedDict):
     office_hours: List[OfficeHours]
     employees: List[Employee]
 
+"""
+Class that updates contacts for Portal Obcana from API of Orechov website. 
+"""
 class ContactUpdater:
-    def __init__(self, config_path='config/postgres_config.ini'):
+    def __init__(self, config_path='config.txt'):
     
         config_path = Path(config_path)
         
@@ -54,24 +66,52 @@ class ContactUpdater:
         
         self.base_path = self.script_dir
         self._load_configurations()
-        
         # Setup logging
-        self.setup_logging()
+        self.logger = self._setup_logging()
         
         load_dotenv()
         
         # Database configuration from environment variables
-        self.db_params = {
-            'dbname': os.getenv('DB_NAME'),
-            'user': os.getenv('DB_USER'),
-            'password': os.getenv('DB_PASSWORD'),
-            'host': os.getenv('DB_HOST'),
-            'port': os.getenv('DB_PORT')
-        }
+        
+        if self.uses_ssl == 'True':
+            self.db_params = {
+                'dbname': os.getenv('DB_NAME'),
+                'user': os.getenv('DB_USER'),
+                'password': os.getenv('DB_PASSWORD'),
+                'host': os.getenv('DB_HOST'),
+                'port': os.getenv('DB_PORT'),
+                'sslmode': 'verify-full',
+                'sslcert': os.getenv('SSL_CERT_FILE', str(self.client_crt_file)),
+                'sslkey': os.getenv('SSL_KEY_FILE', str(self.client_key_file)),
+                'sslrootcert': os.getenv('SSL_CA_FILE', str(self.ca_crt))
+            }
+            # Verify SSL files exist
+            self._verify_ssl_files()
+        else:
+            self.db_params = {
+                'dbname': os.getenv('DB_NAME'),
+                'user': os.getenv('DB_USER'),
+                'password': os.getenv('DB_PASSWORD'),
+                'host': os.getenv('DB_HOST'),
+                'port': os.getenv('DB_PORT'),
+            }
 
         if not all(self.db_params.values()):
             self.logger.error("Missing required database configuration in environment variables")
             raise ValueError("Missing required database configuration")
+        
+
+    def _verify_ssl_files(self):
+        # Verify that all required SSL files exist.
+        ssl_files = [
+            self.db_params['sslcert'],
+            self.db_params['sslkey'],
+            self.db_params['sslrootcert']
+        ]
+        
+        for file_path in ssl_files:
+            if not Path(file_path).is_file():
+                raise FileNotFoundError(f"Required SSL file not found: {file_path}")
     
     def _resolve_path(self, path_str):
         # Helper method to resolve paths based on whether they're absolute or relative
@@ -82,33 +122,40 @@ class ContactUpdater:
     def _load_configurations(self):
         # API configuration
         self.api_url = self.config['API']['url']
+        
+        self.uses_ssl = self.config['SSL']['with_ssl']
 
-        # Logs directory and main log file path
+        # Load directories, log and ssl file paths
         self.logs_directory = self._resolve_path(self.config['Logs']['directory'])
+        self.ssl_directory = self._resolve_path(self.config['SSL']['directory'])
+        
         
         self.log_file = self.logs_directory / self.config['Logs']['filename']
+        self.client_crt_file = self.ssl_directory / Path('client.crt')
+        self.client_key_file = self.ssl_directory / Path('client.key')
+        self.ca_crt = self.ssl_directory / Path('ca.crt')
         
         self.log_file.parent.mkdir(parents=True, exist_ok=True)
 
-    def setup_logging(self) -> None:
+    def _setup_logging(self) -> None:
         try:
-            # Configure logging for the application.
-            log_dir = self.logs_directory
+            os.makedirs(self.logs_directory, exist_ok=True)
             
-            log_file = log_dir / self.log_file
+            logger = logging.getLogger('portal_contacts_sync')
+            logger.setLevel(logging.INFO)
+            logger.handlers = []
             
-            logging.basicConfig(
-                level=logging.INFO,
-                format='%(asctime)s - %(levelname)s - %(message)s',
-                handlers=[
-                    logging.FileHandler(log_file, encoding='utf-8')
-                ]
+            handler = logging.FileHandler(
+                self.log_file,
+                encoding='utf-8'
             )
+            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            handler.setFormatter(formatter)
+            logger.addHandler(handler)
             
-            self.logger = logging.getLogger(__name__)
+            return logger
         except Exception as e:
-            print(f"Error setting up logging: {str(e)}", file=sys.stderr)
-            raise
+            raise ValueError(f"Failure to set up logging for program: {e}")
 
     def parse_office_hours(self, content: str) -> List[OfficeHours]:
         # Extract office hours from the content.
@@ -116,10 +163,11 @@ class ContactUpdater:
             self.logger.debug("Parsing office hours")
             office_hours: List[OfficeHours] = []
             
-            office_hours_match = re.search(r'\*\*Úřední hodiny:\*\*(.*?)(?:\.\[stack\]|$)', content, re.DOTALL)
+            #office_hours_match = re.search(r'\*\*Úřední hodiny:\*\*(.*?)(?:\.\[stack\]|$)', content, re.DOTALL)
+            office_hours_match = re.search(r'\*\*Úřední hodiny:\*\*\r\n([\s\S]*?)(?:\r\n\r\n\.\[stack\]|\r\n\r\n\*\*|$)', content)
             if not office_hours_match:
                 self.logger.error("No office hours section found in content")
-                raise ValueError(f"No office hours section found in content")
+                return [] # If office hours are removed, the synchronization should still proceed
 
             hours_text = office_hours_match.group(1)
             
@@ -133,8 +181,8 @@ class ContactUpdater:
                     'days': days.strip(),
                     'time': time.strip()
                 })
-
-            self.logger.debug(f"Found {len(office_hours)} office hours entries")
+            
+            self.logger.info("Parsing of office hours was successful.")
             return office_hours
         except Exception as e:
             self.logger.error(f"Failed to parse town hall working hours: {str(e)}")
@@ -142,7 +190,6 @@ class ContactUpdater:
 
     def parse_employees(self, content: str) -> List[Employee]:
         # Extract employee information from the content.
-        self.logger.debug("Parsing employee information")
         try:
             employees: List[Employee] = []
             staff_data = re.findall(r'\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+)', content)
@@ -156,7 +203,11 @@ class ContactUpdater:
                 )
                 employees.append(contact)
             
-            self.logger.debug(f"Found {len(employees)} employees")
+            if employees == []:
+                self.logger.error("No employees found. Format of contacts likely changed. Aborting synchronization.")
+                raise ValueError("No employees found. Format of contacts likely changed. Aborting synchronization.")
+            
+            self.logger.info("Parsing of employee contacts was successful.")
             return employees
         except Exception as e:
             self.logger.error(f"Failed to parse employee contacts: {str(e)}")
@@ -164,7 +215,6 @@ class ContactUpdater:
 
     def parse_main_content(self, content: str) -> Dict[str, Optional[str]]:
         # Extract main contact information from the content.
-        self.logger.debug("Parsing main contact information")
         try:
             main_section = content.split('**Úřední hodiny:**')[0]
             
@@ -183,8 +233,11 @@ class ContactUpdater:
                 'dic': next((m.group(1) for m in re.finditer(r'DIČ:\s*([^\n]+)', main_section)), None),
                 'bank_account': next((m.group(1) for m in re.finditer(r'č\.ú\.:\s*([^\n]+)', main_section)), None),
             }
+            if all(value is None for key, value in main_data.items() if key != 'name'):
+                self.logger.error("No main contact found. Format of contacts likely changed. Aborting synchronization.")
+                raise ValueError("No main contact found. Format of contacts likely changed. Aborting synchronization.")
             
-            self.logger.debug(f"Parsed main data: {json.dumps(main_data, ensure_ascii=False)}")
+            self.logger.info("Parsing of main contact was successful.")
             return main_data
         except Exception as e:
             self.logger.error(f"Failed to parse main contact: {str(e)}")
@@ -213,7 +266,7 @@ class ContactUpdater:
                 'employees': employees
             }
         except requests.RequestException as e:
-            self.logger.error(f"Failed to fetch data from API: {str(e)}")
+            self.logger.error(f"Failed to fetch data from API because API request failed: {str(e)}")
             raise
         except Exception as e:
             self.logger.error(f"Failed to fetch data from API: {str(e)}")
@@ -222,7 +275,7 @@ class ContactUpdater:
     def ensure_tables_exist(self) -> None:
         # Check if all required tables exist
         self.logger.info("Checking if required database tables exist")
-        required_tables = ['contact', 'OfficeHours', 'employees']
+        required_tables = ['contact', 'office_hours', 'employees']
         missing_tables = []
         
         with psycopg2.connect(**self.db_params) as conn:
@@ -239,7 +292,6 @@ class ContactUpdater:
                         
                         if not exists:
                             missing_tables.append(table)
-                            self.logger.error(f"Required table '{table}' does not exist")
                     
                     if missing_tables:
                         error_msg = f"Missing required tables: {', '.join(missing_tables)}"
@@ -254,17 +306,17 @@ class ContactUpdater:
                     raise psycopg2.Error(error_msg)
 
     def update_database(self, contact_data: Contact) -> None:
-        # Update the database with new contact information.
+        # Update or create contact information in the database.
         self.logger.info("Starting database update")
         
         with psycopg2.connect(**self.db_params) as conn:
             with conn.cursor() as cur:
                 try:
                     # Check if contact exists
-                    cur.execute("SELECT id FROM contact WHERE id = 1")
-                    contact_exists = cur.fetchone() is not None
+                    cur.execute('SELECT "createdAt" FROM contact LIMIT 1')
+                    existing_contact = cur.fetchone()
 
-                    if contact_exists:
+                    if existing_contact:
                         cur.execute("""
                             UPDATE contact SET
                                 name = %s,
@@ -277,9 +329,9 @@ class ContactUpdater:
                                 ic = %s,
                                 dic = %s,
                                 bank_account = %s,
-                                last_updated = %s
-                            WHERE id = 1
-                            RETURNING id
+                                "last_updated" = CURRENT_TIMESTAMP
+                            WHERE "createdAt" = %s
+                            RETURNING "createdAt"
                         """, (
                             contact_data['name'],
                             contact_data['address'],
@@ -291,19 +343,31 @@ class ContactUpdater:
                             contact_data['ic'],
                             contact_data['dic'],
                             contact_data['bank_account'],
-                            datetime.now()
+                            existing_contact[0]
                         ))
+                        contact_created_at = existing_contact[0]
                     else:
-                        self.logger.info("New contact record created.")
+                        self.logger.info("Creating new contact record.")
                         cur.execute("""
                             INSERT INTO contact (
-                                id, name, address, phone, mobile, email, maintenence,
-                                data_id, ic, dic, bank_account, last_updated
+                                name,
+                                address,
+                                phone,
+                                mobile,
+                                email,
+                                maintenence,
+                                data_id,
+                                ic,
+                                dic,
+                                bank_account,
+                                "createdAt",
+                                "last_updated"
                             )
                             VALUES (
-                                1, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+                                %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+                                CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                             )
-                            RETURNING id
+                            RETURNING "createdAt"
                         """, (
                             contact_data['name'],
                             contact_data['address'],
@@ -314,46 +378,65 @@ class ContactUpdater:
                             contact_data['data_id'],
                             contact_data['ic'],
                             contact_data['dic'],
-                            contact_data['bank_account'],
-                            datetime.now()
+                            contact_data['bank_account']
                         ))
+                        contact_created_at = cur.fetchone()[0]
 
-                    contact_id = cur.fetchone()[0]
-
-                    # Clear existing office hours and employees
-                    cur.execute('DELETE FROM "OfficeHours" WHERE "contactId" = %s', (contact_id,))
-                    cur.execute('DELETE FROM employees WHERE "contactId" = %s', (contact_id,))
+                    # Clear existing office hours
+                    cur.execute('DELETE FROM office_hours WHERE "contactId" = %s', (contact_created_at,))
 
                     # Insert new office hours
                     if contact_data['office_hours']:
+                        office_hours_values = [(
+                            h['days'],
+                            h['time'],
+                            contact_created_at
+                        ) for h in contact_data['office_hours']]
+                        
                         cur.executemany("""
-                            INSERT INTO "OfficeHours" (days, time, "contactId")
+                            INSERT INTO office_hours (
+                                days,
+                                time,
+                                "contactId"
+                            )
                             VALUES (%s, %s, %s)
-                        """, [(h['days'], h['time'], contact_id) for h in contact_data['office_hours']])
+                        """, office_hours_values)
+
+                    # Clear existing employees
+                    cur.execute('DELETE FROM employees WHERE "contactId" = %s', (contact_created_at,))
 
                     # Insert new employees
                     if contact_data['employees']:
-                        cur.executemany("""
-                            INSERT INTO employees (name, position, phone, email, "contactId")
-                            VALUES (%s, %s, %s, %s, %s)
-                        """, [(
+                        employee_values = [(
                             e['name'],
                             e['position'],
                             e['phone'],
                             e['email'],
-                            contact_id
-                        ) for e in contact_data['employees']])
+                            contact_created_at
+                        ) for e in contact_data['employees']]
+                        
+                        cur.executemany("""
+                            INSERT INTO employees (
+                                name,
+                                position,
+                                phone,
+                                email,
+                                "contactId"
+                            )
+                            VALUES (%s, %s, %s, %s, %s)
+                        """, employee_values)
 
                     conn.commit()
-                    self.logger.info(f"Successfully updated contacts")
-                    self.logger.info(f"Updated or added {len(contact_data['office_hours'])} office hours and {len(contact_data['employees'])} employees")
+                    self.logger.info("Successfully updated contact information")
+                    self.logger.info(f"Updated or added {len(contact_data['office_hours'])} office hours "
+                                   f"and {len(contact_data['employees'])} employees")
 
                 except Exception as e:
                     conn.rollback()
                     self.logger.error(f"Database update failed: {str(e)}")
                     raise
 
-    def synchronize(self) -> None:
+    def update(self) -> None:
         self.logger.info("Starting contact data update process")
         try:
             self.ensure_tables_exist()
@@ -377,11 +460,11 @@ def main():
         print(f"Synchronizace selhala. Konfigurační chyba: {str(e)}", file=sys.stderr)
         return 1
     try:
-        updater.synchronize()
+        updater.update()
         return 0
     except Exception as e:
         updater.logger.error(f"Update of contacts failed: {str(e)}")
-        print(f"Synchronizace selhala. Pro více informací si přečtěte log na adrese {updater.log_file}", file=sys.stderr)
+        print(f"Synchronizace selhala. Pro více informací si přečtěte log soubor na adrese {updater.log_file}", file=sys.stderr)
         return 1
 
 if __name__ == "__main__":

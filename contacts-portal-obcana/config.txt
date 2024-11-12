@@ -4,3 +4,7 @@ url = https://www.orechovubrna.cz/api/kontakt/
 [Logs]
 directory = logs
 filename = contacts_portal.log
+
+[SSL]
+with_ssl = True
+directory = ssl

@@ -1,0 +1,3 @@
+https://www.orechovubrna.cz/api/hasici/
+
+{"content":"**Sbor dobrovoln\u00fdch hasi\u010d\u016f O\u0159echov**\r\nE-mail: sdhorechov@seznam.cz \r\nTel.: +420 777 283 527\r\nWeb: www.hasiciorechov.cz"}
