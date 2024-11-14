@@ -326,7 +326,7 @@ Pro více informací si přečtěte log soubor na adrese {config_loader.main_log
                 
     except Exception as e:
         main_logger.error(f"Error during update of database: {str(e)}")
-        print(f"Synchronizace selhala. Pro více informací si přečtěte log na adrese {config_loader.main_log}", file=sys.stderr)
+        print(f"Synchronizace selhala. Pro více informací si přečtěte log soubor na adrese {config_loader.main_log}", file=sys.stderr)
         return 1
         
 

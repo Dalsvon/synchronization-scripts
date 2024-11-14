@@ -1,0 +1,10 @@
+# Flask app dependencies
+Flask==3.0.2
+python-crontab==3.2.0
+python-dotenv>=1.0.1
+
+# Synchronization scripts dependencies
+requests>=2.22.0
+firebase-admin>=6.0.0
+beautifulsoup4>=4.11.2
+psycopg2-binary>=2.9.10

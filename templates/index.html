@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Správce synchronizace pro obec Ořechov</title>
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='sync_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-bold text-xl text-gray-800">
+                    Správce synchronizace pro obec Ořechov
+                </div>
+                <div>
+                    <a href="{{ url_for('logout') }}" 
+                       class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                        Odhlásit se
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <div class="bg-white rounded-lg shadow-lg p-6">
+            <div class="mb-6">
+                <button onclick="refreshStatus()" 
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Zkontrolujte existenci skriptů
+                </button>
+            </div>
+
+            <div id="statusMessage" 
+                 class="mb-6 p-4 rounded-lg border {% if validation.valid %}bg-green-50 border-green-200 text-green-800{% else %}bg-yellow-50 border-yellow-200 text-yellow-800{% endif %}">
+                {{ validation.message }}
+            </div>
+
+            <!-- Scripts List -->
+            <div class="space-y-4">
+                {% for script in validation.scripts %}
+                <div id="script-border" class="border rounded-lg p-4 {% if script.enabled %}bg-gray-50{% else %}bg-gray-100{% endif %}">
+                    <div class="flex flex-col gap-4">
+                        <!-- Title and Status -->
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-lg font-semibold">{{ script.display_name }}</h3>
+                            <span class="status-badge inline-flex px-2 py-1 rounded-full text-sm font-medium w-fit
+                                       {% if script.status == 'Synchronizační skript nalezen' %}bg-green-100 text-green-800{% else %}bg-red-100 text-red-800{% endif %}">
+                                {{ script.status }}
+                            </span>
+                        </div>
+                        
+                        <!-- Schedule Selector -->
+                        <div class="flex items-center gap-2">
+                            <label class="text-gray-700 font-medium">Synchronizovat automaticky:</label>
+                            <select id="schedule-{{ script.name }}"
+                                    onchange="saveSchedule('{{ script.name }}')"
+                                    {% if not script.enabled %}disabled{% endif %}
+                                    class="shadow border rounded py-2 px-3 text-gray-700 leading-tight
+                                           focus:outline-none focus:ring-2 focus:ring-blue-500
+                                           disabled:opacity-50 disabled:cursor-not-allowed">
+                                {% for option in schedule_options %}
+                                <option value="{{ option }}"
+                                        {% if current_schedules[script.name] == option %}selected{% endif %}>
+                                    {{ option }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+                        <!-- Run Button -->
+                        <div>
+                            <button onclick="runScript('{{ script.name }}')"
+                                    {% if not script.enabled %}disabled{% endif %}
+                                    class="font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-500
+                                           {% if script.enabled %}
+                                           bg-green-500 hover:bg-green-600 text-white
+                                           {% else %}
+                                           bg-gray-300 text-gray-500 cursor-not-allowed
+                                           {% endif %}">
+                                {{ 'Spustit teď' if script.enabled else 'Nelze spustit' }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isRunning = false;
+
+        // Changes if the scripts can be run or be sheduled based on whether another script is already running
+        function updateControls() {
+            const scripts = document.querySelectorAll('div[id^="script-border"]');
+        
+            scripts.forEach(scriptDiv => {
+                const runButton = scriptDiv.querySelector('button[onclick^="runScript"]');
+                const scheduleSelect = scriptDiv.querySelector('select[id^="schedule-"]');
+                const statusBadge = scriptDiv.querySelector('.status-badge');
+                const isScriptFound = statusBadge.textContent.trim() === 'Synchronizační skript nalezen';
+
+                if (isRunning) {
+                    // If any script is running, disable all controls
+                    runButton.disabled = true;
+                    scheduleSelect.disabled = true;
+                    runButton.classList.add('opacity-50', 'cursor-not-allowed');
+                    scheduleSelect.classList.add('opacity-50', 'cursor-not-allowed');
+                } else {
+                    // When not running, enable controls for found scripts
+                    if (isScriptFound) {
+                        runButton.disabled = false;
+                        scheduleSelect.disabled = false;
+                        runButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                        scheduleSelect.classList.remove('opacity-50', 'cursor-not-allowed');
+                        runButton.textContent = 'Spustit teď';
+                        runButton.classList.remove('bg-gray-300', 'text-gray-500');
+                        runButton.classList.add('bg-green-500', 'hover:bg-green-600', 'text-white');
+                    }
+                }
+            });
+        }
+
+        // Returns status of all scripts and if they are runnable
+        async function refreshStatus() {
+            try {
+                const response = await fetch('/api/refresh', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    location.reload();
+                } else {
+                    showError(result.message);
+                }
+            } catch (error) {
+                showError('Chyba při obnovení statusu. Skuste refresh stránky.');
+            }
+        }
+
+        // Runs a script
+        async function runScript(scriptName) {
+            try {
+                isRunning = true;
+                updateControls();
+                updateStatusMessage(`Spouštění skriptu ${scriptName}...`, true);
+
+                const response = await fetch(`/api/run-script/${scriptName}`, {
+                    method: 'POST'
+                });
+                
+                const result = await response.json();
+                
+                isRunning = false;
+                updateControls();
+                
+                if (result.success) {
+                    updateStatusMessage(result.message, true);
+                } else {
+                    showError(result.message);
+                }
+            } catch (error) {
+                isRunning = false;
+                updateControls();
+                showError('Chyba při spuštění skriptu. Skuste refresh stránky.');
+            }
+        }
+
+        // Saves a cron schedule for a script
+        async function saveSchedule(scriptName) {
+            if (isRunning) {
+                showError('Počkejte na dokončení běžícího skriptu.');
+                return;
+            }
+
+            const select = document.getElementById(`schedule-${scriptName}`);
+            const schedule = select.value;
+            
+            try {
+                const response = await fetch(`/api/save-schedule/${scriptName}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ schedule: schedule })
+                });
+                
+                const result = await response.json();
+                if (result.success) {
+                    updateStatusMessage(result.message, true);
+                } else {
+                    showError(result.message);
+                }
+            } catch (error) {
+                showError('Chyba při ukládání plánu. Skuste refresh stránky.');
+            }
+        }
+
+        // Shows a message
+        function updateStatusMessage(message, success = true) {
+            const statusMessage = document.getElementById('statusMessage');
+            statusMessage.textContent = message;
+            statusMessage.className = `mb-6 p-4 rounded-lg border ${
+                success 
+                ? 'bg-green-50 border-green-200 text-green-800' 
+                : 'bg-red-50 border-red-200 text-red-800'
+            }`;
+        }
+
+        // Shows an error message
+        function showError(message) {
+            updateStatusMessage(message, false);
+        }
+    </script>
+</body>
+</html>
