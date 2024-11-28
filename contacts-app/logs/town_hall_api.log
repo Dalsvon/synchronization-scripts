@@ -165,3 +165,11 @@
 2024-11-27 23:00:08,451 - INFO - No changes detected in contacts
 2024-11-28 00:00:06,646 - INFO - Starting contact update process for contact_item/town_hall
 2024-11-28 00:00:08,562 - INFO - No changes detected in contacts
+2024-11-28 13:21:59,774 - INFO - Starting contact update process for contact_item/town_hall
+2024-11-28 13:22:01,974 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:01,974 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:08,514 - INFO - Starting contact update process for contact_item/town_hall
+2024-11-28 13:28:10,330 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:10,330 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:30:58,244 - INFO - Starting contact update process for contact_item/town_hall
+2024-11-28 13:30:59,946 - INFO - No changes detected in contacts

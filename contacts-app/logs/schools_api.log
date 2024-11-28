@@ -137,3 +137,11 @@
 2024-11-27 23:00:04,146 - INFO - No changes detected in contacts
 2024-11-28 00:00:02,145 - INFO - Starting contact update process for contact_item/school
 2024-11-28 00:00:04,591 - INFO - No changes detected in contacts
+2024-11-28 13:21:55,564 - INFO - Starting contact update process for contact_item/school
+2024-11-28 13:21:57,866 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:21:57,866 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:04,718 - INFO - Starting contact update process for contact_item/school
+2024-11-28 13:28:06,676 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:06,676 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:30:54,420 - INFO - Starting contact update process for contact_item/school
+2024-11-28 13:30:56,380 - INFO - No changes detected in contacts

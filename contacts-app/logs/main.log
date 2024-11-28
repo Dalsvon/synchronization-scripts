@@ -533,3 +533,43 @@
 2024-11-28 00:00:14,285 - INFO - Successfully updated contact_item/library (no changes)
 2024-11-28 00:00:16,253 - INFO - Successfully updated contact_item/doctors (no changes)
 2024-11-28 00:00:18,142 - INFO - Successfully updated contact_item/drug_store (no changes)
+2024-11-28 13:21:57,866 - ERROR - Error updating contact_item/school: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:21:57,867 - ERROR - The contacts from schools could not be updated.
+2024-11-28 13:21:59,774 - ERROR - Error updating contact_item/general: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:21:59,774 - ERROR - The contacts from general could not be updated.
+2024-11-28 13:22:01,974 - ERROR - Error updating contact_item/town_hall: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:01,974 - ERROR - The contacts from town_hall could not be updated.
+2024-11-28 13:22:04,219 - ERROR - Error updating contact_item/post_office: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:04,219 - ERROR - The contacts from post_office could not be updated.
+2024-11-28 13:22:05,890 - ERROR - Error updating contact_item/firemen: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:05,890 - ERROR - The contacts from firemen could not be updated.
+2024-11-28 13:22:07,563 - ERROR - Error updating contact_item/library: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:07,563 - ERROR - The contacts from library could not be updated.
+2024-11-28 13:22:09,451 - ERROR - Error updating contact_item/doctors: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:09,451 - ERROR - The contacts from doctors could not be updated.
+2024-11-28 13:22:11,591 - ERROR - Error updating contact_item/drug_store: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:11,591 - ERROR - The contacts from drug_store could not be updated.
+2024-11-28 13:28:06,676 - ERROR - Error updating contact_item/school: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:06,676 - ERROR - The contacts from schools could not be updated.
+2024-11-28 13:28:08,514 - ERROR - Error updating contact_item/general: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:08,514 - ERROR - The contacts from general could not be updated.
+2024-11-28 13:28:10,330 - ERROR - Error updating contact_item/town_hall: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:10,330 - ERROR - The contacts from town_hall could not be updated.
+2024-11-28 13:28:12,081 - ERROR - Error updating contact_item/post_office: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:12,081 - ERROR - The contacts from post_office could not be updated.
+2024-11-28 13:28:13,805 - ERROR - Error updating contact_item/firemen: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:13,805 - ERROR - The contacts from firemen could not be updated.
+2024-11-28 13:28:15,689 - ERROR - Error updating contact_item/library: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:15,689 - ERROR - The contacts from library could not be updated.
+2024-11-28 13:28:17,452 - ERROR - Error updating contact_item/doctors: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:17,452 - ERROR - The contacts from doctors could not be updated.
+2024-11-28 13:28:19,262 - ERROR - Error updating contact_item/drug_store: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:19,263 - ERROR - The contacts from drug_store could not be updated.
+2024-11-28 13:30:56,381 - INFO - Successfully updated contact_item/school (no changes)
+2024-11-28 13:30:58,244 - INFO - Successfully updated contact_item/general (no changes)
+2024-11-28 13:30:59,946 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-11-28 13:31:01,830 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-11-28 13:31:03,641 - INFO - Successfully updated contact_item/firemen (no changes)
+2024-11-28 13:31:05,579 - INFO - Successfully updated contact_item/library (no changes)
+2024-11-28 13:31:07,630 - INFO - Successfully updated contact_item/doctors (no changes)
+2024-11-28 13:31:09,205 - INFO - Successfully updated contact_item/drug_store (no changes)

@@ -131,3 +131,11 @@
 2024-11-27 23:00:12,114 - INFO - No changes detected in contacts
 2024-11-28 00:00:10,640 - INFO - Starting contact update process for contact_item/firemen
 2024-11-28 00:00:12,403 - INFO - No changes detected in contacts
+2024-11-28 13:22:04,219 - INFO - Starting contact update process for contact_item/firemen
+2024-11-28 13:22:05,890 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:05,890 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:12,081 - INFO - Starting contact update process for contact_item/firemen
+2024-11-28 13:28:13,805 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:13,805 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:31:01,830 - INFO - Starting contact update process for contact_item/firemen
+2024-11-28 13:31:03,641 - INFO - No changes detected in contacts

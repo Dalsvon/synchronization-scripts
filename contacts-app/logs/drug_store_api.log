@@ -128,3 +128,11 @@
 2024-11-27 23:00:17,619 - INFO - No changes detected in contacts
 2024-11-28 00:00:16,253 - INFO - Starting contact update process for contact_item/drug_store
 2024-11-28 00:00:18,142 - INFO - No changes detected in contacts
+2024-11-28 13:22:09,451 - INFO - Starting contact update process for contact_item/drug_store
+2024-11-28 13:22:11,591 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:22:11,591 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:17,453 - INFO - Starting contact update process for contact_item/drug_store
+2024-11-28 13:28:19,262 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:28:19,262 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:31:07,630 - INFO - Starting contact update process for contact_item/drug_store
+2024-11-28 13:31:09,205 - INFO - No changes detected in contacts
