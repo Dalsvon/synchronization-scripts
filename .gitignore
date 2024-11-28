@@ -1,4 +1,5 @@
 # Ignore all "key" folders
+**/key/
 
 # Ignore all .env files
 **/.env
