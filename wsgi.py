@@ -1,4 +1,4 @@
-"""import sys
+import sys
 import os
 
 # Get application directory
@@ -28,19 +28,5 @@ except ImportError:
 from app import app as application
 
 # Only run the development server if this file is run directly
-if __name__ == "__main__":
-    application.run()"""
-
-
-import sys
-import os
-
-# Get application directory
-app_dir = os.path.dirname(os.path.abspath(__file__))
-# Add application directory to Python path
-sys.path.insert(0, app_dir)
-
-from app import app as application
-
 if __name__ == "__main__":
     application.run()
