@@ -688,3 +688,11 @@
 2024-11-28 13:32:21,549 - INFO - Found 55 newspaper items
 2024-11-28 13:32:21,717 - INFO - No changes detected in newspapers data
 2024-11-28 13:32:21,717 - INFO - Synchronization completed successfully
+2024-11-28 13:36:07,250 - INFO - Starting synchronization process for newspapers
+2024-11-28 13:36:07,250 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-28 13:36:09,455 - INFO - Found 55 newspaper items
+2024-11-28 13:36:09,555 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:36:09,555 - INFO - New newspaper detected: 202402
+2024-11-28 13:36:09,590 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:36:09,590 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-28 13:36:09,590 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
