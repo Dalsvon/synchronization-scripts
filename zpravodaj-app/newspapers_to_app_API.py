@@ -273,7 +273,7 @@ def main():
         return 0
     except Exception as e:
         updater.logger.error(f"Synchronization error: {str(e)}")
-        print(f"Synchronizace selhala. Pro více informací si přečtěte log soubor na adrese {updater.logs_directory / updater.log_filename}", file=sys.stderr)
+        print(f"Synchronizace selhala. Pro více informací si přečtěte záznamový soubor na adrese {updater.logs_directory / updater.log_filename}", file=sys.stderr)
         return 1
 
 if __name__ == "__main__":

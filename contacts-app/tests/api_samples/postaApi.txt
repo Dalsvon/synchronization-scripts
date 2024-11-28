@@ -1,3 +1,1 @@
-https://www.orechovubrna.cz/api/posta/
-
 {"content":"**Po\u0161ta O\u0159echov u Brna**\r\nZahradn\u00ed 216\/1\r\n664 44 O\u0159echov\r\nTel.: +420 954 266 444\r\n \r\nOtev\u0159eno:\r\nPO\t10:00 - 12:00, 13:00 - 18:00\r\n\u00daT\t08:00 - 12:00, 13:00 - 16:00\r\nST\t10:00 - 12:00, 13:00 - 18:00\r\n\u010cT\t08:00 - 12:00, 13:00 - 16:00\r\nP\u00c1\t08:00 - 12:00, 13:00 - 16:00\r\nSO\tZav\u0159eno\r\nNE\tZav\u0159eno\r\n"}

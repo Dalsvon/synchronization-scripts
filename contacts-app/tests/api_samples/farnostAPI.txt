@@ -1,4 +1,0 @@
-https://www.orechovubrna.cz/api/farnost/
-
-
-{"content":"Spr\u00e1vce farnosti\r\n******\r\n**P. Ing. Jan Kot\u00edk**\r\nAdresa: Tikovick\u00e1 625\/24, 664 44 O\u0159echov\r\nTel.: +420 777 975 888 \r\nE-mail: orechov-vsechsvatych@dieceze.cz\r\nE-mail: orechov-jiri@dieceze.cz\r\n\r\n\u0158\u00edmskokatolick\u00e1 farnost u kostela V\u0161ech svat\u00fdch, O\u0159echov\r\n========\r\nAdresa farnosti: P\u00e1ralova 59\/20, 664 44 O\u0159echov\r\nI\u010c: 65265386\r\nBankovn\u00ed spojen\u00ed: 2978586309\/0800\r\n\r\n\u0158\u00edmskokatolick\u00e1 farnost u kostela sv. Ji\u0159\u00ed, O\u0159echov\r\n========\r\nAdresa farnosti: Tikovick\u00e1 625\/24, 664 44 O\u0159echov\r\nI\u010c: 65266285\r\nBankovn\u00ed spojen\u00ed: 3320732319\/0800\r\n\r\nV\u00edce informac\u00ed na adrese http:\/\/www.farnostorechov.cz\/"}

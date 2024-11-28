@@ -29,56 +29,63 @@ class SyncManager:
         "Jednou měsíčně": "0 0 1 * *",
         "Jednou ročně": "0 0 1 1 *"
     }
-    
-    SCRIPTS = [
-        ScriptInfo(
-            name='contacts_to_app_API.py',
-            subfolder='contacts-app',
-            display_name='Synchronizace kontaktů do mobilní aplikace Ořechova'
-        ),
-        ScriptInfo(
-            name='contacts_to_portal_obcana_API.py',
-            subfolder='contacts-portal-obcana',
-            display_name='Synchronizace kontaktů do Portálu občana Ořechova'
-        ),
-        ScriptInfo(
-            name='newspapers_to_app_API.py',
-            subfolder='zpravodaj-app',
-            display_name='Synchronizace Ořechovského zpravodaje do aplikace Ořechova'
-        ),
-        ScriptInfo(
-            name='documents_to_portal_obcana_API.py',
-            subfolder='documents-portal-obcana',
-            display_name='Synchronizace dokumentů do Portálu občana Ořechova'
-        )
-    ]
 
     def __init__(self):
         self.logger = self._setup_logging()
         self.scripts_folder = str(Path(__file__).parent)
-        self.config_file = os.path.expanduser("~/.sync_manager_config.json")
+        
+        self.config_folder = os.path.join(self.scripts_folder, 'config')
+        os.makedirs(self.config_folder, exist_ok=True)
+        self.config_file = os.path.join(self.config_folder, 'plan_config.json')
+        self.scripts_config_file = Path(os.path.join(self.config_folder, 'scripts_config.json'))
+        
+        # Load scripts configuration
+        self.SCRIPTS = self._load_scripts_config()
+        
         if not os.path.exists(self.config_file):
             self.config = self._remove_old_cron_commands()
             self.save_config()
         else:
-            self.config = self._load_config()
-
-    def _setup_logging(self) -> logging.Logger:
-        logger = logging.getLogger('sync_manager')
-        logger.setLevel(logging.INFO)
-        logger.handlers = []
+            self.config = self._load_plan_config()
+    
+    def _load_scripts_config(self) -> List[ScriptInfo]:
+        # Loads script names, folders and files
+        try:
+            if not self.scripts_config_file.exists():
+                self.logger.error(f"Konfigurační soubor skriptů nebyl nalezen: {self.scripts_config_file}")
+                raise FileNotFoundError(f"Konfigurační soubor skriptů nebyl nalezen: {self.scripts_config_file}")
         
-        handler = logging.StreamHandler()
-        file_handler = logging.FileHandler("sync_app.log", encoding='utf-8')
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        file_handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        logger.addHandler(file_handler)
+            # Explicitly specify UTF-8 encoding
+            with open(self.scripts_config_file, 'r', encoding='utf-8') as f:
+                config_data = json.load(f)
+                
+            if not isinstance(config_data, dict) or 'scripts' not in config_data:
+                raise ValueError("Neplatný formát konfiguračního souboru: chybí klíč 'scripts'")
+                
+            scripts = []
+            for script_data in config_data['scripts']:
+                required_fields = ['name', 'subfolder', 'display_name']
+                if not all(field in script_data for field in required_fields):
+                    missing_fields = [field for field in required_fields if field not in script_data]
+                    raise ValueError(f"V konfiguraci skriptu chybí povinná pole: {', '.join(missing_fields)}")
+                    
+                scripts.append(ScriptInfo(
+                    name=script_data['name'],
+                    subfolder=script_data['subfolder'],
+                    display_name=script_data['display_name']
+                    ))
+                
+            return scripts
+            
+        except json.JSONDecodeError as e:
+            self.logger.error(f"Failed to parse scripts configuration file: {e}")
+            raise ValueError(f"Chyba načítaní skriptů. Nevalidní JSON soubor: {e}")
+        except Exception as e:
+            self.logger.error(f"Error loading scripts configuration: {e}")
+            raise ValueError(f"Chyba načítaní skriptů: {e}")
         
-        return logger
-
-    def _load_config(self) -> dict:
+    def _load_plan_config(self) -> dict:
+        # Loads schedule plans for scripts
         try:
             with open(self.config_file, 'r') as f:
                 config = json.load(f)
@@ -86,6 +93,32 @@ class SyncManager:
         except Exception as e:
             self.logger.error(f"Failed to load config: {e}")
             raise ValueError(f"Chyba při hledání konfigurace: {e}.")
+
+    def _setup_logging(self) -> logging.Logger:
+        # Sets up logging
+        logger = logging.getLogger('sync_manager')
+        logger.setLevel(logging.INFO)
+        logger.handlers = []
+        
+        log_dir = '/var/log/sync_manager'
+        try:
+            if not os.path.exists(log_dir):
+                os.makedirs(log_dir, exist_ok=True)
+        except PermissionError:
+            log_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'logs')
+            os.makedirs(log_dir, exist_ok=True)
+        
+        log_file = os.path.join(log_dir, 'sync_app.log')
+        
+        handler = logging.StreamHandler()
+        file_handler = logging.FileHandler(log_file, encoding='utf-8')
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        file_handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.addHandler(file_handler)
+        
+        return logger
     
     def _remove_old_cron_commands(self) -> dict:
         # Creates a new config and resets cron jobs
@@ -234,8 +267,7 @@ class SyncManager:
             
         except subprocess.CalledProcessError as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
-            error_msg = e.stderr if e.stderr else "Nastala neznámá chyba během provádění skriptu."
-            raise RuntimeError(error_msg)
+            raise RuntimeError(f"Nastala neznámá chyba během provádění skriptu {script_name}.")
         
         except Exception as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
@@ -262,13 +294,15 @@ class SyncManager:
             cron = CronTab(user=True)
             schedule = self.SCHEDULE_OPTIONS[schedule_name]
             
+            venv_python = str(Path(self.scripts_folder) / 'venv' / 'bin' / 'python3')
+            
             for job in cron:
                 if script_path in str(job.command):
                     cron.remove(job)
             
             if schedule:
                 job = cron.new(
-                    command=f"python3 {script_path}",
+                    command=f"{venv_python} {script_path}",
                     comment=f"sync_manager_{script_name}"
                 )
                 job.setall(schedule)
@@ -299,8 +333,13 @@ def create_app():
     
     app = Flask(__name__)
     
-    app.secret_key = os.getenv('FLASK_SECRET_KEY')
-    app.permanent_session_lifetime = timedelta(hours=2)
+    app.config.update(
+        SECRET_KEY=os.getenv('FLASK_SECRET_KEY'),
+        SESSION_COOKIE_SECURE=True,
+        SESSION_COOKIE_HTTPONLY=True,
+        SESSION_COOKIE_SAMESITE='Lax',
+        PERMANENT_SESSION_LIFETIME=timedelta(hours=2),
+    )
     
     # Initialize SyncManager at app startup
     with app.app_context():
@@ -419,4 +458,5 @@ def save_schedule(script_name):
         }), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # In production, we'll use gunicorn instead of this
+    app.run(host='0.0.0.0', port=3002)

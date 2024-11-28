@@ -1,6 +1,3 @@
-https://www.orechovubrna.cz/api/kontakt/
-
-
 {"content":"**Obec O\u0159echov**\r\nZahradn\u00ed 216\/1\r\n664 44 O\u0159echov\r\n\r\nTel.: +420 547 225 131\r\nMobil: +420 731 414 473\r\n\r\nE-mail: obec@orechovubrna.cz\r\n\u00dadr\u017eba obce: udrzba@orechovubrna.cz\r\nID datov\u00e9 schr\u00e1nky:
 bmbbcae \r\n\r\nI\u010c: 00282278\r\nDI\u010c: CZ00282278\r\n\u010d.\u00fa.: FIO banka 2502224783\/2010\r\n\r\n**\u00da\u0159edn\u00ed hodiny:**\r\n Pond\u011bl\u00ed a st\u0159eda: 8:00 - 12:00 hod., 13:00 - 17:00 hod.\r\n \u00dater\u00fd a \u010dtvrtek:
 8:00 - 12:00 hod., 13:00 - 15:00 hod.\r\n P\u00e1tek: ZAV\u0158ENO\r\n\r\n.[stack]\r\n| **DUD\u00cdK Tom\u00e1\u0161**| starosta | +420 736 537 231 | starosta@orechovubrna.cz\r\n| **SMI\u0160T\u00cdK Pavel** | m\u00edstostarosta obce | +420 731 521 787

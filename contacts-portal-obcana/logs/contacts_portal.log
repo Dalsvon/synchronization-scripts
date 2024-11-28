@@ -1,140 +1,194 @@
-2024-11-10 01:27:45,291 - INFO - Starting contact data update process
-2024-11-10 01:27:45,291 - INFO - Checking if required database tables exist
-2024-11-10 01:27:45,308 - INFO - All required database tables exist
-2024-11-10 01:27:45,309 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 01:27:47,368 - INFO - Parsing of main contact was successful.
-2024-11-10 01:27:47,368 - INFO - Successfully parsed all contact data
-2024-11-10 01:27:47,368 - INFO - Found 3 office hours and 10 employees
-2024-11-10 01:27:47,368 - INFO - Starting database update
-2024-11-10 01:27:47,393 - INFO - Successfully updated contacts
-2024-11-10 01:27:47,393 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-10 01:27:47,393 - INFO - Contact data update completed successfully
-2024-11-10 01:45:00,611 - INFO - Starting contact data update process
-2024-11-10 01:45:00,611 - INFO - Checking if required database tables exist
-2024-11-10 01:45:00,628 - INFO - All required database tables exist
-2024-11-10 01:45:00,629 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 01:45:03,254 - INFO - Parsing of main contact was successful.
-2024-11-10 01:45:03,255 - INFO - Parsing of employee contacts was successful.
-2024-11-10 01:45:03,255 - INFO - Successfully parsed all contact data
-2024-11-10 01:45:03,255 - INFO - Found 3 office hours and 10 employees
-2024-11-10 01:45:03,255 - INFO - Starting database update
-2024-11-10 01:45:03,284 - INFO - Successfully updated contacts
-2024-11-10 01:45:03,285 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-10 01:45:03,285 - INFO - Contact data update completed successfully
-2024-11-10 01:46:43,577 - INFO - Starting contact data update process
-2024-11-10 01:46:43,578 - INFO - Checking if required database tables exist
-2024-11-10 01:46:43,593 - ERROR - Required table 'condasdastact' does not exist
-2024-11-10 01:46:43,595 - ERROR - Missing required tables: condasdastact
-2024-11-10 01:46:43,596 - ERROR - Unexpected error occurred: Missing required tables: condasdastact
-2024-11-10 01:46:43,596 - ERROR - Update of contacts failed: Missing required tables: condasdastact
-2024-11-10 01:47:29,558 - INFO - Starting contact data update process
-2024-11-10 01:47:29,558 - INFO - Checking if required database tables exist
-2024-11-10 01:47:29,572 - ERROR - Required table 'contacts' does not exist
-2024-11-10 01:47:29,574 - ERROR - Required table 'OfficeHousrs' does not exist
-2024-11-10 01:47:29,575 - ERROR - Missing required tables: contacts, OfficeHousrs
-2024-11-10 01:47:29,576 - ERROR - Unexpected error occurred: Missing required tables: contacts, OfficeHousrs
-2024-11-10 01:47:29,576 - ERROR - Update of contacts failed: Missing required tables: contacts, OfficeHousrs
-2024-11-10 16:03:17,452 - INFO - Starting contact data update process
-2024-11-10 16:03:17,453 - INFO - Checking if required database tables exist
-2024-11-10 16:03:17,496 - INFO - All required database tables exist
-2024-11-10 16:03:17,497 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 16:03:19,952 - INFO - Parsing of main contact was successful.
-2024-11-10 16:03:19,952 - INFO - Parsing of office hours was successful.
-2024-11-10 16:03:19,952 - INFO - Parsing of employee contacts was successful.
-2024-11-10 16:03:19,953 - INFO - Successfully parsed all contact data
-2024-11-10 16:03:19,953 - INFO - Found 3 office hours and 10 employees
-2024-11-10 16:03:19,953 - INFO - Starting database update
-2024-11-10 16:03:19,966 - ERROR - Database update failed: column "created_at" does not exist
-LINE 1: SELECT created_at FROM contact LIMIT 1
-               ^
-HINT:  Perhaps you meant to reference the column "contact.createdAt".
+2024-11-13 20:19:03,179 - INFO - Starting contact data update process
+2024-11-13 20:19:03,179 - INFO - Checking if required database tables exist
+2024-11-13 20:19:03,198 - INFO - All required database tables exist
+2024-11-13 20:19:03,199 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-13 20:19:04,935 - INFO - Parsing of main contact was successful.
+2024-11-13 20:19:04,935 - INFO - Parsing of office hours was successful.
+2024-11-13 20:19:04,935 - INFO - Parsing of employee contacts was successful.
+2024-11-13 20:19:04,935 - INFO - Successfully parsed all contact data
+2024-11-13 20:19:04,935 - INFO - Found 3 office hours and 10 employees
+2024-11-13 20:19:04,935 - INFO - Starting database update
+2024-11-13 20:19:04,965 - INFO - Successfully updated contact information
+2024-11-13 20:19:04,965 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-13 20:19:04,965 - INFO - Contact data update completed successfully
+2024-11-13 20:19:44,946 - INFO - Starting contact data update process
+2024-11-13 20:19:44,946 - INFO - Checking if required database tables exist
+2024-11-13 20:19:44,965 - INFO - All required database tables exist
+2024-11-13 20:19:44,966 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-13 20:19:46,816 - INFO - Parsing of main contact was successful.
+2024-11-13 20:19:46,816 - INFO - Parsing of office hours was successful.
+2024-11-13 20:19:46,816 - INFO - Parsing of employee contacts was successful.
+2024-11-13 20:19:46,817 - INFO - Successfully parsed all contact data
+2024-11-13 20:19:46,817 - INFO - Found 3 office hours and 10 employees
+2024-11-13 20:19:46,817 - INFO - Starting database update
+2024-11-13 20:19:46,848 - INFO - Successfully updated contact information
+2024-11-13 20:19:46,848 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-13 20:19:46,848 - INFO - Contact data update completed successfully
+2024-11-13 20:24:21,989 - INFO - Starting contact data update process
+2024-11-13 20:24:21,989 - INFO - Checking if required database tables exist
+2024-11-13 20:24:22,009 - INFO - All required database tables exist
+2024-11-13 20:24:22,010 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-13 20:24:23,755 - INFO - Parsing of main contact was successful.
+2024-11-13 20:24:23,756 - INFO - Parsing of office hours was successful.
+2024-11-13 20:24:23,756 - INFO - Parsing of employee contacts was successful.
+2024-11-13 20:24:23,756 - INFO - Successfully parsed all contact data
+2024-11-13 20:24:23,756 - INFO - Found 3 office hours and 10 employees
+2024-11-13 20:24:23,756 - INFO - Starting database update
+2024-11-13 20:24:23,787 - INFO - Successfully updated contact information
+2024-11-13 20:24:23,787 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-13 20:24:23,787 - INFO - Contact data update completed successfully
+2024-11-13 20:26:07,433 - INFO - Starting contact data update process
+2024-11-13 20:26:07,434 - INFO - Checking if required database tables exist
+2024-11-13 20:26:07,493 - INFO - All required database tables exist
+2024-11-13 20:26:07,494 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-13 20:26:09,088 - INFO - Parsing of main contact was successful.
+2024-11-13 20:26:09,088 - INFO - Parsing of office hours was successful.
+2024-11-13 20:26:09,088 - INFO - Parsing of employee contacts was successful.
+2024-11-13 20:26:09,088 - INFO - Successfully parsed all contact data
+2024-11-13 20:26:09,088 - INFO - Found 3 office hours and 10 employees
+2024-11-13 20:26:09,088 - INFO - Starting database update
+2024-11-13 20:26:09,119 - INFO - Successfully updated contact information
+2024-11-13 20:26:09,119 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-13 20:26:09,120 - INFO - Contact data update completed successfully
+2024-11-13 23:53:41,774 - INFO - Starting contact data update process
+2024-11-13 23:53:41,774 - INFO - Checking if required database tables exist
+2024-11-13 23:53:41,794 - INFO - All required database tables exist
+2024-11-13 23:53:41,795 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-13 23:53:43,585 - INFO - Parsing of main contact was successful.
+2024-11-13 23:53:43,585 - INFO - Parsing of office hours was successful.
+2024-11-13 23:53:43,585 - INFO - Parsing of employee contacts was successful.
+2024-11-13 23:53:43,585 - INFO - Successfully parsed all contact data
+2024-11-13 23:53:43,585 - INFO - Found 3 office hours and 10 employees
+2024-11-13 23:53:43,586 - INFO - Starting database update
+2024-11-13 23:53:43,619 - INFO - Successfully updated contact information
+2024-11-13 23:53:43,619 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-13 23:53:43,620 - INFO - Contact data update completed successfully
+2024-11-13 23:54:07,790 - INFO - Starting contact data update process
+2024-11-13 23:54:07,790 - INFO - Checking if required database tables exist
+2024-11-13 23:54:07,811 - INFO - All required database tables exist
+2024-11-13 23:54:07,812 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-13 23:54:09,840 - INFO - Parsing of main contact was successful.
+2024-11-13 23:54:09,840 - INFO - Parsing of office hours was successful.
+2024-11-13 23:54:09,841 - INFO - Parsing of employee contacts was successful.
+2024-11-13 23:54:09,841 - INFO - Successfully parsed all contact data
+2024-11-13 23:54:09,841 - INFO - Found 3 office hours and 10 employees
+2024-11-13 23:54:09,841 - INFO - Starting database update
+2024-11-13 23:54:09,868 - INFO - Successfully updated contact information
+2024-11-13 23:54:09,868 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-13 23:54:09,868 - INFO - Contact data update completed successfully
+2024-11-17 17:16:46,300 - INFO - Starting contact data update process
+2024-11-17 17:16:46,300 - INFO - Checking if required database tables exist
+2024-11-17 17:16:46,335 - INFO - All required database tables exist
+2024-11-17 17:16:46,336 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-17 17:16:48,821 - INFO - Parsing of main contact was successful.
+2024-11-17 17:16:48,821 - INFO - Parsing of office hours was successful.
+2024-11-17 17:16:48,821 - INFO - Parsing of employee contacts was successful.
+2024-11-17 17:16:48,821 - INFO - Successfully parsed all contact data
+2024-11-17 17:16:48,821 - INFO - Found 3 office hours and 10 employees
+2024-11-17 17:16:48,821 - INFO - Starting database update
+2024-11-17 17:16:48,838 - ERROR - Database update failed: column "data_id" of relation "contact" does not exist
+LINE 14:                                 data_id = 'bmbbcae 
+                                         ^
 
-2024-11-10 16:03:19,967 - ERROR - Database operation failed: column "created_at" does not exist
-LINE 1: SELECT created_at FROM contact LIMIT 1
-               ^
-HINT:  Perhaps you meant to reference the column "contact.createdAt".
+2024-11-17 17:16:48,838 - ERROR - Database operation failed: column "data_id" of relation "contact" does not exist
+LINE 14:                                 data_id = 'bmbbcae 
+                                         ^
 
-2024-11-10 16:03:19,967 - ERROR - Update of contacts failed: column "created_at" does not exist
-LINE 1: SELECT created_at FROM contact LIMIT 1
-               ^
-HINT:  Perhaps you meant to reference the column "contact.createdAt".
+2024-11-17 17:16:48,838 - ERROR - Update of contacts failed: column "data_id" of relation "contact" does not exist
+LINE 14:                                 data_id = 'bmbbcae 
+                                         ^
 
-2024-11-10 16:09:44,392 - INFO - Starting contact data update process
-2024-11-10 16:09:44,392 - INFO - Checking if required database tables exist
-2024-11-10 16:09:44,408 - INFO - All required database tables exist
-2024-11-10 16:09:44,409 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 16:09:46,456 - INFO - Parsing of main contact was successful.
-2024-11-10 16:09:46,457 - INFO - Parsing of office hours was successful.
-2024-11-10 16:09:46,457 - INFO - Parsing of employee contacts was successful.
-2024-11-10 16:09:46,457 - INFO - Successfully parsed all contact data
-2024-11-10 16:09:46,457 - INFO - Found 3 office hours and 10 employees
-2024-11-10 16:09:46,457 - INFO - Starting database update
-2024-11-10 16:09:46,470 - ERROR - Database update failed: column "createdat" does not exist
-LINE 1: SELECT createdAt FROM contact LIMIT 1
-               ^
-HINT:  Perhaps you meant to reference the column "contact.createdAt".
+2024-11-17 17:20:41,920 - INFO - Starting contact data update process
+2024-11-17 17:20:41,920 - INFO - Checking if required database tables exist
+2024-11-17 17:20:41,939 - INFO - All required database tables exist
+2024-11-17 17:20:41,940 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-17 17:20:43,596 - INFO - Parsing of main contact was successful.
+2024-11-17 17:20:43,597 - INFO - Parsing of office hours was successful.
+2024-11-17 17:20:43,597 - INFO - Parsing of employee contacts was successful.
+2024-11-17 17:20:43,597 - INFO - Successfully parsed all contact data
+2024-11-17 17:20:43,597 - INFO - Found 3 office hours and 10 employees
+2024-11-17 17:20:43,597 - INFO - Starting database update
+2024-11-17 17:20:43,616 - ERROR - Database update failed: 'dataId'
+2024-11-17 17:20:43,616 - ERROR - Unexpected error occurred: 'dataId'
+2024-11-17 17:20:43,616 - ERROR - Update of contacts failed: 'dataId'
+2024-11-17 17:21:47,020 - INFO - Starting contact data update process
+2024-11-17 17:21:47,020 - INFO - Checking if required database tables exist
+2024-11-17 17:21:47,039 - INFO - All required database tables exist
+2024-11-17 17:21:47,040 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-17 17:21:48,909 - INFO - Parsing of main contact was successful.
+2024-11-17 17:21:48,909 - INFO - Parsing of office hours was successful.
+2024-11-17 17:21:48,909 - INFO - Parsing of employee contacts was successful.
+2024-11-17 17:21:48,909 - INFO - Successfully parsed all contact data
+2024-11-17 17:21:48,909 - INFO - Found 3 office hours and 10 employees
+2024-11-17 17:21:48,910 - INFO - Starting database update
+2024-11-17 17:21:48,928 - ERROR - Database update failed: column "dataid" of relation "contact" does not exist
+LINE 14:                                 dataId = 'bmbbcae 
+                                         ^
 
-2024-11-10 16:09:46,470 - ERROR - Database operation failed: column "createdat" does not exist
-LINE 1: SELECT createdAt FROM contact LIMIT 1
-               ^
-HINT:  Perhaps you meant to reference the column "contact.createdAt".
+2024-11-17 17:21:48,928 - ERROR - Database operation failed: column "dataid" of relation "contact" does not exist
+LINE 14:                                 dataId = 'bmbbcae 
+                                         ^
 
-2024-11-10 16:09:46,470 - ERROR - Update of contacts failed: column "createdat" does not exist
-LINE 1: SELECT createdAt FROM contact LIMIT 1
-               ^
-HINT:  Perhaps you meant to reference the column "contact.createdAt".
+2024-11-17 17:21:48,928 - ERROR - Update of contacts failed: column "dataid" of relation "contact" does not exist
+LINE 14:                                 dataId = 'bmbbcae 
+                                         ^
 
-2024-11-10 16:12:23,024 - INFO - Starting contact data update process
-2024-11-10 16:12:23,025 - INFO - Checking if required database tables exist
-2024-11-10 16:12:23,040 - INFO - All required database tables exist
-2024-11-10 16:12:23,041 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 16:12:24,664 - INFO - Parsing of main contact was successful.
-2024-11-10 16:12:24,664 - INFO - Parsing of office hours was successful.
-2024-11-10 16:12:24,664 - INFO - Parsing of employee contacts was successful.
-2024-11-10 16:12:24,665 - INFO - Successfully parsed all contact data
-2024-11-10 16:12:24,665 - INFO - Found 3 office hours and 10 employees
-2024-11-10 16:12:24,665 - INFO - Starting database update
-2024-11-10 16:12:24,677 - INFO - Creating new contact record.
-2024-11-10 16:12:24,695 - INFO - Successfully updated contact information
-2024-11-10 16:12:24,695 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-10 16:12:24,696 - INFO - Contact data update completed successfully
-2024-11-10 16:28:24,043 - INFO - Starting contact data update process
-2024-11-10 16:28:24,043 - INFO - Checking if required database tables exist
-2024-11-10 16:28:24,063 - INFO - All required database tables exist
-2024-11-10 16:28:24,065 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 16:28:25,902 - INFO - Parsing of main contact was successful.
-2024-11-10 16:28:25,902 - INFO - Parsing of office hours was successful.
-2024-11-10 16:28:25,902 - INFO - Parsing of employee contacts was successful.
-2024-11-10 16:28:25,902 - INFO - Successfully parsed all contact data
-2024-11-10 16:28:25,902 - INFO - Found 3 office hours and 10 employees
-2024-11-10 16:28:25,902 - INFO - Starting database update
-2024-11-10 16:28:25,914 - INFO - Creating new contact record.
-2024-11-10 16:28:25,931 - INFO - Successfully updated contact information
-2024-11-10 16:28:25,932 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-10 16:28:25,932 - INFO - Contact data update completed successfully
-2024-11-10 17:20:22,154 - INFO - Starting contact data update process
-2024-11-10 17:20:22,154 - INFO - Checking if required database tables exist
-2024-11-10 17:20:22,193 - INFO - All required database tables exist
-2024-11-10 17:20:22,194 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 17:20:23,819 - INFO - Parsing of main contact was successful.
-2024-11-10 17:20:23,819 - INFO - Parsing of office hours was successful.
-2024-11-10 17:20:23,819 - INFO - Parsing of employee contacts was successful.
-2024-11-10 17:20:23,819 - INFO - Successfully parsed all contact data
-2024-11-10 17:20:23,819 - INFO - Found 3 office hours and 10 employees
-2024-11-10 17:20:23,819 - INFO - Starting database update
-2024-11-10 17:20:23,849 - INFO - Successfully updated contact information
-2024-11-10 17:20:23,849 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-10 17:20:23,849 - INFO - Contact data update completed successfully
-2024-11-10 20:42:37,991 - INFO - Starting contact data update process
-2024-11-10 20:42:37,992 - INFO - Checking if required database tables exist
-2024-11-10 20:42:38,028 - INFO - All required database tables exist
-2024-11-10 20:42:38,029 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
-2024-11-10 20:42:47,603 - INFO - Parsing of main contact was successful.
-2024-11-10 20:42:47,603 - INFO - Parsing of office hours was successful.
-2024-11-10 20:42:47,603 - INFO - Parsing of employee contacts was successful.
-2024-11-10 20:42:47,603 - INFO - Successfully parsed all contact data
-2024-11-10 20:42:47,603 - INFO - Found 3 office hours and 10 employees
-2024-11-10 20:42:47,603 - INFO - Starting database update
-2024-11-10 20:42:47,636 - INFO - Successfully updated contact information
-2024-11-10 20:42:47,637 - INFO - Updated or added 3 office hours and 10 employees
-2024-11-10 20:42:47,637 - INFO - Contact data update completed successfully
+2024-11-17 17:25:59,459 - INFO - Starting contact data update process
+2024-11-17 17:25:59,459 - INFO - Checking if required database tables exist
+2024-11-17 17:25:59,478 - INFO - All required database tables exist
+2024-11-17 17:25:59,479 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-17 17:26:01,289 - INFO - Parsing of main contact was successful.
+2024-11-17 17:26:01,289 - INFO - Parsing of office hours was successful.
+2024-11-17 17:26:01,289 - INFO - Parsing of employee contacts was successful.
+2024-11-17 17:26:01,289 - INFO - Successfully parsed all contact data
+2024-11-17 17:26:01,289 - INFO - Found 3 office hours and 10 employees
+2024-11-17 17:26:01,289 - INFO - Starting database update
+2024-11-17 17:26:01,310 - ERROR - Database update failed: column "bankaccount" of relation "contact" does not exist
+LINE 20:                                 bankAccount = 'FIO banka 250...
+                                         ^
+
+2024-11-17 17:26:01,310 - ERROR - Database operation failed: column "bankaccount" of relation "contact" does not exist
+LINE 20:                                 bankAccount = 'FIO banka 250...
+                                         ^
+
+2024-11-17 17:26:01,310 - ERROR - Update of contacts failed: column "bankaccount" of relation "contact" does not exist
+LINE 20:                                 bankAccount = 'FIO banka 250...
+                                         ^
+
+2024-11-17 17:26:51,504 - INFO - Starting contact data update process
+2024-11-17 17:26:51,504 - INFO - Checking if required database tables exist
+2024-11-17 17:26:51,524 - INFO - All required database tables exist
+2024-11-17 17:26:51,524 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-17 17:26:53,354 - INFO - Parsing of main contact was successful.
+2024-11-17 17:26:53,355 - INFO - Parsing of office hours was successful.
+2024-11-17 17:26:53,355 - INFO - Parsing of employee contacts was successful.
+2024-11-17 17:26:53,355 - INFO - Successfully parsed all contact data
+2024-11-17 17:26:53,355 - INFO - Found 3 office hours and 10 employees
+2024-11-17 17:26:53,355 - INFO - Starting database update
+2024-11-17 17:26:53,386 - INFO - Successfully updated contact information
+2024-11-17 17:26:53,387 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-17 17:26:53,387 - INFO - Contact data update completed successfully
+2024-11-27 16:25:18,425 - INFO - Starting contact data update process
+2024-11-27 16:25:18,426 - INFO - Checking if required database tables exist
+2024-11-27 16:25:18,427 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-27 16:25:18,427 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-27 16:28:30,573 - INFO - Starting contact data update process
+2024-11-27 16:28:30,573 - INFO - Checking if required database tables exist
+2024-11-27 16:28:30,574 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-27 16:28:30,574 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-27 16:28:43,316 - INFO - Starting contact data update process
+2024-11-27 16:28:43,316 - INFO - Checking if required database tables exist
+2024-11-27 16:28:43,317 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-11-27 16:28:43,317 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+

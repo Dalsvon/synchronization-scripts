@@ -42,3 +42,92 @@
 2024-11-13 18:43:35,034 - INFO - No changes detected in contacts
 2024-11-13 23:59:52,206 - INFO - Starting contact update process for contact_item/firemen
 2024-11-13 23:59:54,195 - INFO - No changes detected in contacts
+2024-11-19 02:10:14,730 - INFO - Starting contact update process for contact_item/firemen
+2024-11-19 02:10:16,597 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:10:16,597 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:15:04,595 - INFO - Starting contact update process for contact_item/firemen
+2024-11-19 02:15:06,727 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:15:06,727 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:22:07,761 - INFO - Starting contact update process for contact_item/firemen
+2024-11-19 02:22:09,911 - INFO - No changes detected in contacts
+2024-11-19 12:42:18,767 - INFO - Starting contact update process for contact_item/firemen
+2024-11-19 12:42:20,498 - INFO - No changes detected in contacts
+2024-11-24 11:56:40,802 - INFO - Starting contact update process for contact_item/firemen
+2024-11-24 11:56:42,809 - INFO - No changes detected in contacts
+2024-11-24 12:04:51,282 - INFO - Starting contact update process for contact_item/firemen
+2024-11-24 12:04:53,013 - INFO - No changes detected in contacts
+2024-11-25 13:15:42,543 - INFO - Starting contact update process for contact_item/firemen
+2024-11-25 13:15:44,435 - INFO - Modified contact: Sbor dobrovolných hasičů Ořechov
+2024-11-25 13:15:44,435 - INFO - Changes summary:
+2024-11-25 13:15:44,435 - INFO - Modified contacts: ["Sbor dobrovolných hasičů Ořechov"]
+2024-11-25 13:15:44,484 - INFO - Successfully updated contacts at 2024-11-25T13:15:44.484666
+2024-11-25 22:41:49,709 - INFO - Starting contact update process for contact_item/firemen
+2024-11-25 22:41:51,515 - INFO - No changes detected in contacts
+2024-11-25 22:47:21,033 - INFO - Starting contact update process for contact_item/firemen
+2024-11-25 22:47:22,864 - INFO - No changes detected in contacts
+2024-11-25 22:56:47,823 - INFO - Starting contact update process for contact_item/firemen
+2024-11-25 22:56:49,800 - INFO - No changes detected in contacts
+2024-11-25 23:00:15,005 - INFO - Starting contact update process for contact_item/firemen
+2024-11-25 23:00:16,653 - INFO - No changes detected in contacts
+2024-11-25 23:16:43,747 - INFO - Starting contact update process for contact_item/firemen
+2024-11-25 23:16:45,767 - INFO - No changes detected in contacts
+2024-11-25 23:28:09,770 - INFO - Starting contact update process for contact_item/firemen
+2024-11-25 23:28:11,325 - INFO - No changes detected in contacts
+2024-11-26 00:00:09,534 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 00:00:11,252 - INFO - No changes detected in contacts
+2024-11-26 11:00:09,730 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 11:00:11,824 - INFO - No changes detected in contacts
+2024-11-26 11:19:42,303 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 11:19:45,197 - INFO - No changes detected in contacts
+2024-11-26 12:00:11,122 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 12:00:12,928 - INFO - No changes detected in contacts
+2024-11-26 13:00:10,587 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 13:00:12,488 - INFO - No changes detected in contacts
+2024-11-26 14:00:10,728 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 14:00:12,570 - INFO - No changes detected in contacts
+2024-11-26 15:00:10,471 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 15:00:12,189 - INFO - No changes detected in contacts
+2024-11-26 16:00:11,994 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 16:00:14,504 - INFO - No changes detected in contacts
+2024-11-26 17:00:10,184 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 17:00:12,015 - INFO - No changes detected in contacts
+2024-11-26 18:00:10,894 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 18:00:12,820 - INFO - No changes detected in contacts
+2024-11-26 19:00:10,788 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 19:00:12,549 - INFO - No changes detected in contacts
+2024-11-26 20:00:10,675 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 20:00:12,539 - INFO - No changes detected in contacts
+2024-11-26 21:00:58,740 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 21:01:10,320 - INFO - No changes detected in contacts
+2024-11-26 22:00:10,895 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 22:00:13,003 - INFO - No changes detected in contacts
+2024-11-26 23:00:11,132 - INFO - Starting contact update process for contact_item/firemen
+2024-11-26 23:00:12,683 - INFO - No changes detected in contacts
+2024-11-27 12:00:22,370 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 12:00:25,698 - INFO - No changes detected in contacts
+2024-11-27 12:49:07,115 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 12:49:08,941 - INFO - No changes detected in contacts
+2024-11-27 13:00:19,534 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 13:00:22,368 - INFO - No changes detected in contacts
+2024-11-27 14:00:10,441 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 14:00:12,357 - INFO - No changes detected in contacts
+2024-11-27 15:00:10,087 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 15:00:12,067 - INFO - No changes detected in contacts
+2024-11-27 16:00:11,421 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 16:00:13,515 - INFO - No changes detected in contacts
+2024-11-27 17:00:11,269 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 17:00:13,596 - INFO - No changes detected in contacts
+2024-11-27 18:00:10,995 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 18:00:13,109 - INFO - No changes detected in contacts
+2024-11-27 19:00:10,453 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 19:00:12,391 - INFO - No changes detected in contacts
+2024-11-27 20:00:10,313 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 20:00:11,951 - INFO - No changes detected in contacts
+2024-11-27 21:00:45,087 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 21:00:57,191 - INFO - No changes detected in contacts
+2024-11-27 22:00:11,399 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 22:00:13,340 - INFO - No changes detected in contacts
+2024-11-27 23:00:10,373 - INFO - Starting contact update process for contact_item/firemen
+2024-11-27 23:00:12,114 - INFO - No changes detected in contacts
+2024-11-28 00:00:10,640 - INFO - Starting contact update process for contact_item/firemen
+2024-11-28 00:00:12,403 - INFO - No changes detected in contacts

@@ -7,7 +7,7 @@ import logging
 import sys
 import importlib.util
 import re
-from contacts_to_app import ConfigLoader, ContactDataUpdater, setup_main_logger
+from contacts_to_app_API import ConfigLoader, ContactDataUpdater, setup_main_logger
 from contact_item import ContactItem
 from parsers import *
 
@@ -19,8 +19,8 @@ class TestParsers(unittest.TestCase):
         # Load sample API responses
         self.api_responses = {}
         api_files = [
-            'farnostAPI.txt', 'hasiciAPI.txt', 'knihovnaApi.txt',
-            'lekariAPI.txt', 'PostaApi.txt', 'skolyApi.txt', 'testAPI.txt'
+            'hasiciApi.txt', 'knihovnaApi.txt', 'lekariApi.txt',
+            'postaApi.txt', 'skolyApi.txt', 'generalApi.txt'
         ]
         
         for file in api_files:
@@ -57,7 +57,7 @@ class TestParsers(unittest.TestCase):
             parse_school_data("Invalid content", self.mock_main_logger, self.mock_logger)
 
     def test_parse_general_contact_valid(self):
-        result = parse_general_contact(self.api_responses['testAPI.txt'],
+        result = parse_general_contact(self.api_responses['generalApi.txt'],
                                      self.mock_main_logger,
                                      self.mock_logger)
         
@@ -71,9 +71,59 @@ class TestParsers(unittest.TestCase):
     def test_parse_general_contact_empty(self):
         with self.assertRaises(ValueError):
             parse_general_contact("", self.mock_main_logger, self.mock_logger)
+    
+    def test_parse_town_hall_contact_valid(self):
+        result = parse_town_hall_contact(self.api_responses['generalApi.txt'],
+                                       self.mock_main_logger,
+                                       self.mock_logger)
+        
+        # Check that we got the expected number of contacts
+        self.assertTrue(len(result) > 0, "Should have found at least one town hall contact")
+        
+        # Test for specific known contacts
+        expected_contacts = {
+            "DUDÍK Tomáš": {
+                "subtitle": "starosta",
+                "phone": "+420 736 537 231",
+                "mail": "starosta@orechovubrna.cz"
+            },
+            "HRUBÁ Ivona": {
+                "subtitle": "evidence obyvatel",
+                "phone": "+420 547 225 131",
+                "mail": "ekonom@orechovubrna.cz"
+            }
+        }
+        
+        # Create a dictionary of results for easier lookup
+        result_dict = {contact.title: contact for contact in result}
+        
+        # Test each expected contact
+        for name, expected_data in expected_contacts.items():
+            self.assertIn(name, result_dict, f"Contact {name} should be present")
+            contact = result_dict[name]
+            self.assertEqual(contact.subtitle, expected_data["subtitle"],
+                           f"Wrong subtitle for {name}")
+            self.assertEqual(contact.phone, expected_data["phone"],
+                           f"Wrong phone for {name}")
+            self.assertEqual(contact.mail, expected_data["mail"],
+                           f"Wrong email for {name}")
+
+    def test_parse_town_hall_contact_empty(self):
+        with self.assertRaises(ValueError):
+            parse_town_hall_contact("", self.mock_main_logger, self.mock_logger)
+
+    def test_parse_town_hall_contact_invalid(self):
+        invalid_data = "**Some Title**\nInvalid content without proper structure"
+        with self.assertRaises(ValueError):
+            parse_town_hall_contact(invalid_data, self.mock_main_logger, self.mock_logger)
+
+    def test_parse_town_hall_contact_malformed(self):
+        malformed_data = "| **Name** | Position | Invalid phone Invalid email"
+        with self.assertRaises(ValueError):
+            parse_town_hall_contact(malformed_data, self.mock_main_logger, self.mock_logger)
 
     def test_parse_post_office_data_valid(self):
-        result = parse_post_office_data(self.api_responses['PostaApi.txt'],
+        result = parse_post_office_data(self.api_responses['postaApi.txt'],
                                       self.mock_main_logger,
                                       self.mock_logger)
         
@@ -83,7 +133,7 @@ class TestParsers(unittest.TestCase):
         self.assertTrue("Zahradní" in result[0].address and "216/1" in result[0].address)
 
     def test_parse_firemen_data_valid(self):
-        result = parse_firemen_data(self.api_responses['hasiciAPI.txt'],
+        result = parse_firemen_data(self.api_responses['hasiciApi.txt'],
                                   self.mock_main_logger,
                                   self.mock_logger)
         
@@ -103,7 +153,7 @@ class TestParsers(unittest.TestCase):
         self.assertEqual(result[0].phone, "+420 732 822 748")
 
     def test_parse_doctors_data_valid(self):
-        result = parse_doctors_data(self.api_responses['lekariAPI.txt'],
+        result = parse_doctors_data(self.api_responses['lekariApi.txt'],
                                   self.mock_main_logger,
                                   self.mock_logger)
         
@@ -113,7 +163,7 @@ class TestParsers(unittest.TestCase):
             self.assertTrue(doctor.title and doctor.subtitle)  # Ensure basic fields are present
 
     def test_parse_drug_store_data_valid(self):
-        result = parse_drug_store_data(self.api_responses['lekariAPI.txt'],
+        result = parse_drug_store_data(self.api_responses['lekariApi.txt'],
                                      self.mock_main_logger,
                                      self.mock_logger)
         
@@ -299,6 +349,60 @@ class TestContactsToApp(unittest.TestCase):
         result = self.updater.fetch_contact_data()
         self.assertIsNone(result)
         self.updater.logger.error.assert_called_once()
+    
+    @patch('requests.get')
+    def test_fetch_contact_data_missing_content(self, mock_get):
+        # Setup mock response with missing 'content' field
+        mock_response = Mock()
+        mock_response.json.return_value = {'data': 'test data', 'status': 'ok'}
+        mock_get.return_value = mock_response
+        
+        self.updater.data_config = {'api_url': 'http://test.url'}
+        self.updater.logger = Mock(spec=logging.Logger)
+        
+        # Test the fetch_contact_data method
+        result = self.updater.fetch_contact_data()
+        
+        # Verify results
+        self.assertIsNone(result)
+        self.updater.logger.error.assert_called_once()
+        self.assertTrue(any('Failed to fetch contact data' in str(call) for call in self.updater.logger.error.call_args_list))
+
+    @patch('requests.get')
+    def test_fetch_contact_data_empty_response(self, mock_get):
+        # Setup mock response with empty response
+        mock_response = Mock()
+        mock_response.json.return_value = {}
+        mock_get.return_value = mock_response
+        
+        self.updater.data_config = {'api_url': 'http://test.url'}
+        self.updater.logger = Mock(spec=logging.Logger)
+        
+        # Test the fetch_contact_data method
+        result = self.updater.fetch_contact_data()
+        
+        # Verify results
+        self.assertIsNone(result)
+        self.updater.logger.error.assert_called_once()
+        self.assertTrue(any('Failed to fetch contact data' in str(call) for call in self.updater.logger.error.call_args_list))
+
+    @patch('requests.get')
+    def test_fetch_contact_data_malformed_json(self, mock_get):
+        # Setup mock response with malformed JSON
+        mock_response = Mock()
+        mock_response.json.side_effect = json.JSONDecodeError('Malformed JSON', '', 0)
+        mock_get.return_value = mock_response
+        
+        self.updater.data_config = {'api_url': 'http://test.url'}
+        self.updater.logger = Mock(spec=logging.Logger)
+        
+        # Test the fetch_contact_data method
+        result = self.updater.fetch_contact_data()
+        
+        # Verify results
+        self.assertIsNone(result)
+        self.updater.logger.error.assert_called_once()
+        self.assertTrue(any('Failed to fetch contact data' in str(call) for call in self.updater.logger.error.call_args_list))
 
     @patch('firebase_admin.db.reference')
     def test_update_contacts_new_data(self, mock_db_ref):
@@ -311,19 +415,39 @@ class TestContactsToApp(unittest.TestCase):
         existing_contacts = [None]
         
         self.updater.data_config = {'firebase_route': 'test/route'}
-        self.updater.logger = Mock(spec=logging.Logger)  # Ensure logger is set
+        self.updater.logger = Mock(spec=logging.Logger)
+        
         result = self.updater.update_contacts(new_contacts, existing_contacts)
+        
+        # Verify the operation succeeded
         self.assertTrue(result)
+        
+        # Verify set() was called once
         mock_ref.set.assert_called_once()
+        
+        # Get what was actually passed to set()
+        actual_data = mock_ref.set.call_args[0][0]
+        
+        # Verify the structure and content
+        self.assertIsInstance(actual_data, list)
+        self.assertEqual(len(actual_data), 2)  # [None, contact_data]
+        self.assertIsNone(actual_data[0])
+        
+        # Verify the contact data
+        contact_data = actual_data[1]
+        self.assertEqual(contact_data['title'], "Test Contact")
+        self.assertEqual(contact_data['phone'], "123456789")
 
     @patch('firebase_admin.db.reference')
     def test_update_contacts_modified_data(self, mock_db_ref):
         mock_ref = Mock()
         mock_db_ref.return_value = mock_ref
         
+        # New contact data with updated email
         new_contacts = [
             ContactItem(title="Test Contact", phone="123456789", mail="new@test.com")
         ]
+        # Existing data in database
         existing_contacts = [None, {
             'title': "Test Contact",
             'phone': "123456789",
@@ -331,10 +455,32 @@ class TestContactsToApp(unittest.TestCase):
         }]
         
         self.updater.data_config = {'firebase_route': 'test/route'}
-        self.updater.logger = Mock(spec=logging.Logger)  # Ensure logger is set
+        self.updater.logger = Mock(spec=logging.Logger)
+        
         result = self.updater.update_contacts(new_contacts, existing_contacts)
+        
+        # Verify the operation succeeded
         self.assertTrue(result)
+        
+        # Verify set() was called once
         mock_ref.set.assert_called_once()
+        
+        # Get what was actually passed to set()
+        actual_data = mock_ref.set.call_args[0][0]
+        
+        # Verify the structure
+        self.assertIsInstance(actual_data, list)
+        self.assertEqual(len(actual_data), 2)
+        self.assertIsNone(actual_data[0])
+        
+        # Verify the contact data
+        updated_contact = actual_data[1]
+        self.assertEqual(updated_contact['title'], "Test Contact")
+        self.assertEqual(updated_contact['phone'], "123456789")
+        self.assertEqual(updated_contact['mail'], "new@test.com")
+        
+        # Verify the logger recorded the modification
+        self.updater.logger.info.assert_any_call("Modified contact: Test Contact")
 
     def test_setup_main_logger(self):
         with patch('logging.FileHandler'):

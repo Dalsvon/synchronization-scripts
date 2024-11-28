@@ -165,14 +165,11 @@ class ContactDataUpdater:
             raise ValueError(f"Failed to fetch existing contacts: {e}")
 
     def update_contacts(self, new_contacts, existing_contacts):
-        """
-        Update contacts in Firebase, preserving additional fields for existing contacts
-        but removing contacts that are not in the API response.
-        """
+        # Update contacts in Firebase, preserving additional fields for existing contacts
+        # but removing contacts that are not in the API response.
         ref = db.reference(self.data_config['firebase_route'])
         new_data_list = [contact.to_dict() for contact in new_contacts]
         
-        # Create dictionaries with title as key
         existing_dict = {item.get('title'): item for item in (existing_contacts[1:] if existing_contacts else [])}
         new_dict = {item.get('title'): item for item in new_data_list}
         
@@ -326,7 +323,7 @@ Pro více informací si přečtěte log soubor na adrese {config_loader.main_log
                 
     except Exception as e:
         main_logger.error(f"Error during update of database: {str(e)}")
-        print(f"Synchronizace selhala. Pro více informací si přečtěte log soubor na adrese {config_loader.main_log}", file=sys.stderr)
+        print(f"Synchronizace selhala. Pro více informací si přečtěte záznamový soubor na adrese {config_loader.main_log}", file=sys.stderr)
         return 1
         
 

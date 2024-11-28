@@ -1,0 +1,24 @@
+{
+    "scripts": [
+      {
+        "name": "contacts_to_app_API.py",
+        "subfolder": "contacts-app",
+        "display_name": "Synchronizace kontaktů do mobilní aplikace Ořechova"
+      },
+      {
+        "name": "contacts_to_portal_obcana_API.py", 
+        "subfolder": "contacts-portal-obcana",
+        "display_name": "Synchronizace kontaktů do Portálu občana Ořechova"
+      },
+      {
+        "name": "newspapers_to_app_API.py",
+        "subfolder": "zpravodaj-app", 
+        "display_name": "Synchronizace Ořechovského zpravodaje do aplikace Ořechova"
+      },
+      {
+        "name": "documents_to_portal_obcana_API.py",
+        "subfolder": "documents-portal-obcana",
+        "display_name": "Synchronizace dokumentů do Portálu občana Ořechova"
+      }
+    ]
+  }

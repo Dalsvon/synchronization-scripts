@@ -33,3 +33,653 @@
 2024-11-09 00:04:44,084 - INFO - Found 55 newspaper items
 2024-11-09 00:04:44,321 - INFO - No changes detected in newspapers data
 2024-11-09 00:04:44,321 - INFO - Synchronization completed successfully
+2024-11-12 12:41:58,614 - INFO - Starting synchronization process for newspapers
+2024-11-12 12:41:58,615 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-12 12:42:01,160 - INFO - Found 55 newspaper items
+2024-11-12 12:42:01,393 - INFO - No changes detected in newspapers data
+2024-11-12 12:42:01,393 - INFO - Synchronization completed successfully
+2024-11-12 12:55:40,945 - INFO - Starting synchronization process for newspapers
+2024-11-12 12:55:40,945 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-12 12:55:44,047 - INFO - Found 55 newspaper items
+2024-11-12 12:55:44,202 - INFO - No changes detected in newspapers data
+2024-11-12 12:55:44,202 - INFO - Synchronization completed successfully
+2024-11-12 12:55:44,383 - INFO - Starting synchronization process for newspapers
+2024-11-12 12:55:44,383 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-12 12:55:46,997 - INFO - Found 55 newspaper items
+2024-11-12 12:55:47,156 - INFO - No changes detected in newspapers data
+2024-11-12 12:55:47,157 - INFO - Synchronization completed successfully
+2024-11-12 19:31:14,656 - ERROR - Synchronization error: dsad
+2024-11-12 19:58:23,035 - ERROR - Synchronization error: dsad
+2024-11-12 21:08:22,980 - INFO - Starting synchronization process for newspapers
+2024-11-12 21:08:22,980 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-12 21:08:26,481 - INFO - Found 55 newspaper items
+2024-11-12 21:08:26,748 - INFO - No changes detected in newspapers data
+2024-11-12 21:08:26,748 - INFO - Synchronization completed successfully
+2024-11-12 21:09:35,074 - ERROR - Synchronization error: dsadasd
+2024-11-12 21:38:33,847 - ERROR - Synchronization error: dsadasd
+2024-11-12 23:27:06,578 - INFO - Starting synchronization process for newspapers
+2024-11-12 23:27:06,578 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-12 23:27:09,034 - INFO - Found 55 newspaper items
+2024-11-12 23:27:09,211 - INFO - No changes detected in newspapers data
+2024-11-12 23:27:09,211 - INFO - Synchronization completed successfully
+2024-11-13 03:52:07,384 - INFO - Starting synchronization process for newspapers
+2024-11-13 03:52:07,385 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 03:52:10,516 - INFO - Found 55 newspaper items
+2024-11-13 03:52:10,750 - INFO - No changes detected in newspapers data
+2024-11-13 03:52:10,750 - INFO - Synchronization completed successfully
+2024-11-13 03:53:02,674 - INFO - Starting synchronization process for newspapers
+2024-11-13 03:53:02,674 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 03:53:05,442 - INFO - Found 55 newspaper items
+2024-11-13 03:53:05,622 - INFO - No changes detected in newspapers data
+2024-11-13 03:53:05,623 - INFO - Synchronization completed successfully
+2024-11-13 03:55:31,096 - INFO - Starting synchronization process for newspapers
+2024-11-13 03:55:31,096 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 03:55:33,577 - INFO - Found 55 newspaper items
+2024-11-13 03:55:33,762 - INFO - No changes detected in newspapers data
+2024-11-13 03:55:33,762 - INFO - Synchronization completed successfully
+2024-11-13 14:16:31,080 - INFO - Starting synchronization process for newspapers
+2024-11-13 14:16:31,080 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 14:16:33,629 - INFO - Found 55 newspaper items
+2024-11-13 14:16:33,866 - INFO - No changes detected in newspapers data
+2024-11-13 14:16:33,866 - INFO - Synchronization completed successfully
+2024-11-13 16:06:48,236 - INFO - Starting synchronization process for newspapers
+2024-11-13 16:06:48,236 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 16:06:50,816 - INFO - Found 55 newspaper items
+2024-11-13 16:06:51,052 - INFO - No changes detected in newspapers data
+2024-11-13 16:06:51,052 - INFO - Synchronization completed successfully
+2024-11-13 16:31:54,834 - INFO - Starting synchronization process for newspapers
+2024-11-13 16:31:54,834 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 16:31:57,223 - INFO - Found 55 newspaper items
+2024-11-13 16:31:57,393 - INFO - No changes detected in newspapers data
+2024-11-13 16:31:57,393 - INFO - Synchronization completed successfully
+2024-11-13 17:00:01,767 - INFO - Starting synchronization process for newspapers
+2024-11-13 17:00:01,767 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 17:00:04,747 - INFO - Found 55 newspaper items
+2024-11-13 17:00:04,983 - INFO - No changes detected in newspapers data
+2024-11-13 17:00:04,983 - INFO - Synchronization completed successfully
+2024-11-13 18:00:01,250 - INFO - Starting synchronization process for newspapers
+2024-11-13 18:00:01,251 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 18:00:04,090 - INFO - Found 55 newspaper items
+2024-11-13 18:00:04,321 - INFO - No changes detected in newspapers data
+2024-11-13 18:00:04,322 - INFO - Synchronization completed successfully
+2024-11-13 19:00:01,559 - INFO - Starting synchronization process for newspapers
+2024-11-13 19:00:01,559 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 19:00:04,215 - INFO - Found 55 newspaper items
+2024-11-13 19:00:04,447 - INFO - No changes detected in newspapers data
+2024-11-13 19:00:04,447 - INFO - Synchronization completed successfully
+2024-11-13 19:50:05,870 - INFO - Starting synchronization process for newspapers
+2024-11-13 19:50:05,871 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 19:50:08,681 - INFO - Found 55 newspaper items
+2024-11-13 19:50:08,925 - INFO - No changes detected in newspapers data
+2024-11-13 19:50:08,925 - INFO - Synchronization completed successfully
+2024-11-13 20:00:01,757 - INFO - Starting synchronization process for newspapers
+2024-11-13 20:00:01,757 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 20:00:04,656 - INFO - Found 55 newspaper items
+2024-11-13 20:00:04,893 - INFO - No changes detected in newspapers data
+2024-11-13 20:00:04,893 - INFO - Synchronization completed successfully
+2024-11-13 21:00:02,228 - INFO - Starting synchronization process for newspapers
+2024-11-13 21:00:02,229 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 21:00:13,203 - INFO - Found 55 newspaper items
+2024-11-13 21:00:13,446 - INFO - No changes detected in newspapers data
+2024-11-13 21:00:13,446 - INFO - Synchronization completed successfully
+2024-11-13 22:00:01,695 - INFO - Starting synchronization process for newspapers
+2024-11-13 22:00:01,695 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 22:00:04,280 - INFO - Found 55 newspaper items
+2024-11-13 22:00:04,582 - INFO - No changes detected in newspapers data
+2024-11-13 22:00:04,582 - INFO - Synchronization completed successfully
+2024-11-13 23:00:01,848 - INFO - Starting synchronization process for newspapers
+2024-11-13 23:00:01,848 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 23:00:04,516 - INFO - Found 55 newspaper items
+2024-11-13 23:00:04,765 - INFO - No changes detected in newspapers data
+2024-11-13 23:00:04,765 - INFO - Synchronization completed successfully
+2024-11-13 23:54:12,794 - INFO - Starting synchronization process for newspapers
+2024-11-13 23:54:12,794 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-13 23:54:15,298 - INFO - Found 55 newspaper items
+2024-11-13 23:54:15,526 - INFO - No changes detected in newspapers data
+2024-11-13 23:54:15,526 - INFO - Synchronization completed successfully
+2024-11-14 00:00:02,083 - INFO - Starting synchronization process for newspapers
+2024-11-14 00:00:02,083 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-14 00:00:09,487 - INFO - Found 55 newspaper items
+2024-11-14 00:00:09,654 - INFO - No changes detected in newspapers data
+2024-11-14 00:00:09,654 - INFO - Synchronization completed successfully
+2024-11-14 01:00:01,498 - INFO - Starting synchronization process for newspapers
+2024-11-14 01:00:01,499 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-14 01:00:03,921 - INFO - Found 55 newspaper items
+2024-11-14 01:00:04,152 - INFO - No changes detected in newspapers data
+2024-11-14 01:00:04,152 - INFO - Synchronization completed successfully
+2024-11-14 02:00:01,440 - INFO - Starting synchronization process for newspapers
+2024-11-14 02:00:01,441 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-14 02:00:04,089 - INFO - Found 55 newspaper items
+2024-11-14 02:00:04,354 - INFO - No changes detected in newspapers data
+2024-11-14 02:00:04,354 - INFO - Synchronization completed successfully
+2024-11-14 03:00:01,595 - INFO - Starting synchronization process for newspapers
+2024-11-14 03:00:01,595 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-14 03:00:04,279 - INFO - Found 55 newspaper items
+2024-11-14 03:00:04,514 - INFO - No changes detected in newspapers data
+2024-11-14 03:00:04,514 - INFO - Synchronization completed successfully
+2024-11-14 04:00:01,823 - INFO - Starting synchronization process for newspapers
+2024-11-14 04:00:01,823 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-14 04:00:04,823 - INFO - Found 55 newspaper items
+2024-11-14 04:00:05,066 - INFO - No changes detected in newspapers data
+2024-11-14 04:00:05,066 - INFO - Synchronization completed successfully
+2024-11-15 01:00:02,097 - INFO - Starting synchronization process for newspapers
+2024-11-15 01:00:02,098 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-15 01:00:04,367 - INFO - Found 55 newspaper items
+2024-11-15 01:00:04,450 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-15 01:00:04,450 - INFO - New newspaper detected: 202402
+2024-11-15 01:00:04,484 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-15 01:00:04,484 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-15 01:00:04,484 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-15 02:00:01,776 - INFO - Starting synchronization process for newspapers
+2024-11-15 02:00:01,776 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-15 02:00:04,482 - INFO - Found 55 newspaper items
+2024-11-15 02:00:04,567 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-15 02:00:04,568 - INFO - New newspaper detected: 202402
+2024-11-15 02:00:04,600 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-15 02:00:04,600 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-15 02:00:04,600 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 18:00:01,285 - INFO - Starting synchronization process for newspapers
+2024-11-17 18:00:01,286 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-17 18:00:03,564 - INFO - Found 55 newspaper items
+2024-11-17 18:00:03,660 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 18:00:03,660 - INFO - New newspaper detected: 202402
+2024-11-17 18:00:03,695 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 18:00:03,695 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 18:00:03,695 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 19:00:01,948 - INFO - Starting synchronization process for newspapers
+2024-11-17 19:00:01,948 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-17 19:00:04,725 - INFO - Found 55 newspaper items
+2024-11-17 19:00:04,808 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 19:00:04,808 - INFO - New newspaper detected: 202402
+2024-11-17 19:00:04,842 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 19:00:04,842 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 19:00:04,842 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 20:00:02,073 - INFO - Starting synchronization process for newspapers
+2024-11-17 20:00:02,073 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-17 20:00:04,390 - INFO - Found 55 newspaper items
+2024-11-17 20:00:04,473 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 20:00:04,474 - INFO - New newspaper detected: 202402
+2024-11-17 20:00:04,505 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 20:00:04,505 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 20:00:04,505 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 21:00:01,802 - INFO - Starting synchronization process for newspapers
+2024-11-17 21:00:01,803 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-17 21:00:04,804 - INFO - Found 55 newspaper items
+2024-11-17 21:00:04,900 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 21:00:04,901 - INFO - New newspaper detected: 202402
+2024-11-17 21:00:04,932 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 21:00:04,932 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 21:00:04,932 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 22:00:02,192 - INFO - Starting synchronization process for newspapers
+2024-11-17 22:00:02,192 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-17 22:00:05,232 - INFO - Found 55 newspaper items
+2024-11-17 22:00:05,317 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 22:00:05,318 - INFO - New newspaper detected: 202402
+2024-11-17 22:00:05,349 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 22:00:05,349 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 22:00:05,349 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 23:00:01,599 - INFO - Starting synchronization process for newspapers
+2024-11-17 23:00:01,599 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-17 23:00:03,879 - INFO - Found 55 newspaper items
+2024-11-17 23:00:03,974 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 23:00:03,974 - INFO - New newspaper detected: 202402
+2024-11-17 23:00:04,006 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 23:00:04,006 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-17 23:00:04,006 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 00:00:01,600 - INFO - Starting synchronization process for newspapers
+2024-11-18 00:00:01,600 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 00:00:05,302 - INFO - Found 55 newspaper items
+2024-11-18 00:00:05,594 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 00:00:05,594 - INFO - New newspaper detected: 202402
+2024-11-18 00:00:05,646 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 00:00:05,646 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 00:00:05,646 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 01:00:01,933 - INFO - Starting synchronization process for newspapers
+2024-11-18 01:00:01,933 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 01:00:04,177 - INFO - Found 55 newspaper items
+2024-11-18 01:00:04,358 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 01:00:04,358 - INFO - New newspaper detected: 202402
+2024-11-18 01:00:04,426 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 01:00:04,426 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 01:00:04,426 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 02:00:01,677 - INFO - Starting synchronization process for newspapers
+2024-11-18 02:00:01,677 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 02:00:04,176 - INFO - Found 55 newspaper items
+2024-11-18 02:00:04,260 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 02:00:04,260 - INFO - New newspaper detected: 202402
+2024-11-18 02:00:04,290 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 02:00:04,290 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 02:00:04,290 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 03:00:01,547 - INFO - Starting synchronization process for newspapers
+2024-11-18 03:00:01,547 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 03:00:04,009 - INFO - Found 55 newspaper items
+2024-11-18 03:00:04,097 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 03:00:04,097 - INFO - New newspaper detected: 202402
+2024-11-18 03:00:04,128 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 03:00:04,128 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 03:00:04,128 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 04:00:01,386 - INFO - Starting synchronization process for newspapers
+2024-11-18 04:00:01,386 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 04:00:04,062 - INFO - Found 55 newspaper items
+2024-11-18 04:00:04,146 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 04:00:04,146 - INFO - New newspaper detected: 202402
+2024-11-18 04:00:04,177 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 04:00:04,177 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 04:00:04,177 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 18:00:01,670 - INFO - Starting synchronization process for newspapers
+2024-11-18 18:00:01,671 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 18:00:05,028 - INFO - Found 55 newspaper items
+2024-11-18 18:00:05,120 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 18:00:05,120 - INFO - New newspaper detected: 202402
+2024-11-18 18:00:05,153 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 18:00:05,154 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 18:00:05,154 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 19:00:01,416 - INFO - Starting synchronization process for newspapers
+2024-11-18 19:00:01,416 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 19:00:04,069 - INFO - Found 55 newspaper items
+2024-11-18 19:00:04,151 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 19:00:04,151 - INFO - New newspaper detected: 202402
+2024-11-18 19:00:04,182 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 19:00:04,183 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 19:00:04,183 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 20:00:01,425 - INFO - Starting synchronization process for newspapers
+2024-11-18 20:00:01,425 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 20:00:05,617 - INFO - Found 55 newspaper items
+2024-11-18 20:00:05,700 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 20:00:05,700 - INFO - New newspaper detected: 202402
+2024-11-18 20:00:05,738 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 20:00:05,738 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 20:00:05,738 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 21:00:01,983 - INFO - Starting synchronization process for newspapers
+2024-11-18 21:00:01,983 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 21:00:17,026 - INFO - Found 55 newspaper items
+2024-11-18 21:00:17,220 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 21:00:17,220 - INFO - New newspaper detected: 202402
+2024-11-18 21:00:17,290 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 21:00:17,290 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 21:00:17,290 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 22:00:01,558 - INFO - Starting synchronization process for newspapers
+2024-11-18 22:00:01,559 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 22:00:05,056 - INFO - Found 55 newspaper items
+2024-11-18 22:00:05,258 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 22:00:05,258 - INFO - New newspaper detected: 202402
+2024-11-18 22:00:05,319 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 22:00:05,319 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 22:00:05,319 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 23:00:01,577 - INFO - Starting synchronization process for newspapers
+2024-11-18 23:00:01,577 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-18 23:00:04,900 - INFO - Found 55 newspaper items
+2024-11-18 23:00:04,983 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 23:00:04,983 - INFO - New newspaper detected: 202402
+2024-11-18 23:00:05,015 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 23:00:05,015 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-18 23:00:05,015 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 00:00:01,363 - INFO - Starting synchronization process for newspapers
+2024-11-19 00:00:01,363 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 00:00:04,278 - INFO - Found 55 newspaper items
+2024-11-19 00:00:04,368 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 00:00:04,369 - INFO - New newspaper detected: 202402
+2024-11-19 00:00:04,404 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 00:00:04,404 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 00:00:04,404 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 01:00:01,682 - INFO - Starting synchronization process for newspapers
+2024-11-19 01:00:01,682 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 01:00:04,725 - INFO - Found 55 newspaper items
+2024-11-19 01:00:04,815 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 01:00:04,815 - INFO - New newspaper detected: 202402
+2024-11-19 01:00:04,845 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 01:00:04,845 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 01:00:04,845 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:00:02,097 - INFO - Starting synchronization process for newspapers
+2024-11-19 02:00:02,097 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 02:00:04,394 - INFO - Found 55 newspaper items
+2024-11-19 02:00:04,495 - ERROR - Error fetching existing data: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:00:04,495 - INFO - New newspaper detected: 202402
+2024-11-19 02:00:04,527 - ERROR - Unexpected error during data comparison: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:00:04,527 - ERROR - Error during synchronization: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:00:04,527 - ERROR - Synchronization error: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:33:18,193 - INFO - Starting synchronization process for newspapers
+2024-11-19 02:33:18,194 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 02:33:20,922 - INFO - Found 55 newspaper items
+2024-11-19 02:33:21,147 - INFO - No changes detected in newspapers data
+2024-11-19 02:33:21,147 - INFO - Synchronization completed successfully
+2024-11-19 03:00:01,977 - INFO - Starting synchronization process for newspapers
+2024-11-19 03:00:01,977 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 03:00:05,614 - INFO - Found 55 newspaper items
+2024-11-19 03:00:05,868 - INFO - No changes detected in newspapers data
+2024-11-19 03:00:05,868 - INFO - Synchronization completed successfully
+2024-11-19 04:00:02,247 - INFO - Starting synchronization process for newspapers
+2024-11-19 04:00:02,247 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 04:00:04,691 - INFO - Found 55 newspaper items
+2024-11-19 04:00:04,925 - INFO - No changes detected in newspapers data
+2024-11-19 04:00:04,925 - INFO - Synchronization completed successfully
+2024-11-19 11:05:32,274 - INFO - Starting synchronization process for newspapers
+2024-11-19 11:05:32,275 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 11:05:35,030 - INFO - Found 55 newspaper items
+2024-11-19 11:05:35,300 - INFO - No changes detected in newspapers data
+2024-11-19 11:05:35,300 - INFO - Synchronization completed successfully
+2024-11-19 11:21:26,171 - INFO - Starting synchronization process for newspapers
+2024-11-19 11:21:26,172 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 11:21:28,589 - INFO - Found 55 newspaper items
+2024-11-19 11:21:28,840 - INFO - No changes detected in newspapers data
+2024-11-19 11:21:28,841 - INFO - Synchronization completed successfully
+2024-11-19 13:37:34,186 - INFO - Starting synchronization process for newspapers
+2024-11-19 13:37:34,186 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-19 13:37:36,656 - INFO - Found 55 newspaper items
+2024-11-19 13:37:36,901 - INFO - New newspaper detected: 201503
+2024-11-19 13:37:36,949 - INFO - Summary of changes:
+2024-11-19 13:37:36,949 - INFO - Added new newspapers: [201503]
+2024-11-19 13:37:36,949 - INFO - Synchronization completed successfully
+2024-11-22 22:39:53,914 - INFO - Starting synchronization process for newspapers
+2024-11-22 22:39:53,914 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-22 22:39:57,012 - INFO - Found 55 newspaper items
+2024-11-22 22:39:57,338 - INFO - No changes detected in newspapers data
+2024-11-22 22:39:57,338 - INFO - Synchronization completed successfully
+2024-11-23 08:48:19,817 - INFO - Starting synchronization process for newspapers
+2024-11-23 08:48:19,817 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-23 08:48:22,215 - INFO - Found 55 newspaper items
+2024-11-23 08:48:22,485 - INFO - No changes detected in newspapers data
+2024-11-23 08:48:22,485 - INFO - Synchronization completed successfully
+2024-11-25 13:20:17,153 - INFO - Starting synchronization process for newspapers
+2024-11-25 13:20:17,154 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-25 13:20:19,698 - INFO - Found 55 newspaper items
+2024-11-25 13:20:19,868 - INFO - New newspaper detected: 202402
+2024-11-25 13:20:19,920 - INFO - New newspaper detected: 202401
+2024-11-25 13:20:19,965 - INFO - New newspaper detected: 202303
+2024-11-25 13:20:20,013 - INFO - New newspaper detected: 202302
+2024-11-25 13:20:20,061 - INFO - New newspaper detected: 202301
+2024-11-25 13:20:20,116 - INFO - New newspaper detected: 202203
+2024-11-25 13:20:20,164 - INFO - Link change detected for newspaper 202202
+2024-11-25 13:20:20,164 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2022-1427.pdf
+2024-11-25 13:20:20,164 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2022-1427.pdf
+2024-11-25 13:20:20,213 - INFO - Link change detected for newspaper 202201
+2024-11-25 13:20:20,214 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2022-1384.pdf
+2024-11-25 13:20:20,214 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2022-1384.pdf
+2024-11-25 13:20:20,262 - INFO - Link change detected for newspaper 202103
+2024-11-25 13:20:20,262 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2021-1278.pdf
+2024-11-25 13:20:20,262 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2021-1278.pdf
+2024-11-25 13:20:20,310 - INFO - Link change detected for newspaper 202102
+2024-11-25 13:20:20,310 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2021-1258.pdf
+2024-11-25 13:20:20,310 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2021-1258.pdf
+2024-11-25 13:20:20,360 - INFO - Link change detected for newspaper 202101
+2024-11-25 13:20:20,360 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2021-1200.pdf
+2024-11-25 13:20:20,360 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2021-1200.pdf
+2024-11-25 13:20:20,410 - INFO - Link change detected for newspaper 202003
+2024-11-25 13:20:20,410 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2020-1096.pdf
+2024-11-25 13:20:20,410 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2020-1096.pdf
+2024-11-25 13:20:20,486 - INFO - Link change detected for newspaper 202002
+2024-11-25 13:20:20,487 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2020-1036.pdf
+2024-11-25 13:20:20,487 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2020-1036.pdf
+2024-11-25 13:20:20,532 - INFO - Link change detected for newspaper 202001
+2024-11-25 13:20:20,532 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2020-991.pdf
+2024-11-25 13:20:20,532 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2020-991.pdf
+2024-11-25 13:20:20,568 - INFO - Link change detected for newspaper 201903
+2024-11-25 13:20:20,568 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2019-913.pdf
+2024-11-25 13:20:20,568 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2019-913.pdf
+2024-11-25 13:20:20,616 - INFO - Link change detected for newspaper 201902
+2024-11-25 13:20:20,616 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2019-869.pdf
+2024-11-25 13:20:20,616 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2019-869.pdf
+2024-11-25 13:20:20,664 - INFO - Link change detected for newspaper 201901
+2024-11-25 13:20:20,664 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2019-836.pdf
+2024-11-25 13:20:20,664 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2019-836.pdf
+2024-11-25 13:20:20,719 - INFO - Link change detected for newspaper 201803
+2024-11-25 13:20:20,719 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2018-780.pdf
+2024-11-25 13:20:20,719 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2018-780.pdf
+2024-11-25 13:20:20,752 - INFO - Link change detected for newspaper 201802
+2024-11-25 13:20:20,752 - INFO - Old link: hhttps://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2018-751.pdf
+2024-11-25 13:20:20,752 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2018-751.pdf
+2024-11-25 13:20:20,808 - INFO - Link change detected for newspaper 201801
+2024-11-25 13:20:20,808 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2018-699.pdf
+2024-11-25 13:20:20,808 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2018-699.pdf
+2024-11-25 13:20:20,856 - INFO - Link change detected for newspaper 201703
+2024-11-25 13:20:20,856 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2017-663.pdf
+2024-11-25 13:20:20,856 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2017-663.pdf
+2024-11-25 13:20:20,908 - INFO - Link change detected for newspaper 201702
+2024-11-25 13:20:20,908 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2017-611.pdf
+2024-11-25 13:20:20,908 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2017-611.pdf
+2024-11-25 13:20:20,958 - INFO - Link change detected for newspaper 201701
+2024-11-25 13:20:20,958 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2017-554.pdf
+2024-11-25 13:20:20,958 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2017-554.pdf
+2024-11-25 13:20:21,008 - INFO - Link change detected for newspaper 201603
+2024-11-25 13:20:21,008 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2016-502.pdf
+2024-11-25 13:20:21,008 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2016-502.pdf
+2024-11-25 13:20:21,054 - INFO - Link change detected for newspaper 201602
+2024-11-25 13:20:21,054 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2016-478.pdf
+2024-11-25 13:20:21,054 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2016-478.pdf
+2024-11-25 13:20:21,103 - INFO - Link change detected for newspaper 201601
+2024-11-25 13:20:21,103 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2016-467.pdf
+2024-11-25 13:20:21,103 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2016-467.pdf
+2024-11-25 13:20:21,148 - INFO - Link change detected for newspaper 201503
+2024-11-25 13:20:21,148 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2015-437.pdf
+2024-11-25 13:20:21,148 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2015-437.pdf
+2024-11-25 13:20:21,199 - INFO - Link change detected for newspaper 201502
+2024-11-25 13:20:21,199 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2015-404.pdf
+2024-11-25 13:20:21,199 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2015-404.pdf
+2024-11-25 13:20:21,247 - INFO - Link change detected for newspaper 201501
+2024-11-25 13:20:21,247 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2015-391.pdf
+2024-11-25 13:20:21,247 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2015-391.pdf
+2024-11-25 13:20:21,297 - INFO - Link change detected for newspaper 201404
+2024-11-25 13:20:21,297 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%204/2014-347.pdf
+2024-11-25 13:20:21,297 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 4/2014-347.pdf
+2024-11-25 13:20:21,347 - INFO - Link change detected for newspaper 201403
+2024-11-25 13:20:21,347 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2014-326.pdf
+2024-11-25 13:20:21,347 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2014-326.pdf
+2024-11-25 13:20:21,397 - INFO - Link change detected for newspaper 201402
+2024-11-25 13:20:21,397 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2014-308.pdf
+2024-11-25 13:20:21,397 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2014-308.pdf
+2024-11-25 13:20:21,465 - INFO - Link change detected for newspaper 201401
+2024-11-25 13:20:21,465 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2014-291.pdf
+2024-11-25 13:20:21,465 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2014-291.pdf
+2024-11-25 13:20:21,516 - INFO - Link change detected for newspaper 201303
+2024-11-25 13:20:21,516 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2013-238.pdf
+2024-11-25 13:20:21,516 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2013-238.pdf
+2024-11-25 13:20:21,567 - INFO - Link change detected for newspaper 201302
+2024-11-25 13:20:21,567 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2013-207.pdf
+2024-11-25 13:20:21,567 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2013-207.pdf
+2024-11-25 13:20:21,613 - INFO - Link change detected for newspaper 201203
+2024-11-25 13:20:21,613 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2012-173.pdf
+2024-11-25 13:20:21,613 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2012-173.pdf
+2024-11-25 13:20:21,663 - INFO - Link change detected for newspaper 201202
+2024-11-25 13:20:21,663 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2012-172.pdf
+2024-11-25 13:20:21,663 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2012-172.pdf
+2024-11-25 13:20:21,713 - INFO - Link change detected for newspaper 201301
+2024-11-25 13:20:21,713 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2013-171.pdf
+2024-11-25 13:20:21,713 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2013-171.pdf
+2024-11-25 13:20:21,754 - INFO - Link change detected for newspaper 201104
+2024-11-25 13:20:21,754 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%204/2011-109.pdf
+2024-11-25 13:20:21,754 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 4/2011-109.pdf
+2024-11-25 13:20:21,805 - INFO - Link change detected for newspaper 201201
+2024-11-25 13:20:21,806 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2012-108.pdf
+2024-11-25 13:20:21,806 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2012-108.pdf
+2024-11-25 13:20:21,852 - INFO - Link change detected for newspaper 201103
+2024-11-25 13:20:21,852 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2011-99.pdf
+2024-11-25 13:20:21,852 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2011-99.pdf
+2024-11-25 13:20:21,899 - INFO - Link change detected for newspaper 201102
+2024-11-25 13:20:21,899 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2011-89.pdf
+2024-11-25 13:20:21,899 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2011-89.pdf
+2024-11-25 13:20:21,972 - INFO - Link change detected for newspaper 201101
+2024-11-25 13:20:21,972 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2011-82.pdf
+2024-11-25 13:20:21,972 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2011-82.pdf
+2024-11-25 13:20:22,025 - INFO - Link change detected for newspaper 201003
+2024-11-25 13:20:22,026 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2010-67.pdf
+2024-11-25 13:20:22,026 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2010-67.pdf
+2024-11-25 13:20:22,083 - INFO - Link change detected for newspaper 201004
+2024-11-25 13:20:22,084 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%204/2010-66.pdf
+2024-11-25 13:20:22,084 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 4/2010-66.pdf
+2024-11-25 13:20:22,132 - INFO - Link change detected for newspaper 201002
+2024-11-25 13:20:22,132 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2010-65.pdf
+2024-11-25 13:20:22,132 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2010-65.pdf
+2024-11-25 13:20:22,179 - INFO - Link change detected for newspaper 201001
+2024-11-25 13:20:22,180 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2010-42.pdf
+2024-11-25 13:20:22,180 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2010-42.pdf
+2024-11-25 13:20:22,227 - INFO - Link change detected for newspaper 200904
+2024-11-25 13:20:22,227 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%204/2009-41.pdf
+2024-11-25 13:20:22,227 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 4/2009-41.pdf
+2024-11-25 13:20:22,277 - INFO - Link change detected for newspaper 200903
+2024-11-25 13:20:22,278 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%203/2009-29.pdf
+2024-11-25 13:20:22,278 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 3/2009-29.pdf
+2024-11-25 13:20:22,328 - INFO - Link change detected for newspaper 200902
+2024-11-25 13:20:22,328 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%202/2009-28.pdf
+2024-11-25 13:20:22,328 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 2/2009-28.pdf
+2024-11-25 13:20:22,376 - INFO - Link change detected for newspaper 200901
+2024-11-25 13:20:22,376 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%201/2009-19.pdf
+2024-11-25 13:20:22,376 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj 1/2009-19.pdf
+2024-11-25 13:20:22,424 - INFO - New newspaper detected: 200812
+2024-11-25 13:20:22,474 - INFO - Link change detected for newspaper 200803
+2024-11-25 13:20:22,474 - INFO - Old link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/O%C5%99echovsk%C3%BD%20zpravodaj%20z%C3%A1%C5%99%C3%AD%202008-10.pdf
+2024-11-25 13:20:22,474 - INFO - New link: https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/soubory/OÅechovskÃ½ zpravodaj bÅezen 2008-12.pdf
+2024-11-25 13:20:22,524 - INFO - New newspaper detected: 200806
+2024-11-25 13:20:22,570 - INFO - New newspaper detected: 200809
+2024-11-25 13:20:22,614 - INFO - Summary of changes:
+2024-11-25 13:20:22,614 - INFO - Updated links for newspapers: [202202, 202201, 202103, 202102, 202101, 202003, 202002, 202001, 201903, 201902, 201901, 201803, 201802, 201801, 201703, 201702, 201701, 201603, 201602, 201601, 201503, 201502, 201501, 201404, 201403, 201402, 201401, 201303, 201302, 201203, 201202, 201301, 201104, 201201, 201103, 201102, 201101, 201003, 201004, 201002, 201001, 200904, 200903, 200902, 200901, 200803]
+2024-11-25 13:20:22,614 - INFO - Added new newspapers: [202402, 202401, 202303, 202302, 202301, 202203, 200812, 200806, 200809]
+2024-11-25 13:20:22,614 - INFO - Synchronization completed successfully
+2024-11-25 13:23:41,672 - INFO - Starting synchronization process for newspapers
+2024-11-25 13:23:41,672 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-25 13:23:44,077 - INFO - Found 55 newspaper items
+2024-11-25 13:23:44,306 - INFO - No changes detected in newspapers data
+2024-11-25 13:23:44,306 - INFO - Synchronization completed successfully
+2024-11-25 13:24:00,961 - INFO - Starting synchronization process for newspapers
+2024-11-25 13:24:00,961 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-25 13:24:03,722 - INFO - Found 55 newspaper items
+2024-11-25 13:24:04,013 - INFO - New newspaper detected: 201503
+2024-11-25 13:24:04,065 - INFO - Summary of changes:
+2024-11-25 13:24:04,065 - INFO - Added new newspapers: [201503]
+2024-11-25 13:24:04,065 - INFO - Synchronization completed successfully
+2024-11-25 13:26:53,072 - INFO - Starting synchronization process for newspapers
+2024-11-25 13:26:53,072 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-25 13:26:55,659 - INFO - Found 55 newspaper items
+2024-11-25 13:26:55,851 - INFO - No changes detected in newspapers data
+2024-11-25 13:26:55,851 - INFO - Synchronization completed successfully
+2024-11-25 13:27:54,150 - INFO - Starting synchronization process for newspapers
+2024-11-25 13:27:54,150 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-25 13:27:56,908 - INFO - Found 55 newspaper items
+2024-11-25 13:27:57,077 - INFO - New newspaper detected: 201103
+2024-11-25 13:27:57,128 - INFO - Summary of changes:
+2024-11-25 13:27:57,128 - INFO - Added new newspapers: [201103]
+2024-11-25 13:27:57,128 - INFO - Synchronization completed successfully
+2024-11-26 12:00:01,783 - INFO - Starting synchronization process for newspapers
+2024-11-26 12:00:01,784 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 12:00:04,993 - INFO - Found 55 newspaper items
+2024-11-26 12:00:05,432 - INFO - No changes detected in newspapers data
+2024-11-26 12:00:05,432 - INFO - Synchronization completed successfully
+2024-11-26 13:00:02,385 - INFO - Starting synchronization process for newspapers
+2024-11-26 13:00:02,386 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 13:00:05,145 - INFO - Found 55 newspaper items
+2024-11-26 13:00:05,359 - INFO - No changes detected in newspapers data
+2024-11-26 13:00:05,359 - INFO - Synchronization completed successfully
+2024-11-26 14:00:01,846 - INFO - Starting synchronization process for newspapers
+2024-11-26 14:00:01,846 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 14:00:04,482 - INFO - Found 55 newspaper items
+2024-11-26 14:00:04,685 - INFO - No changes detected in newspapers data
+2024-11-26 14:00:04,685 - INFO - Synchronization completed successfully
+2024-11-26 15:00:01,530 - INFO - Starting synchronization process for newspapers
+2024-11-26 15:00:01,531 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 15:00:04,946 - INFO - Found 55 newspaper items
+2024-11-26 15:00:05,144 - INFO - No changes detected in newspapers data
+2024-11-26 15:00:05,144 - INFO - Synchronization completed successfully
+2024-11-26 16:00:01,464 - INFO - Starting synchronization process for newspapers
+2024-11-26 16:00:01,464 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 16:00:04,683 - INFO - Found 55 newspaper items
+2024-11-26 16:00:04,892 - INFO - No changes detected in newspapers data
+2024-11-26 16:00:04,892 - INFO - Synchronization completed successfully
+2024-11-26 17:00:01,555 - INFO - Starting synchronization process for newspapers
+2024-11-26 17:00:01,555 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 17:00:04,756 - INFO - Found 55 newspaper items
+2024-11-26 17:00:04,954 - INFO - No changes detected in newspapers data
+2024-11-26 17:00:04,954 - INFO - Synchronization completed successfully
+2024-11-26 18:00:02,308 - INFO - Starting synchronization process for newspapers
+2024-11-26 18:00:02,309 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 18:00:05,876 - INFO - Found 55 newspaper items
+2024-11-26 18:00:06,109 - INFO - No changes detected in newspapers data
+2024-11-26 18:00:06,109 - INFO - Synchronization completed successfully
+2024-11-26 19:00:02,331 - INFO - Starting synchronization process for newspapers
+2024-11-26 19:00:02,331 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 19:00:04,994 - INFO - Found 55 newspaper items
+2024-11-26 19:00:05,540 - INFO - No changes detected in newspapers data
+2024-11-26 19:00:05,540 - INFO - Synchronization completed successfully
+2024-11-26 20:00:01,561 - INFO - Starting synchronization process for newspapers
+2024-11-26 20:00:01,561 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 20:00:05,113 - INFO - Found 55 newspaper items
+2024-11-26 20:00:05,323 - INFO - No changes detected in newspapers data
+2024-11-26 20:00:05,323 - INFO - Synchronization completed successfully
+2024-11-26 21:00:01,667 - INFO - Starting synchronization process for newspapers
+2024-11-26 21:00:01,667 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 21:00:19,565 - INFO - Found 55 newspaper items
+2024-11-26 21:00:19,762 - INFO - No changes detected in newspapers data
+2024-11-26 21:00:19,763 - INFO - Synchronization completed successfully
+2024-11-26 22:00:02,149 - INFO - Starting synchronization process for newspapers
+2024-11-26 22:00:02,149 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 22:00:05,815 - INFO - Found 55 newspaper items
+2024-11-26 22:00:06,009 - INFO - No changes detected in newspapers data
+2024-11-26 22:00:06,009 - INFO - Synchronization completed successfully
+2024-11-26 23:00:02,026 - INFO - Starting synchronization process for newspapers
+2024-11-26 23:00:02,026 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-26 23:00:06,009 - INFO - Found 55 newspaper items
+2024-11-26 23:00:06,205 - INFO - No changes detected in newspapers data
+2024-11-26 23:00:06,205 - INFO - Synchronization completed successfully
+2024-11-27 12:00:02,101 - INFO - Starting synchronization process for newspapers
+2024-11-27 12:00:02,102 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 12:00:10,191 - INFO - Found 55 newspaper items
+2024-11-27 12:00:10,391 - INFO - No changes detected in newspapers data
+2024-11-27 12:00:10,391 - INFO - Synchronization completed successfully
+2024-11-27 13:00:01,889 - INFO - Starting synchronization process for newspapers
+2024-11-27 13:00:01,889 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 13:00:10,526 - INFO - Found 55 newspaper items
+2024-11-27 13:00:10,718 - INFO - No changes detected in newspapers data
+2024-11-27 13:00:10,718 - INFO - Synchronization completed successfully
+2024-11-27 14:00:01,799 - INFO - Starting synchronization process for newspapers
+2024-11-27 14:00:01,799 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 14:00:04,668 - INFO - Found 55 newspaper items
+2024-11-27 14:00:04,872 - INFO - No changes detected in newspapers data
+2024-11-27 14:00:04,872 - INFO - Synchronization completed successfully
+2024-11-27 15:00:01,892 - INFO - Starting synchronization process for newspapers
+2024-11-27 15:00:01,892 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 15:00:04,657 - INFO - Found 55 newspaper items
+2024-11-27 15:00:04,870 - INFO - No changes detected in newspapers data
+2024-11-27 15:00:04,870 - INFO - Synchronization completed successfully
+2024-11-27 16:00:02,077 - INFO - Starting synchronization process for newspapers
+2024-11-27 16:00:02,077 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 16:00:05,279 - INFO - Found 55 newspaper items
+2024-11-27 16:00:05,484 - INFO - No changes detected in newspapers data
+2024-11-27 16:00:05,484 - INFO - Synchronization completed successfully
+2024-11-27 17:00:02,120 - INFO - Starting synchronization process for newspapers
+2024-11-27 17:00:02,120 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 17:00:05,082 - INFO - Found 55 newspaper items
+2024-11-27 17:00:05,287 - INFO - No changes detected in newspapers data
+2024-11-27 17:00:05,287 - INFO - Synchronization completed successfully
+2024-11-27 18:00:02,079 - INFO - Starting synchronization process for newspapers
+2024-11-27 18:00:02,079 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 18:00:05,123 - INFO - Found 55 newspaper items
+2024-11-27 18:00:05,323 - INFO - No changes detected in newspapers data
+2024-11-27 18:00:05,323 - INFO - Synchronization completed successfully
+2024-11-27 19:00:01,664 - INFO - Starting synchronization process for newspapers
+2024-11-27 19:00:01,664 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 19:00:04,525 - INFO - Found 55 newspaper items
+2024-11-27 19:00:04,917 - INFO - No changes detected in newspapers data
+2024-11-27 19:00:04,917 - INFO - Synchronization completed successfully
+2024-11-27 20:00:01,777 - INFO - Starting synchronization process for newspapers
+2024-11-27 20:00:01,777 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 20:00:04,946 - INFO - Found 55 newspaper items
+2024-11-27 20:00:05,152 - INFO - No changes detected in newspapers data
+2024-11-27 20:00:05,152 - INFO - Synchronization completed successfully
+2024-11-27 21:00:01,441 - INFO - Starting synchronization process for newspapers
+2024-11-27 21:00:01,441 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 21:00:13,423 - INFO - Found 55 newspaper items
+2024-11-27 21:00:13,617 - INFO - No changes detected in newspapers data
+2024-11-27 21:00:13,617 - INFO - Synchronization completed successfully
+2024-11-27 22:00:02,089 - INFO - Starting synchronization process for newspapers
+2024-11-27 22:00:02,089 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 22:00:05,947 - INFO - Found 55 newspaper items
+2024-11-27 22:00:06,137 - INFO - No changes detected in newspapers data
+2024-11-27 22:00:06,137 - INFO - Synchronization completed successfully
+2024-11-27 23:00:02,022 - INFO - Starting synchronization process for newspapers
+2024-11-27 23:00:02,022 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-27 23:00:04,846 - INFO - Found 55 newspaper items
+2024-11-27 23:00:05,041 - INFO - No changes detected in newspapers data
+2024-11-27 23:00:05,041 - INFO - Synchronization completed successfully
+2024-11-28 00:00:02,225 - INFO - Starting synchronization process for newspapers
+2024-11-28 00:00:02,226 - INFO - Fetching newspapers from https://www.orechovubrna.cz/zivot-v-obci/orechovsky-zpravodaj/
+2024-11-28 00:00:05,178 - INFO - Found 55 newspaper items
+2024-11-28 00:00:05,466 - INFO - No changes detected in newspapers data
+2024-11-28 00:00:05,466 - INFO - Synchronization completed successfully

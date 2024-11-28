@@ -1,0 +1,36 @@
+2024-11-10 01:27:45,291 - INFO - Starting contact data update process
+2024-11-10 01:27:45,291 - INFO - Checking if required database tables exist
+2024-11-10 01:27:45,308 - INFO - All required database tables exist
+2024-11-10 01:27:45,309 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 01:27:47,368 - INFO - Parsing of main contact was successful.
+2024-11-10 01:27:47,368 - INFO - Successfully parsed all contact data
+2024-11-10 01:27:47,368 - INFO - Found 3 office hours and 10 employees
+2024-11-10 01:27:47,368 - INFO - Starting database update
+2024-11-10 01:27:47,393 - INFO - Successfully updated contacts
+2024-11-10 01:27:47,393 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 01:27:47,393 - INFO - Contact data update completed successfully
+2024-11-10 01:45:00,611 - INFO - Starting contact data update process
+2024-11-10 01:45:00,611 - INFO - Checking if required database tables exist
+2024-11-10 01:45:00,628 - INFO - All required database tables exist
+2024-11-10 01:45:00,629 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-11-10 01:45:03,254 - INFO - Parsing of main contact was successful.
+2024-11-10 01:45:03,255 - INFO - Parsing of employee contacts was successful.
+2024-11-10 01:45:03,255 - INFO - Successfully parsed all contact data
+2024-11-10 01:45:03,255 - INFO - Found 3 office hours and 10 employees
+2024-11-10 01:45:03,255 - INFO - Starting database update
+2024-11-10 01:45:03,284 - INFO - Successfully updated contacts
+2024-11-10 01:45:03,285 - INFO - Updated or added 3 office hours and 10 employees
+2024-11-10 01:45:03,285 - INFO - Contact data update completed successfully
+2024-11-10 01:46:43,577 - INFO - Starting contact data update process
+2024-11-10 01:46:43,578 - INFO - Checking if required database tables exist
+2024-11-10 01:46:43,593 - ERROR - Required table 'condasdastact' does not exist
+2024-11-10 01:46:43,595 - ERROR - Missing required tables: condasdastact
+2024-11-10 01:46:43,596 - ERROR - Unexpected error occurred: Missing required tables: condasdastact
+2024-11-10 01:46:43,596 - ERROR - Update of contacts failed: Missing required tables: condasdastact
+2024-11-10 01:47:29,558 - INFO - Starting contact data update process
+2024-11-10 01:47:29,558 - INFO - Checking if required database tables exist
+2024-11-10 01:47:29,572 - ERROR - Required table 'contacts' does not exist
+2024-11-10 01:47:29,574 - ERROR - Required table 'OfficeHousrs' does not exist
+2024-11-10 01:47:29,575 - ERROR - Missing required tables: contacts, OfficeHousrs
+2024-11-10 01:47:29,576 - ERROR - Unexpected error occurred: Missing required tables: contacts, OfficeHousrs
+2024-11-10 01:47:29,576 - ERROR - Update of contacts failed: Missing required tables: contacts, OfficeHousrs

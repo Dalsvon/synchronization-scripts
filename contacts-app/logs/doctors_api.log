@@ -45,3 +45,95 @@
 2024-11-13 18:43:39,604 - INFO - No changes detected in contacts
 2024-11-13 23:59:56,149 - INFO - Starting contact update process for contact_item/doctors
 2024-11-13 23:59:57,759 - INFO - No changes detected in contacts
+2024-11-19 02:10:18,372 - INFO - Starting contact update process for contact_item/doctors
+2024-11-19 02:10:20,079 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:10:20,079 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:15:08,442 - INFO - Starting contact update process for contact_item/doctors
+2024-11-19 02:15:10,493 - ERROR - Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:15:10,493 - ERROR - Error during contact update: Failed to fetch existing contacts: ('invalid_grant: Invalid JWT Signature.', {'error': 'invalid_grant', 'error_description': 'Invalid JWT Signature.'})
+2024-11-19 02:22:11,654 - INFO - Starting contact update process for contact_item/doctors
+2024-11-19 02:22:13,401 - INFO - No changes detected in contacts
+2024-11-19 12:42:23,159 - INFO - Starting contact update process for contact_item/doctors
+2024-11-19 12:42:25,022 - INFO - No changes detected in contacts
+2024-11-24 11:56:44,816 - INFO - Starting contact update process for contact_item/doctors
+2024-11-24 11:56:46,818 - INFO - No changes detected in contacts
+2024-11-24 12:04:55,024 - INFO - Starting contact update process for contact_item/doctors
+2024-11-24 12:04:56,943 - INFO - No changes detected in contacts
+2024-11-25 13:15:46,437 - INFO - Starting contact update process for contact_item/doctors
+2024-11-25 13:15:48,261 - INFO - Modified contact: Praktická lékařka pro dospělé
+2024-11-25 13:15:48,261 - INFO - Modified contact: Praktická lékařka pro děti a dorost
+2024-11-25 13:15:48,261 - INFO - Modified contact: Zubní lékař
+2024-11-25 13:15:48,261 - INFO - Modified contact: Gynekologie
+2024-11-25 13:15:48,261 - INFO - Changes summary:
+2024-11-25 13:15:48,261 - INFO - Modified contacts: ["Praktická lékařka pro dospělé", "Praktická lékařka pro děti a dorost", "Zubní lékař", "Gynekologie"]
+2024-11-25 13:15:48,310 - INFO - Successfully updated contacts at 2024-11-25T13:15:48.310564
+2024-11-25 22:41:53,507 - INFO - Starting contact update process for contact_item/doctors
+2024-11-25 22:41:55,664 - INFO - No changes detected in contacts
+2024-11-25 22:47:24,818 - INFO - Starting contact update process for contact_item/doctors
+2024-11-25 22:47:27,004 - INFO - No changes detected in contacts
+2024-11-25 22:56:51,781 - INFO - Starting contact update process for contact_item/doctors
+2024-11-25 22:56:53,999 - INFO - No changes detected in contacts
+2024-11-25 23:00:18,471 - INFO - Starting contact update process for contact_item/doctors
+2024-11-25 23:00:20,258 - INFO - No changes detected in contacts
+2024-11-25 23:16:47,570 - INFO - Starting contact update process for contact_item/doctors
+2024-11-25 23:16:49,226 - INFO - No changes detected in contacts
+2024-11-25 23:28:13,396 - INFO - Starting contact update process for contact_item/doctors
+2024-11-25 23:28:15,267 - INFO - No changes detected in contacts
+2024-11-26 00:00:13,064 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 00:00:14,913 - INFO - No changes detected in contacts
+2024-11-26 11:00:13,831 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 11:00:15,628 - INFO - No changes detected in contacts
+2024-11-26 11:19:46,695 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 11:19:48,527 - INFO - No changes detected in contacts
+2024-11-26 12:00:15,060 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 12:00:17,126 - INFO - No changes detected in contacts
+2024-11-26 13:00:14,193 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 13:00:16,062 - INFO - No changes detected in contacts
+2024-11-26 14:00:14,495 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 14:00:16,392 - INFO - No changes detected in contacts
+2024-11-26 15:00:13,910 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 15:00:16,108 - INFO - No changes detected in contacts
+2024-11-26 16:00:16,575 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 16:00:18,915 - INFO - No changes detected in contacts
+2024-11-26 17:00:13,864 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 17:00:15,590 - INFO - No changes detected in contacts
+2024-11-26 18:00:14,719 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 18:00:16,719 - INFO - No changes detected in contacts
+2024-11-26 19:00:14,361 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 19:00:15,957 - INFO - No changes detected in contacts
+2024-11-26 20:00:14,413 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 20:00:16,258 - INFO - No changes detected in contacts
+2024-11-26 21:01:24,232 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 21:01:37,213 - INFO - No changes detected in contacts
+2024-11-26 22:00:14,980 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 22:00:16,708 - INFO - No changes detected in contacts
+2024-11-26 23:00:14,413 - INFO - Starting contact update process for contact_item/doctors
+2024-11-26 23:00:16,458 - INFO - No changes detected in contacts
+2024-11-27 12:00:27,998 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 12:00:30,402 - INFO - No changes detected in contacts
+2024-11-27 12:49:10,927 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 12:49:13,093 - INFO - No changes detected in contacts
+2024-11-27 13:00:26,041 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 13:00:29,880 - INFO - No changes detected in contacts
+2024-11-27 14:00:14,360 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 14:00:16,325 - INFO - No changes detected in contacts
+2024-11-27 15:00:14,106 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 15:00:15,969 - INFO - No changes detected in contacts
+2024-11-27 16:00:15,274 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 16:00:17,739 - INFO - No changes detected in contacts
+2024-11-27 17:00:15,506 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 17:00:17,798 - INFO - No changes detected in contacts
+2024-11-27 18:00:15,475 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 18:00:17,395 - INFO - No changes detected in contacts
+2024-11-27 19:00:14,494 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 19:00:16,633 - INFO - No changes detected in contacts
+2024-11-27 20:00:14,171 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 20:00:16,051 - INFO - No changes detected in contacts
+2024-11-27 21:01:08,580 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 21:01:22,296 - INFO - No changes detected in contacts
+2024-11-27 22:00:15,190 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 22:00:16,962 - INFO - No changes detected in contacts
+2024-11-27 23:00:13,823 - INFO - Starting contact update process for contact_item/doctors
+2024-11-27 23:00:15,711 - INFO - No changes detected in contacts
+2024-11-28 00:00:14,285 - INFO - Starting contact update process for contact_item/doctors
+2024-11-28 00:00:16,253 - INFO - No changes detected in contacts

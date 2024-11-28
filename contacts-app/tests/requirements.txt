@@ -1,2 +1,0 @@
-firebase-admin>=6.0.0
-requests>=2.22.0

@@ -1,3 +1,1 @@
-Address - https://www.orechovubrna.cz/api/skoly/
-
 {"content":"**Z\u00e1kladn\u00ed \u0161kola a Mate\u0159sk\u00e1 \u0161kola O\u0159echov**\r\nTel.: +420 547 225 121 \r\nE-mail: zs_orechov@volny.cz \r\nWeb: www.zsorechov.cz \r\n\r\n\r\n**Z\u00e1kladn\u00ed um\u011bleck\u00e1 \u0161kola O\u0159echov**\r\nKomensk\u00e9ho 4\r\nTel.: +420 604 942 427, +420 739 093 720\r\nE-mail: zus.orechov@volny.cz\r\nWeb: http:\/\/www.zusmore.cz"}

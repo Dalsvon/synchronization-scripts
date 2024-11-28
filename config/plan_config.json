@@ -1,0 +1,6 @@
+{
+  "schedule_contacts_to_app_API.py": "0 * * * *",
+  "schedule_contacts_to_portal_obcana_API.py": "0 0 * * 0",
+  "schedule_newspapers_to_app_API.py": "0 * * * *",
+  "schedule_documents_to_portal_obcana_API.py": ""
+}
