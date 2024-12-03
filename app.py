@@ -237,6 +237,8 @@ class SyncManager:
             env = os.environ.copy()
             env['PYTHONPATH'] = f"{script_dir}:{env.get('PYTHONPATH', '')}"
             
+            venv_python = str(Path(self.scripts_folder) / 'venv' / 'bin' / 'python3')
+            
             # Load .env file from script directory
             dotenv_path = os.path.join(script_dir, '.env')
             if os.path.exists(dotenv_path):
@@ -252,7 +254,7 @@ class SyncManager:
                         env[ssl_var] = str(ssl_path)
             
             process = subprocess.run(
-                ['python3', script_path],
+                [f"{venv_python}", script_path],
                 check=True,
                 capture_output=True,
                 text=True,
