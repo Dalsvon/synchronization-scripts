@@ -192,3 +192,22 @@ LINE 20:                                 bankAccount = 'FIO banka 250...
 2024-11-27 16:28:43,317 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
 	Is the server running on that host and accepting TCP/IP connections?
 
+2024-12-03 16:19:08,666 - INFO - Starting contact data update process
+2024-12-03 16:19:08,667 - INFO - Checking if required database tables exist
+2024-12-03 16:19:08,689 - ERROR - Database operation failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: private key file "ssl/client.key" has group or world access; file must have permissions u=rw (0600) or less if owned by the current user, or permissions u=rw,g=r (0640) or less if owned by root
+
+2024-12-03 16:19:08,689 - ERROR - Update of contacts failed: connection to server at "localhost" (127.0.0.1), port 5433 failed: private key file "ssl/client.key" has group or world access; file must have permissions u=rw (0600) or less if owned by the current user, or permissions u=rw,g=r (0640) or less if owned by root
+
+2024-12-03 16:20:20,124 - INFO - Starting contact data update process
+2024-12-03 16:20:20,124 - INFO - Checking if required database tables exist
+2024-12-03 16:20:20,187 - INFO - All required database tables exist
+2024-12-03 16:20:20,187 - INFO - Fetching contact data from https://www.orechovubrna.cz/api/kontakt/
+2024-12-03 16:20:22,044 - INFO - Parsing of main contact was successful.
+2024-12-03 16:20:22,044 - INFO - Parsing of office hours was successful.
+2024-12-03 16:20:22,044 - INFO - Parsing of employee contacts was successful.
+2024-12-03 16:20:22,044 - INFO - Successfully parsed all contact data
+2024-12-03 16:20:22,044 - INFO - Found 3 office hours and 10 employees
+2024-12-03 16:20:22,044 - INFO - Starting database update
+2024-12-03 16:20:22,083 - INFO - Successfully updated contact information
+2024-12-03 16:20:22,083 - INFO - Updated or added 3 office hours and 10 employees
+2024-12-03 16:20:22,083 - INFO - Contact data update completed successfully

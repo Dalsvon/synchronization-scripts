@@ -147,3 +147,25 @@
 2024-11-28 13:31:07,630 - INFO - No changes detected in contacts
 2024-11-28 13:43:51,091 - INFO - Starting contact update process for contact_item/doctors
 2024-11-28 13:43:52,776 - INFO - No changes detected in contacts
+2024-12-02 15:04:46,679 - INFO - Starting contact update process for contact_item/doctors
+2024-12-02 15:04:48,753 - INFO - No changes detected in contacts
+2024-12-02 15:11:08,307 - INFO - Starting contact update process for contact_item/doctors
+2024-12-02 15:11:11,491 - INFO - No changes detected in contacts
+2024-12-02 17:25:26,068 - INFO - Starting contact update process for contact_item/doctors
+2024-12-02 17:25:27,828 - ERROR - Error during contact update: parse_doctors_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:26:10,809 - INFO - Starting contact update process for contact_item/doctors
+2024-12-02 17:26:12,792 - INFO - No changes detected in contacts
+2024-12-02 17:29:53,690 - INFO - Starting contact update process for contact_item/doctors
+2024-12-02 17:29:55,604 - INFO - No changes detected in contacts
+2024-12-02 17:32:41,712 - INFO - Starting contact update process for contact_item/doctors
+2024-12-02 17:32:43,844 - ERROR - Invalid email format: drrova@seznam.cz  - emailová adresa slouží pouze ke konzultaci zdravotního stavu nikoliv pro předpis léků
+2024-12-02 17:32:43,892 - INFO - Modified contact: Praktická lékařka pro děti a dorost
+2024-12-02 17:32:43,893 - INFO - Modified contact: Zubní lékař
+2024-12-02 17:32:43,893 - INFO - Changes summary:
+2024-12-02 17:32:43,893 - INFO - Modified contacts: ["Praktická lékařka pro děti a dorost", "Zubní lékař"]
+2024-12-02 17:32:43,939 - INFO - Successfully updated contacts at 2024-12-02T17:32:43.939098
+2024-12-02 17:39:23,554 - INFO - Starting contact update process for contact_item/doctors
+2024-12-02 17:39:25,446 - INFO - Modified contact: Praktická lékařka pro dospělé
+2024-12-02 17:39:25,446 - INFO - Changes summary:
+2024-12-02 17:39:25,446 - INFO - Modified contacts: ["Praktická lékařka pro dospělé"]
+2024-12-02 17:39:25,500 - INFO - Successfully updated contacts at 2024-12-02T17:39:25.500003

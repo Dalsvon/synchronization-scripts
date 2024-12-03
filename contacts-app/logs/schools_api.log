@@ -147,3 +147,27 @@
 2024-11-28 13:30:56,380 - INFO - No changes detected in contacts
 2024-11-28 13:43:39,682 - INFO - Starting contact update process for contact_item/school
 2024-11-28 13:43:41,592 - INFO - No changes detected in contacts
+2024-12-02 15:04:32,336 - INFO - Starting contact update process for contact_item/school
+2024-12-02 15:04:34,961 - INFO - Modified contact: Základní škola a Mateřská škola Ořechov
+2024-12-02 15:04:34,961 - INFO - Modified contact: Základní umělecká škola Ořechov
+2024-12-02 15:04:34,961 - INFO - Changes summary:
+2024-12-02 15:04:34,961 - INFO - Modified contacts: ["Základní škola a Mateřská škola Ořechov", "Základní umělecká škola Ořechov"]
+2024-12-02 15:04:35,015 - INFO - Successfully updated contacts at 2024-12-02T15:04:35.015166
+2024-12-02 15:10:54,735 - INFO - Starting contact update process for contact_item/school
+2024-12-02 15:10:57,952 - INFO - Modified contact: Základní škola a Mateřská škola Ořechov
+2024-12-02 15:10:57,952 - INFO - Modified contact: Základní umělecká škola Ořechov
+2024-12-02 15:10:57,952 - INFO - Changes summary:
+2024-12-02 15:10:57,952 - INFO - Modified contacts: ["Základní škola a Mateřská škola Ořechov", "Základní umělecká škola Ořechov"]
+2024-12-02 15:10:58,002 - INFO - Successfully updated contacts at 2024-12-02T15:10:58.002147
+2024-12-02 17:25:14,498 - INFO - Starting contact update process for contact_item/school
+2024-12-02 17:25:16,711 - ERROR - Error during contact update: parse_school_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:59,279 - INFO - Starting contact update process for contact_item/school
+2024-12-02 17:26:01,340 - ERROR - dfsdfdfsdf
+2024-12-02 17:26:01,340 - ERROR - dfsdfdfsdf
+2024-12-02 17:26:01,573 - INFO - No changes detected in contacts
+2024-12-02 17:29:40,616 - INFO - Starting contact update process for contact_item/school
+2024-12-02 17:29:42,992 - INFO - No changes detected in contacts
+2024-12-02 17:32:22,691 - INFO - Starting contact update process for contact_item/school
+2024-12-02 17:32:25,708 - INFO - No changes detected in contacts
+2024-12-02 17:39:11,275 - INFO - Starting contact update process for contact_item/school
+2024-12-02 17:39:13,438 - INFO - No changes detected in contacts

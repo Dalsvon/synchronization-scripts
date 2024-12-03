@@ -141,3 +141,20 @@
 2024-11-28 13:31:03,641 - INFO - No changes detected in contacts
 2024-11-28 13:43:47,554 - INFO - Starting contact update process for contact_item/firemen
 2024-11-28 13:43:49,317 - INFO - No changes detected in contacts
+2024-12-02 15:04:41,514 - INFO - Starting contact update process for contact_item/firemen
+2024-12-02 15:04:44,142 - INFO - No changes detected in contacts
+2024-12-02 15:11:04,328 - INFO - Starting contact update process for contact_item/firemen
+2024-12-02 15:11:06,572 - INFO - No changes detected in contacts
+2024-12-02 17:25:22,418 - INFO - Starting contact update process for contact_item/firemen
+2024-12-02 17:25:24,103 - ERROR - Error during contact update: parse_firemen_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:26:07,004 - INFO - Starting contact update process for contact_item/firemen
+2024-12-02 17:26:08,984 - INFO - No changes detected in contacts
+2024-12-02 17:29:48,705 - INFO - Starting contact update process for contact_item/firemen
+2024-12-02 17:29:51,496 - INFO - No changes detected in contacts
+2024-12-02 17:32:32,889 - INFO - Starting contact update process for contact_item/firemen
+2024-12-02 17:32:39,914 - INFO - Modified contact: Sbor dobrovolných hasičů Ořechov
+2024-12-02 17:32:39,914 - INFO - Changes summary:
+2024-12-02 17:32:39,914 - INFO - Modified contacts: ["Sbor dobrovolných hasičů Ořechov"]
+2024-12-02 17:32:39,966 - INFO - Successfully updated contacts at 2024-12-02T17:32:39.966946
+2024-12-02 17:39:19,458 - INFO - Starting contact update process for contact_item/firemen
+2024-12-02 17:39:21,278 - INFO - No changes detected in contacts

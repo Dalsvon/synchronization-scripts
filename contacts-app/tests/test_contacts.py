@@ -39,26 +39,24 @@ class TestParsers(unittest.TestCase):
 
     def test_parse_school_data_valid(self):
         result = parse_school_data(self.api_responses['skolyApi.txt'], 
-                                 self.mock_main_logger, 
                                  self.mock_logger)
         
         self.assertEqual(len(result), 2)
         self.assertEqual(result[0].title, "Základní škola a Mateřská škola Ořechov")
         self.assertEqual(result[0].phone, "+420 547 225 121")
         self.assertEqual(result[0].mail, "zs_orechov@volny.cz")
-        self.assertEqual(result[0].web, "www.zsorechov.cz")
+        self.assertEqual(result[0].web, "http://www.zsorechov.cz")
 
     def test_parse_school_data_empty(self):
         with self.assertRaises(ValueError):
-            parse_school_data("", self.mock_main_logger, self.mock_logger)
+            parse_school_data("", self.mock_logger)
 
     def test_parse_school_data_invalid(self):
         with self.assertRaises(ValueError):
-            parse_school_data("Invalid content", self.mock_main_logger, self.mock_logger)
+            parse_school_data("Invalid content", self.mock_logger)
 
     def test_parse_general_contact_valid(self):
         result = parse_general_contact(self.api_responses['generalApi.txt'],
-                                     self.mock_main_logger,
                                      self.mock_logger)
         
         self.assertEqual(len(result), 1)
@@ -70,11 +68,10 @@ class TestParsers(unittest.TestCase):
 
     def test_parse_general_contact_empty(self):
         with self.assertRaises(ValueError):
-            parse_general_contact("", self.mock_main_logger, self.mock_logger)
+            parse_general_contact("", self.mock_logger)
     
     def test_parse_town_hall_contact_valid(self):
         result = parse_town_hall_contact(self.api_responses['generalApi.txt'],
-                                       self.mock_main_logger,
                                        self.mock_logger)
         
         # Check that we got the expected number of contacts
@@ -110,21 +107,20 @@ class TestParsers(unittest.TestCase):
 
     def test_parse_town_hall_contact_empty(self):
         with self.assertRaises(ValueError):
-            parse_town_hall_contact("", self.mock_main_logger, self.mock_logger)
+            parse_town_hall_contact("", self.mock_logger)
 
     def test_parse_town_hall_contact_invalid(self):
         invalid_data = "**Some Title**\nInvalid content without proper structure"
         with self.assertRaises(ValueError):
-            parse_town_hall_contact(invalid_data, self.mock_main_logger, self.mock_logger)
+            parse_town_hall_contact(invalid_data, self.mock_logger)
 
     def test_parse_town_hall_contact_malformed(self):
         malformed_data = "| **Name** | Position | Invalid phone Invalid email"
         with self.assertRaises(ValueError):
-            parse_town_hall_contact(malformed_data, self.mock_main_logger, self.mock_logger)
+            parse_town_hall_contact(malformed_data, self.mock_logger)
 
     def test_parse_post_office_data_valid(self):
         result = parse_post_office_data(self.api_responses['postaApi.txt'],
-                                      self.mock_main_logger,
                                       self.mock_logger)
         
         self.assertEqual(len(result), 1)
@@ -134,18 +130,16 @@ class TestParsers(unittest.TestCase):
 
     def test_parse_firemen_data_valid(self):
         result = parse_firemen_data(self.api_responses['hasiciApi.txt'],
-                                  self.mock_main_logger,
                                   self.mock_logger)
         
         self.assertEqual(len(result), 1)
         self.assertEqual(result[0].title, "Sbor dobrovolných hasičů Ořechov")
         self.assertEqual(result[0].phone, "+420 777 283 527")
         self.assertEqual(result[0].mail, "sdhorechov@seznam.cz")
-        self.assertEqual(result[0].web, "www.hasiciorechov.cz")
+        self.assertEqual(result[0].web, "http://www.hasiciorechov.cz")
 
     def test_parse_library_data_valid(self):
         result = parse_library_data(self.api_responses['knihovnaApi.txt'],
-                                  self.mock_main_logger,
                                   self.mock_logger)
         
         self.assertEqual(len(result), 1)
@@ -154,7 +148,6 @@ class TestParsers(unittest.TestCase):
 
     def test_parse_doctors_data_valid(self):
         result = parse_doctors_data(self.api_responses['lekariApi.txt'],
-                                  self.mock_main_logger,
                                   self.mock_logger)
         
         self.assertTrue(len(result) > 0)
@@ -164,7 +157,6 @@ class TestParsers(unittest.TestCase):
 
     def test_parse_drug_store_data_valid(self):
         result = parse_drug_store_data(self.api_responses['lekariApi.txt'],
-                                     self.mock_main_logger,
                                      self.mock_logger)
         
         self.assertEqual(len(result), 1)
@@ -190,7 +182,7 @@ class TestParsers(unittest.TestCase):
                         ValueError,
                         msg=f"{parser_name} should raise ValueError for invalid input: {invalid_input}"
                     ):
-                        parser_func(invalid_input, self.mock_main_logger, self.mock_logger)
+                        parser_func(invalid_input, self.mock_logger)
     
     def test_parser_error_handling_for_multiple_contacts(self):
         """Test error handling in all parsers with invalid input"""
@@ -213,7 +205,7 @@ class TestParsers(unittest.TestCase):
                         ValueError,
                         msg=f"{parser_name} should raise ValueError for invalid input: {invalid_input}"
                     ):
-                        parser_func(invalid_input, self.mock_main_logger, self.mock_logger)
+                        parser_func(invalid_input, self.mock_logger)
 
 
 class TestDataConfig(unittest.TestCase):

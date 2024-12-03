@@ -6,5 +6,5 @@ directory = logs
 filename = contacts_portal.log
 
 [SSL]
-with_ssl = True
+with_ssl = False
 directory = ssl

@@ -581,3 +581,67 @@
 2024-11-28 13:43:51,091 - INFO - Successfully updated contact_item/library (no changes)
 2024-11-28 13:43:52,776 - INFO - Successfully updated contact_item/doctors (no changes)
 2024-11-28 13:43:54,577 - INFO - Successfully updated contact_item/drug_store (no changes)
+2024-12-02 15:04:35,015 - INFO - Successfully updated contact_item/school with changes
+2024-12-02 15:04:37,573 - INFO - Successfully updated contact_item/general (no changes)
+2024-12-02 15:04:39,501 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-12-02 15:04:41,514 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-12-02 15:04:44,142 - INFO - Successfully updated contact_item/firemen (no changes)
+2024-12-02 15:04:46,679 - INFO - Successfully updated contact_item/library (no changes)
+2024-12-02 15:04:48,753 - INFO - Successfully updated contact_item/doctors (no changes)
+2024-12-02 15:04:51,193 - INFO - Successfully updated contact_item/drug_store (no changes)
+2024-12-02 15:10:58,002 - INFO - Successfully updated contact_item/school with changes
+2024-12-02 15:11:00,222 - INFO - Successfully updated contact_item/general (no changes)
+2024-12-02 15:11:02,428 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-12-02 15:11:04,328 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-12-02 15:11:06,572 - INFO - Successfully updated contact_item/firemen (no changes)
+2024-12-02 15:11:08,306 - INFO - Successfully updated contact_item/library (no changes)
+2024-12-02 15:11:11,491 - INFO - Successfully updated contact_item/doctors (no changes)
+2024-12-02 15:11:15,564 - INFO - Successfully updated contact_item/drug_store (no changes)
+2024-12-02 17:25:16,711 - ERROR - Error updating contact_item/school: parse_school_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:16,711 - ERROR - The contacts from schools could not be updated.
+2024-12-02 17:25:18,526 - ERROR - Error updating contact_item/general: parse_general_contact() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:18,526 - ERROR - The contacts from general could not be updated.
+2024-12-02 17:25:20,408 - ERROR - Error updating contact_item/town_hall: parse_town_hall_contact() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:20,408 - ERROR - The contacts from town_hall could not be updated.
+2024-12-02 17:25:22,418 - ERROR - Error updating contact_item/post_office: parse_post_office_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:22,418 - ERROR - The contacts from post_office could not be updated.
+2024-12-02 17:25:24,104 - ERROR - Error updating contact_item/firemen: parse_firemen_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:24,104 - ERROR - The contacts from firemen could not be updated.
+2024-12-02 17:25:26,068 - ERROR - Error updating contact_item/library: parse_library_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:26,068 - ERROR - The contacts from library could not be updated.
+2024-12-02 17:25:27,828 - ERROR - Error updating contact_item/doctors: parse_doctors_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:27,828 - ERROR - The contacts from doctors could not be updated.
+2024-12-02 17:25:29,680 - ERROR - Error updating contact_item/drug_store: parse_drug_store_data() takes 2 positional arguments but 3 were given
+2024-12-02 17:25:29,680 - ERROR - The contacts from drug_store could not be updated.
+2024-12-02 17:26:01,573 - INFO - Successfully updated contact_item/school (no changes)
+2024-12-02 17:26:03,436 - INFO - Successfully updated contact_item/general (no changes)
+2024-12-02 17:26:05,334 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-12-02 17:26:07,004 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-12-02 17:26:08,984 - INFO - Successfully updated contact_item/firemen (no changes)
+2024-12-02 17:26:10,809 - INFO - Successfully updated contact_item/library (no changes)
+2024-12-02 17:26:12,792 - INFO - Successfully updated contact_item/doctors (no changes)
+2024-12-02 17:26:14,791 - INFO - Successfully updated contact_item/drug_store (no changes)
+2024-12-02 17:29:42,992 - INFO - Successfully updated contact_item/school (no changes)
+2024-12-02 17:29:45,152 - INFO - Successfully updated contact_item/general (no changes)
+2024-12-02 17:29:46,742 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-12-02 17:29:48,705 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-12-02 17:29:51,496 - INFO - Successfully updated contact_item/firemen (no changes)
+2024-12-02 17:29:53,690 - INFO - Successfully updated contact_item/library (no changes)
+2024-12-02 17:29:55,604 - INFO - Successfully updated contact_item/doctors (no changes)
+2024-12-02 17:29:57,498 - INFO - Successfully updated contact_item/drug_store (no changes)
+2024-12-02 17:32:25,708 - INFO - Successfully updated contact_item/school (no changes)
+2024-12-02 17:32:28,361 - INFO - Successfully updated contact_item/general (no changes)
+2024-12-02 17:32:30,948 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-12-02 17:32:32,889 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-12-02 17:32:39,967 - INFO - Successfully updated contact_item/firemen with changes
+2024-12-02 17:32:41,712 - INFO - Successfully updated contact_item/library (no changes)
+2024-12-02 17:32:43,939 - INFO - Successfully updated contact_item/doctors with changes
+2024-12-02 17:32:45,786 - INFO - Successfully updated contact_item/drug_store (no changes)
+2024-12-02 17:39:13,438 - INFO - Successfully updated contact_item/school (no changes)
+2024-12-02 17:39:15,530 - INFO - Successfully updated contact_item/general (no changes)
+2024-12-02 17:39:17,502 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-12-02 17:39:19,458 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-12-02 17:39:21,278 - INFO - Successfully updated contact_item/firemen (no changes)
+2024-12-02 17:39:23,554 - INFO - Successfully updated contact_item/library (no changes)
+2024-12-02 17:39:25,500 - INFO - Successfully updated contact_item/doctors with changes
+2024-12-02 17:39:27,473 - INFO - Successfully updated contact_item/drug_store (no changes)

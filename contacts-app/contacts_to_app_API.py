@@ -260,7 +260,7 @@ class ContactDataUpdater:
         raw_data = self.fetch_contact_data()
         if raw_data:
             try:
-                parsed_data = self.data_config['parser'](raw_data, self.main_logger, self.logger)
+                parsed_data = self.data_config['parser'](raw_data, self.logger)
                 existing_data = self.get_existing_contacts()
                 return self.update_contacts(parsed_data, existing_data)
             except Exception as e:

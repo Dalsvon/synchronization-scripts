@@ -11,6 +11,14 @@ from pathlib import Path
 import configparser
 import sys
 
+from validators import (
+    validate_email,
+    validate_phone,
+    validate_ic,
+    validate_dic,
+    validate_data_box,
+)
+
 """
 Class representing contact for one employee of the municipality.
 """
@@ -198,8 +206,8 @@ class ContactUpdater:
                 contact = Employee(
                     name=name.strip(),
                     position=position.strip(),
-                    phone=phone.strip(),
-                    email=email.strip()
+                    phone=validate_phone(phone.strip(), self.logger),
+                    email=validate_email(email.strip(), self.logger)
                 )
                 employees.append(contact)
             
@@ -224,13 +232,13 @@ class ContactUpdater:
             main_data = {
                 'name': 'Obec Ořechov',
                 'address': address,
-                'phone': next((m.group(1) for m in re.finditer(r'Tel\.:\s*([^\n]+)', main_section)), None),
-                'mobile': next((m.group(1) for m in re.finditer(r'Mobil:\s*([^\n]+)', main_section)), None),
-                'email': next((m.group(1) for m in re.finditer(r'E-mail:\s*([^\n]+)', main_section)), None),
-                'maintenance': next((m.group(1) for m in re.finditer(r'Údržba obce:\s*([^\n]+)', main_section)), None),
-                'data_id': next((m.group(1) for m in re.finditer(r'ID datové schránky:\s*([^\n]+)', main_section)), None),
-                'ic': next((m.group(1) for m in re.finditer(r'IČ:\s*([^\n]+)', main_section)), None),
-                'dic': next((m.group(1) for m in re.finditer(r'DIČ:\s*([^\n]+)', main_section)), None),
+                'phone': validate_phone(next((m.group(1) for m in re.finditer(r'Tel\.:\s*([^\n]+)', main_section)), None), self.logger),
+                'mobile': validate_phone(next((m.group(1) for m in re.finditer(r'Mobil:\s*([^\n]+)', main_section)), None), self.logger),
+                'email': validate_email(next((m.group(1) for m in re.finditer(r'E-mail:\s*([^\n]+)', main_section)), None), self.logger),
+                'maintenance': validate_email(next((m.group(1) for m in re.finditer(r'Údržba obce:\s*([^\n]+)', main_section)), None), self.logger),
+                'data_id': validate_data_box(next((m.group(1) for m in re.finditer(r'ID datové schránky:\s*([^\n]+)', main_section)), None), self.logger),
+                'ic': validate_ic(next((m.group(1) for m in re.finditer(r'IČ:\s*([^\n]+)', main_section)), None), self.logger),
+                'dic': validate_dic(next((m.group(1) for m in re.finditer(r'DIČ:\s*([^\n]+)', main_section)), None), self.logger),
                 'bank_account': next((m.group(1) for m in re.finditer(r'č\.ú\.:\s*([^\n]+)', main_section)), None),
             }
             if all(value is None for key, value in main_data.items() if key != 'name'):
