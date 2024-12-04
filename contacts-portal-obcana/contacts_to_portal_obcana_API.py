@@ -171,7 +171,6 @@ class ContactUpdater:
             self.logger.debug("Parsing office hours")
             office_hours: List[OfficeHours] = []
             
-            #office_hours_match = re.search(r'\*\*Úřední hodiny:\*\*(.*?)(?:\.\[stack\]|$)', content, re.DOTALL)
             office_hours_match = re.search(r'\*\*Úřední hodiny:\*\*\r\n([\s\S]*?)(?:\r\n\r\n\.\[stack\]|\r\n\r\n\*\*|$)', content)
             if not office_hours_match:
                 self.logger.error("No office hours section found in content")

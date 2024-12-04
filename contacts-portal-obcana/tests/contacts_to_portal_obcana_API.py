@@ -11,6 +11,14 @@ from pathlib import Path
 import configparser
 import sys
 
+from validators import (
+    validate_email,
+    validate_phone,
+    validate_ic,
+    validate_dic,
+    validate_data_box,
+)
+
 """
 Class representing contact for one employee of the municipality.
 """
@@ -110,7 +118,7 @@ class ContactUpdater:
         ]
         
         for file_path in ssl_files:
-            if not Path(file_path).is_file():
+            if not self._resolve_path(file_path).is_file():
                 raise FileNotFoundError(f"Required SSL file not found: {file_path}")
     
     def _resolve_path(self, path_str):
@@ -163,6 +171,7 @@ class ContactUpdater:
             self.logger.debug("Parsing office hours")
             office_hours: List[OfficeHours] = []
             
+            #office_hours_match = re.search(r'\*\*Úřední hodiny:\*\*(.*?)(?:\.\[stack\]|$)', content, re.DOTALL)
             office_hours_match = re.search(r'\*\*Úřední hodiny:\*\*\r\n([\s\S]*?)(?:\r\n\r\n\.\[stack\]|\r\n\r\n\*\*|$)', content)
             if not office_hours_match:
                 self.logger.error("No office hours section found in content")
@@ -197,8 +206,8 @@ class ContactUpdater:
                 contact = Employee(
                     name=name.strip(),
                     position=position.strip(),
-                    phone=phone.strip(),
-                    email=email.strip()
+                    phone=validate_phone(phone.strip(), self.logger),
+                    email=validate_email(email.strip(), self.logger)
                 )
                 employees.append(contact)
             
@@ -223,13 +232,13 @@ class ContactUpdater:
             main_data = {
                 'name': 'Obec Ořechov',
                 'address': address,
-                'phone': next((m.group(1) for m in re.finditer(r'Tel\.:\s*([^\n]+)', main_section)), None),
-                'mobile': next((m.group(1) for m in re.finditer(r'Mobil:\s*([^\n]+)', main_section)), None),
-                'email': next((m.group(1) for m in re.finditer(r'E-mail:\s*([^\n]+)', main_section)), None),
-                'maintenance': next((m.group(1) for m in re.finditer(r'Údržba obce:\s*([^\n]+)', main_section)), None),
-                'data_id': next((m.group(1) for m in re.finditer(r'ID datové schránky:\s*([^\n]+)', main_section)), None),
-                'ic': next((m.group(1) for m in re.finditer(r'IČ:\s*([^\n]+)', main_section)), None),
-                'dic': next((m.group(1) for m in re.finditer(r'DIČ:\s*([^\n]+)', main_section)), None),
+                'phone': validate_phone(next((m.group(1) for m in re.finditer(r'Tel\.:\s*([^\n]+)', main_section)), None), self.logger),
+                'mobile': validate_phone(next((m.group(1) for m in re.finditer(r'Mobil:\s*([^\n]+)', main_section)), None), self.logger),
+                'email': validate_email(next((m.group(1) for m in re.finditer(r'E-mail:\s*([^\n]+)', main_section)), None), self.logger),
+                'maintenance': validate_email(next((m.group(1) for m in re.finditer(r'Údržba obce:\s*([^\n]+)', main_section)), None), self.logger),
+                'data_id': validate_data_box(next((m.group(1) for m in re.finditer(r'ID datové schránky:\s*([^\n]+)', main_section)), None), self.logger),
+                'ic': validate_ic(next((m.group(1) for m in re.finditer(r'IČ:\s*([^\n]+)', main_section)), None), self.logger),
+                'dic': validate_dic(next((m.group(1) for m in re.finditer(r'DIČ:\s*([^\n]+)', main_section)), None), self.logger),
                 'bank_account': next((m.group(1) for m in re.finditer(r'č\.ú\.:\s*([^\n]+)', main_section)), None),
             }
             if all(value is None for key, value in main_data.items() if key != 'name'):
@@ -274,7 +283,7 @@ class ContactUpdater:
     def ensure_tables_exist(self) -> None:
         # Check if all required tables exist
         self.logger.info("Checking if required database tables exist")
-        required_tables = ['contact', 'OfficeHours', 'employees']
+        required_tables = ['contact', 'office_hours', 'employees']
         missing_tables = []
         
         with psycopg2.connect(**self.db_params) as conn:
@@ -305,17 +314,18 @@ class ContactUpdater:
                     raise psycopg2.Error(error_msg)
 
     def update_database(self, contact_data: Contact) -> None:
-        # Update the database with new contact information.
+        # Update or create contact information in the database.
         self.logger.info("Starting database update")
         
         with psycopg2.connect(**self.db_params) as conn:
             with conn.cursor() as cur:
                 try:
                     # Check if contact exists
-                    cur.execute("SELECT id FROM contact WHERE id = 1")
-                    contact_exists = cur.fetchone() is not None
+                    cur.execute('SELECT id FROM contact WHERE id = 1')
+                    existing_contact = cur.fetchone()
 
-                    if contact_exists:
+                    if existing_contact:
+                        # Update existing contact
                         cur.execute("""
                             UPDATE contact SET
                                 name = %s,
@@ -324,13 +334,12 @@ class ContactUpdater:
                                 mobile = %s,
                                 email = %s,
                                 maintenence = %s,
-                                data_id = %s,
+                                "dataId" = %s,
                                 ic = %s,
                                 dic = %s,
-                                bank_account = %s,
-                                last_updated = %s
+                                "bankAccount" = %s,
+                                "lastUpdated" = CURRENT_TIMESTAMP
                             WHERE id = 1
-                            RETURNING id
                         """, (
                             contact_data['name'],
                             contact_data['address'],
@@ -341,20 +350,30 @@ class ContactUpdater:
                             contact_data['data_id'],
                             contact_data['ic'],
                             contact_data['dic'],
-                            contact_data['bank_account'],
-                            datetime.now()
+                            contact_data['bank_account']
                         ))
                     else:
-                        self.logger.info("New contact record created.")
+                        self.logger.info("Creating new contact record with ID 1")
                         cur.execute("""
                             INSERT INTO contact (
-                                id, name, address, phone, mobile, email, maintenence,
-                                data_id, ic, dic, bank_account, last_updated
+                                id,
+                                name,
+                                address,
+                                phone,
+                                mobile,
+                                email,
+                                maintenence,
+                                "dataId",
+                                ic,
+                                dic,
+                                "bankAccount",
+                                "createdAt",
+                                "lastUpdated"
                             )
                             VALUES (
-                                1, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s
+                                1, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s,
+                                CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                             )
-                            RETURNING id
                         """, (
                             contact_data['name'],
                             contact_data['address'],
@@ -365,39 +384,57 @@ class ContactUpdater:
                             contact_data['data_id'],
                             contact_data['ic'],
                             contact_data['dic'],
-                            contact_data['bank_account'],
-                            datetime.now()
+                            contact_data['bank_account']
                         ))
 
-                    contact_id = cur.fetchone()[0]
-
-                    # Clear existing office hours and employees
-                    cur.execute('DELETE FROM "OfficeHours" WHERE "contactId" = %s', (contact_id,))
-                    cur.execute('DELETE FROM employees WHERE "contactId" = %s', (contact_id,))
+                    # Clear existing office hours
+                    cur.execute('DELETE FROM office_hours WHERE "contactId" = 1')
 
                     # Insert new office hours
                     if contact_data['office_hours']:
+                        office_hours_values = [(
+                            h['days'],
+                            h['time'],
+                            1
+                        ) for h in contact_data['office_hours']]
+                        
                         cur.executemany("""
-                            INSERT INTO "OfficeHours" (days, time, "contactId")
+                            INSERT INTO office_hours (
+                                days,
+                                time,
+                                "contactId"
+                            )
                             VALUES (%s, %s, %s)
-                        """, [(h['days'], h['time'], contact_id) for h in contact_data['office_hours']])
+                        """, office_hours_values)
+
+                    # Clear existing employees
+                    cur.execute('DELETE FROM employees WHERE "contactId" = 1')
 
                     # Insert new employees
                     if contact_data['employees']:
-                        cur.executemany("""
-                            INSERT INTO employees (name, position, phone, email, "contactId")
-                            VALUES (%s, %s, %s, %s, %s)
-                        """, [(
+                        employee_values = [(
                             e['name'],
                             e['position'],
                             e['phone'],
                             e['email'],
-                            contact_id
-                        ) for e in contact_data['employees']])
+                            1
+                        ) for e in contact_data['employees']]
+                        
+                        cur.executemany("""
+                            INSERT INTO employees (
+                                name,
+                                position,
+                                phone,
+                                email,
+                                "contactId"
+                            )
+                            VALUES (%s, %s, %s, %s, %s)
+                        """, employee_values)
 
                     conn.commit()
-                    self.logger.info(f"Successfully updated contacts")
-                    self.logger.info(f"Updated or added {len(contact_data['office_hours'])} office hours and {len(contact_data['employees'])} employees")
+                    self.logger.info("Successfully updated contact information")
+                    self.logger.info(f"Updated or added {len(contact_data['office_hours'])} office hours "
+                                   f"and {len(contact_data['employees'])} employees")
 
                 except Exception as e:
                     conn.rollback()
@@ -432,7 +469,7 @@ def main():
         return 0
     except Exception as e:
         updater.logger.error(f"Update of contacts failed: {str(e)}")
-        print(f"Synchronizace selhala. Pro více informací si přečtěte log soubor na adrese {updater.log_file}", file=sys.stderr)
+        print(f"Synchronizace selhala. Pro více informací si přečtěte záznamový soubor na adrese {updater.log_file}", file=sys.stderr)
         return 1
 
 if __name__ == "__main__":
