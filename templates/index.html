@@ -149,7 +149,7 @@
             try {
                 isRunning = true;
                 updateControls();
-                updateStatusMessage(`Spouštění skriptu ${scriptName}...`, true);
+                updateStatusMessage(`Skript ${scriptName} byl spuštěn a probíhá synchronizace...`, true);
 
                 const response = await fetch(`/api/run-script/${scriptName}`, {
                     method: 'POST'

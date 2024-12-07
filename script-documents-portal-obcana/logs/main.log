@@ -1,0 +1,10 @@
+2024-12-05 02:47:09,033 - INFO - Checking if required database tables exist
+2024-12-05 02:47:09,055 - INFO - All required database tables exist
+2024-12-05 02:47:09,056 - INFO - Starting document update process for Psi
+2024-12-05 02:47:22,305 - INFO - Changed 0 files and deleted 0 in folder Psi
+2024-12-05 02:47:22,305 - INFO - The successfully finished synchronization of documents from Psi
+2024-12-07 00:56:59,018 - INFO - Checking if required database tables exist
+2024-12-07 00:56:59,122 - INFO - All required database tables exist
+2024-12-07 00:56:59,124 - INFO - Starting document update process for Psi
+2024-12-07 00:57:13,423 - INFO - Changed or added 2 files and deleted 0 in folder Psi
+2024-12-07 00:57:13,423 - INFO - Successfully finished synchronization of documents from Psi

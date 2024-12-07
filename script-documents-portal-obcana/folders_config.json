@@ -1,0 +1,49 @@
+{
+  "folders": [
+    {
+      "name": "Matrika",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/",
+      "log_name": "matrika.log"
+    },
+    {
+      "name": "Komunální odpad",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/komunalni-odpad/",
+      "log_name": "komunalni_odpad.log"
+    },
+    {
+      "name": "Hrobová místa",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/hrobova-mista/",
+      "log_name": "hrobova_mista.log"
+    },
+    {
+      "name": "Evidence obyvatel",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/evidence-obyvatel/",
+      "log_name": "evidence_obyvatel.log"
+    },
+    {
+      "name": "Psi",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/psi/",
+      "log_name": "psi.log"
+    },
+    {
+      "name": "Kácení dřevin",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/kaceni-drevin/",
+      "log_name": "kaceni_drevin.log"
+    },
+    {
+      "name": "Stavební záležitosti",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/stavebni-zalezitosti/",
+      "log_name": "stavebni_zalezitosti.log"
+    },
+    {
+      "name": "Sociální služby",
+      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/socialni-sluzby/",
+      "log_name": "socialni_sluzby.log"
+    },
+    {
+      "name": "Povinně zveřejňované informace",
+      "url": "https://www.orechovubrna.cz/obecni-urad/povinne-zverejnovane-informace/",
+      "log_name": "povinne_informace.log"
+    }
+  ]
+}

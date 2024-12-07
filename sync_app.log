@@ -1,4 +1,0 @@
-2024-11-22 22:34:41,070 - ERROR - Error loading scripts configuration: local variable 'scripts' referenced before assignment
-2024-11-22 22:34:41,111 - ERROR - Error loading scripts configuration: local variable 'scripts' referenced before assignment
-2024-11-23 08:49:28,867 - ERROR - Missing contacts_to_portal_obcana_API.py in contacts-portal-obcana
-2024-11-23 08:49:29,125 - ERROR - Missing contacts_to_portal_obcana_API.py in contacts-portal-obcana

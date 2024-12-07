@@ -1,0 +1,16 @@
+2024-12-05 02:47:09,056 - INFO - Starting update process
+2024-12-05 02:47:09,073 - INFO - Working with existing folder: Psi
+2024-12-05 02:47:22,300 - INFO - Found 3 documents
+2024-12-05 02:47:22,301 - INFO - Skipping unchanged file: Přihlášení k poplatku za psa
+2024-12-05 02:47:22,301 - INFO - Skipping unchanged file: Odhlášení poplatku za psa
+2024-12-05 02:47:22,301 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku za psa
+2024-12-05 02:47:22,305 - INFO - Processed 0 files
+2024-12-05 02:47:22,305 - INFO - Total data processed: 0.00 B
+2024-12-07 00:56:59,124 - INFO - Starting update process
+2024-12-07 00:56:59,146 - INFO - Working with existing folder: Psi
+2024-12-07 00:57:06,833 - INFO - Found 3 documents
+2024-12-07 00:57:06,835 - INFO - Skipping unchanged file: Přihlášení k poplatku za psa
+2024-12-07 00:57:10,397 - INFO - Added new file: Odhlášení poplatku za psa
+2024-12-07 00:57:13,418 - INFO - Added new file: Žádost o vrácení přeplatku za psa
+2024-12-07 00:57:13,421 - INFO - Processed 2 files
+2024-12-07 00:57:13,423 - INFO - Total data processed: 128.49 KB

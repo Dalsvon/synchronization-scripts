@@ -1,0 +1,9 @@
+2024-12-07 00:25:13,906 - ERROR - Error during update of database: __init__() missing 1 required positional argument: 'main_logger'
+2024-12-07 00:25:44,511 - INFO - Successfully updated contact_item/school (no changes)
+2024-12-07 00:25:46,459 - INFO - Successfully updated contact_item/general (no changes)
+2024-12-07 00:25:48,403 - INFO - Successfully updated contact_item/town_hall (no changes)
+2024-12-07 00:25:50,270 - INFO - Successfully updated contact_item/post_office (no changes)
+2024-12-07 00:25:52,038 - INFO - Successfully updated contact_item/firemen (no changes)
+2024-12-07 00:25:53,932 - INFO - Successfully updated contact_item/library (no changes)
+2024-12-07 00:25:55,842 - INFO - Successfully updated contact_item/doctors (no changes)
+2024-12-07 00:25:57,696 - INFO - Successfully updated contact_item/drug_store (no changes)

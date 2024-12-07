@@ -314,7 +314,7 @@ class SyncManager:
             self.config[f'schedule_{script_name}'] = schedule
             self.save_config()
             
-            message = (f"Plán synchronizace nastaven na {schedule_name}" if schedule else
+            message = (f"Plán synchronizace nastaven na {schedule_name.lower()}" if schedule else
                       "Plán synchronizace odstraněn") + f" pro úlohu {script.display_name}"
             
             return {'success': True, 'message': message}

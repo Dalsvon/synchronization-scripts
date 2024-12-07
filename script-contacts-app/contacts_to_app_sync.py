@@ -33,6 +33,7 @@ class ConfigLoader:
         self.config = configparser.ConfigParser()
         self.config.read(str(config_path))
         self._load_configurations()
+        self.main_logger = self._setup_main_logger()
 
     def _resolve_path(self, path_str):
         # Helper method to resolve paths based on whether they're absolute or relative
@@ -69,6 +70,27 @@ class ConfigLoader:
         parsers_module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(parsers_module)
         return parsers_module.PARSER_FUNCTIONS
+    
+    def _setup_main_logger(self):
+        # Set up the main logger for high-level program status
+        try:
+            os.makedirs(self.logs_directory, exist_ok=True)
+            
+            logger = logging.getLogger('main')
+            logger.setLevel(logging.INFO)
+            logger.handlers = []
+            
+            handler = logging.FileHandler(
+                self.main_log,
+                encoding='utf-8'
+            )
+            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+            handler.setFormatter(formatter)
+            logger.addHandler(handler)
+            
+            return logger
+        except Exception as e:
+            raise ValueError(f"Failed to set up main logger: {e}")
 
 
 """
@@ -76,9 +98,9 @@ Class that initializes database access and logging. After that by calling update
 parse and compare them to the data in database and then change the database if necessary.
 """
 class ContactDataUpdater:
-    def __init__(self, config_loader, main_logger):
+    def __init__(self, config_loader):
         self.config_loader = config_loader
-        self.main_logger = main_logger
+        self.main_logger = self.config_loader.main_logger
         self.logger = None
         self.data_config = None
         self.initialize_firebase()
@@ -98,7 +120,7 @@ class ContactDataUpdater:
             raise ValueError(f"Failure to initialize database connection: {str(e)}")
 
     def setup_logging(self, log_name):
-        # Set up logging for the current contact type.
+        # Set up logging for the current contact type
         try:
             logger = logging.getLogger(log_name)
             logger.setLevel(logging.INFO)
@@ -272,44 +294,25 @@ class ContactDataUpdater:
             self.main_logger.error(f"Error updating {self.data_config['firebase_route']}.")
             return False
 
-def setup_main_logger(main_log_path):
-    # Set up the main logger for high-level program status
-    try:
-        logger = logging.getLogger('main')
-        logger.setLevel(logging.INFO)
-        logger.handlers = []
-        
-        handler = logging.FileHandler(main_log_path, encoding='utf-8')
-        handler.setLevel(logging.INFO)
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
-        
-        return logger
-    
-    except Exception as e:
-        raise ValueError(f"Failure to set up main log for program: {e}")
-
 def main():
     try:
         config_loader = ConfigLoader()
-        main_logger = setup_main_logger(config_loader.main_log)
     except Exception as e:
         print(f"Synchronizace selhala. Konfigurační chyba: {str(e)}", file=sys.stderr)
         return 1
 
     try:
-        updater = ContactDataUpdater(config_loader, main_logger)
+        updater = ContactDataUpdater(config_loader)
         full_update = True
         
         for contact_type in config_loader.data_config.keys():
             if updater.set_contact_type(contact_type):
                 if not updater.update():
                     full_update = False
-                    main_logger.error(f"The contacts from {contact_type} could not be updated.")
+                    config_loader.main_logger.error(f"The contacts from {contact_type} could not be updated.")
             else:
                 full_update = False
-                main_logger.error(f"The contacts from {contact_type} do not have correct type in data config.")
+                config_loader.main_logger.error(f"The contacts from {contact_type} do not have correct type in data config.")
         
         if not full_update:
             print(
@@ -322,7 +325,7 @@ Pro více informací si přečtěte log soubor na adrese {config_loader.main_log
         return 0
                 
     except Exception as e:
-        main_logger.error(f"Error during update of database: {str(e)}")
+        config_loader.main_logger.error(f"Error during update of database: {str(e)}")
         print(f"Synchronizace selhala. Pro více informací si přečtěte záznamový soubor na adrese {config_loader.main_log}", file=sys.stderr)
         return 1
         

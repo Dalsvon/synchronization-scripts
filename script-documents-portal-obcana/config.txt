@@ -1,0 +1,14 @@
+[Application]
+folders_config = folders_config0.json
+file_size_limit_KB = 30000
+
+[Logs]
+directory = logs
+filename = main.log
+
+[SSL]
+with_ssl = True
+directory = ssl
+
+[Optimization]
+skip_unchanged = True

@@ -57,9 +57,10 @@ Class that updates contacts for Portal Obcana from API of Orechov website.
 """
 class ContactUpdater:
     def __init__(self, config_path='config.txt'):
-    
+        # Convert to Path object if it's a string
         config_path = Path(config_path)
         
+        # Get the directory where the script is located
         self.script_dir = Path(__file__).parent.absolute()
         
         # If path is not absolute, make it relative to script directory
@@ -74,13 +75,11 @@ class ContactUpdater:
         
         self.base_path = self.script_dir
         self._load_configurations()
-        # Setup logging
         self.logger = self._setup_logging()
         
         load_dotenv()
         
         # Database configuration from environment variables
-        
         if self.uses_ssl == 'True':
             self.db_params = {
                 'dbname': os.getenv('DB_NAME'),
@@ -110,7 +109,7 @@ class ContactUpdater:
         
 
     def _verify_ssl_files(self):
-        # Verify that all required SSL files exist.
+        # Verify that all required SSL files exist
         ssl_files = [
             self.db_params['sslcert'],
             self.db_params['sslkey'],
@@ -146,6 +145,7 @@ class ContactUpdater:
         self.log_file.parent.mkdir(parents=True, exist_ok=True)
 
     def _setup_logging(self) -> None:
+        # Set up logging
         try:
             os.makedirs(self.logs_directory, exist_ok=True)
             
@@ -166,7 +166,7 @@ class ContactUpdater:
             raise ValueError(f"Failure to set up logging for program: {e}")
 
     def parse_office_hours(self, content: str) -> List[OfficeHours]:
-        # Extract office hours from the content.
+        # Extract office hours from the content
         try:
             self.logger.debug("Parsing office hours")
             office_hours: List[OfficeHours] = []
@@ -196,7 +196,7 @@ class ContactUpdater:
             raise
 
     def parse_employees(self, content: str) -> List[Employee]:
-        # Extract employee information from the content.
+        # Extract employee information from the content
         try:
             employees: List[Employee] = []
             staff_data = re.findall(r'\|\s*\*\*(.+?)\*\*\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+)', content)
@@ -221,7 +221,7 @@ class ContactUpdater:
             raise
 
     def parse_main_content(self, content: str) -> Dict[str, Optional[str]]:
-        # Extract main contact information from the content.
+        # Extract main contact information from the content
         try:
             main_section = content.split('**Úřední hodiny:**')[0]
             

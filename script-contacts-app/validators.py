@@ -2,7 +2,7 @@ import re
 from typing import Optional
 import logging
 
-def validate_email(email: Optional[str], logger: Optional[logging.Logger] = None) -> Optional[str]:
+def validate_email(email: Optional[str], logger: Optional[logging.Logger] = None):
     if not email:
         return None
         
@@ -16,7 +16,7 @@ def validate_email(email: Optional[str], logger: Optional[logging.Logger] = None
     
     return match.group(0)
 
-def validate_phone(phone: Optional[str], logger: Optional[logging.Logger] = None) -> Optional[str]:
+def validate_phone(phone: Optional[str], logger: Optional[logging.Logger] = None):
     if not phone:
         return None
         
@@ -34,7 +34,7 @@ def validate_phone(phone: Optional[str], logger: Optional[logging.Logger] = None
     # Format with proper spacing
     return f"+420 {groups[0]} {groups[1]} {groups[2]}"
 
-def validate_url(url: Optional[str], logger: Optional[logging.Logger] = None) -> Optional[str]:
+def validate_url(url: Optional[str], logger: Optional[logging.Logger] = None):
     if not url:
         return None
         
