@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, flash, redirect, url_for, session
+from flask import Flask, render_template, jsonify, request, flash, redirect, url_for, session, g
 import os
 import subprocess
 from crontab import CronTab
@@ -324,11 +324,15 @@ class SyncManager:
             self.logger.error("Couldn't set schedule: {e}")
             raise RuntimeError(f"Nepodařilo sa uložit plán: {e}")
 
+
 def get_sync_manager():
-    # Returns singleton instance of SyncManager
-    if not hasattr(get_sync_manager, 'instance'):
-        get_sync_manager.instance = SyncManager()
-    return get_sync_manager.instance
+    if 'sync_manager' not in g:
+        g.sync_manager = SyncManager()
+    return g.sync_manager
+
+@app.teardown_appcontext
+def teardown_sync_manager(exception):
+    sync_manager = g.pop('sync_manager', None)
 
 def create_app():
     # Creates the app and loads SyncManager
@@ -343,10 +347,6 @@ def create_app():
         SESSION_COOKIE_SAMESITE='Lax',
         PERMANENT_SESSION_LIFETIME=timedelta(hours=2),
     )
-    
-    # Initialize SyncManager at app startup
-    with app.app_context():
-        get_sync_manager()
     
     return app
 
