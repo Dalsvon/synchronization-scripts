@@ -8,7 +8,7 @@ import configparser
 import re
 import logging
 import os
-from newspapers_to_app_API import NewspaperItem, NewspaperUpdater
+from newspapers_to_app_sync import NewspaperItem, NewspaperUpdater
 
 class LoggerContext:
     """Context manager for handling logger setup and cleanup"""

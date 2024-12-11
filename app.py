@@ -258,6 +258,7 @@ class SyncManager:
                 check=True,
                 capture_output=True,
                 text=True,
+                encoding='utf-8',
                 env=env
             )
             
@@ -269,11 +270,11 @@ class SyncManager:
             
         except subprocess.CalledProcessError as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
-            raise RuntimeError(f"Nastala neznámá chyba během provádění skriptu {script_name}.")
+            raise RuntimeError(f"Nastala neznámá chyba během provádění skriptu {script_name}: {e}.")
         
         except Exception as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
-            raise RuntimeError("Nastala neznámá chyba.")
+            raise RuntimeError(f"Nastala neznámá chyba: {e}.")
         
 
     def save_schedule(self, script_name: str, schedule_name: str) -> Dict:
@@ -460,5 +461,5 @@ def save_schedule(script_name):
         }), 500
 
 if __name__ == '__main__':
-    # In production, we'll use gunicorn instead of this
+    # This is used only for testing, for example with gunicorn 
     app.run(host='0.0.0.0', port=3002)

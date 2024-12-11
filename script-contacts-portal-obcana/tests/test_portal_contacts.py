@@ -5,7 +5,7 @@ from pathlib import Path
 import psycopg2
 import logging
 import sys
-from contacts_to_portal_obcana_API import ContactUpdater, Employee, OfficeHours, Contact
+from contacts_to_portal_obcana_sync import ContactUpdater, Employee, OfficeHours, Contact
 from datetime import datetime
 import requests
 
@@ -186,15 +186,24 @@ class TestPortalContacts(unittest.TestCase):
 
     @patch('psycopg2.connect')
     def test_ensure_tables_exist_missing_table(self, mock_connect):
+        """Test handling of missing required tables"""
         mock_cursor = MagicMock()
-        mock_cursor.fetchone.return_value = [False]
+        mock_cursor.fetchone.return_value = (False,)
         mock_conn = MagicMock()
         mock_conn.cursor.return_value.__enter__.return_value = mock_cursor
         mock_connect.return_value.__enter__.return_value = mock_conn
-
-        updater = ContactUpdater()
-        with self.assertRaises(ValueError):
-            updater.ensure_tables_exist()
+        
+        config_loader = ConfigLoader()
+        
+        with patch.object(DocumentSyncUpdater, '_ensure_tables_exist'):
+            updater = DocumentSyncUpdater(config_loader)
+            logger = logging.getLogger('test')
+            logger.addHandler(logging.NullHandler())
+            updater.logger = logger
+            updater.main_logger = logger
+            
+            with self.assertRaises(ValueError):
+                updater._ensure_tables_exist()
 
     @patch('psycopg2.connect')
     def test_update_database_new_contact(self, mock_connect):

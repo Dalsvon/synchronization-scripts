@@ -10,16 +10,33 @@ from datetime import datetime
 from pathlib import Path
 import configparser
 import sys
+from validators import validate_link, validate_release, validate_year, validate_id
 
 """
-Newspaper class representing a release of Orechovsky zpravodaj.
+Newspaper class representing a release of Orechovsky zpravodaj. Validatates data before creation.
 """
 class NewspaperItem:
-    def __init__(self, id, link, release, year):
-        self.id = int(id)
-        self.link = link # String link to website of Orechov where the releases are stored
-        self.release = int(release)
-        self.year = int(year)
+    def __init__(self, id, link, release, year, logger):
+        self.logger = logger
+        
+        validated_year = validate_year(year, logger)
+        validated_release = validate_release(release, logger)
+        
+        if validated_year is None or validated_release is None:
+            raise ValueError("Invalid year or release number")
+            
+        validated_id = validate_id(id, validated_year, validated_release, logger)
+        if validated_id is None:
+            raise ValueError("Invalid ID format")
+            
+        validated_link = validate_link(link, logger)
+        if validated_link is None:
+            raise ValueError("Invalid link format or not a PDF file")
+        
+        self.id = validated_id
+        self.link = validated_link
+        self.release = validated_release
+        self.year = validated_year
 
     def to_dict(self):
         return {
@@ -35,24 +52,22 @@ website of Orechov with use of provided API.
 """
 class NewspaperUpdater:
     def __init__(self, config_path='config.txt'):
-        try:
-            self.script_dir = Path(__file__).parent.absolute()
-            
-            # Convert to Path object and make relative to script directory if not absolute
-            config_path = Path(config_path)
-            if not config_path.is_absolute():
-                config_path = self.script_dir / config_path
+        # Convert to Path object
+        config_path = Path(config_path)
+        
+        self.script_dir = Path(__file__).parent.absolute()
+        
+        if not config_path.is_absolute():
+            config_path = self.script_dir / config_path
 
-            if not config_path.exists():
-                raise FileNotFoundError(f"Configuration file not found at: {config_path}")
+        if not config_path.exists():
+            raise FileNotFoundError(f"Configuration file not found at: {config_path}")
 
-            self.config = configparser.ConfigParser()
-            self.config.read(str(config_path))
-            self._load_configurations()
-            self.logger = self._setup_logging()
-            self._initialize_firebase()
-        except Exception as e:
-            raise
+        self.config = configparser.ConfigParser()
+        self.config.read(str(config_path))
+        self._load_configurations()
+        self.logger = self._setup_logging()
+        self._initialize_firebase()
 
     def _resolve_path(self, path_str):
         # Helper method to resolve paths based on whether they're absolute or relative
@@ -90,6 +105,7 @@ class NewspaperUpdater:
             raise ValueError(f"Failure to initialize database connection: {str(e)}")
 
     def _setup_logging(self):
+        # Sets up logging
         try:
             os.makedirs(self.logs_directory, exist_ok=True)
             
@@ -110,11 +126,9 @@ class NewspaperUpdater:
             raise ValueError(f"Failure to set up logging for program: {e}")
 
     def _parse_newspaper_item(self, li_element):
-        # Parse a single newspaper item from an HTML li element.
+        # Parse a single newspaper item from an HTML li element
         try:
             link = li_element.find('a')['href']
-            if not link.startswith('http'):
-                link = 'https://www.orechovubrna.cz' + link
                 
             # Czech month names mapping
             month_mapping = {
@@ -128,29 +142,39 @@ class NewspaperUpdater:
                 
             
             raw_text = li_element.text
-            text = raw_text.encode('latin1').decode('utf8').lower()
             
             # Extract release number and year from the link text
-            match = re.search(r'zpravodaj (\d+)/(\d{4})', text, re.IGNORECASE)
+            match = re.search(r'zpravodaj (\d+)/(\d{4})', raw_text, re.IGNORECASE)
             if match:
-                release = int(match.group(1))
-                year = int(match.group(2))
-                
-                # Create ID in format YYYYRR as integer
-                id = (year * 100) + release
-                
-                return NewspaperItem(id, link, release, year)
+                try:
+                    release = int(match.group(1))
+                    year = int(match.group(2))
+                    id = (year * 100) + release
+                    return NewspaperItem(id, link, release, year, self.logger)
+                except ValueError as e:
+                    self.logger.error(f"Invalid format in zpravodaj: {e}")
+                    return None
+                except Exception as e:
+                    self.logger.error(f"Failed to create NewspaperItem: {str(e)}")
+                    return None
             
             # Try second pattern: "zpravodaj MONTH YYYY" used in older publications
             for month_name, month_num in month_mapping.items():
                 # Using word boundaries \b to match whole words
                 pattern = rf'zpravodaj\s+{month_name}\s+(\d{{4}})'
-                match = re.search(pattern, text)
+                match = re.search(pattern, raw_text)
                 if match:
-                    year = int(match.group(1))
-                    release = month_num  # Use month number as release number
-                    id = (year * 100) + release
-                    return NewspaperItem(id, link, release, year)
+                    try:
+                        year = int(match.group(1))
+                        release = month_num  # Use month number as release number
+                        id = (year * 100) + release
+                        return NewspaperItem(id, link, release, year, self.logger)
+                    except ValueError as e:
+                        self.logger.error(f"Invalid format in zpravodaj: {e}")
+                        return None
+                    except Exception as e:
+                        self.logger.error(f"Failed to create NewspaperItem: {str(e)}")
+                        return None
             
             self.logger.error(f"Couldn't parse {li_element.text}")
             
@@ -161,20 +185,20 @@ class NewspaperUpdater:
         return None
 
     def fetch_newspapers(self):
-        # Fetch and parse newspapers from the website.
+        # Fetch and parse newspapers from the website
         try:
             self.logger.info(f"Fetching newspapers from {self.newspapers_url}")
             response = requests.get(self.newspapers_url)
             response.raise_for_status()
+            response.encoding = 'utf-8'
             
-            # Parses website html so it is possible to find all newspaper entries
             soup = BeautifulSoup(response.text, 'html.parser')
             newspaper_items = []
             
             # Find all li elements containing newspaper links
             for li in soup.find_all(self.scrape_element):
                 # Take only newspaper items
-                if 'oåechovskã½ zpravodaj ' in li.text.lower() or 'ořechovský zpravodaj ' in li.text.lower():
+                if 'ořechovský zpravodaj ' in li.text.lower():
                     item = self._parse_newspaper_item(li)
                     if item:
                         newspaper_items.append(item)
@@ -192,7 +216,7 @@ class NewspaperUpdater:
             return None
 
     def get_existing_data(self):
-        # Retrieve existing newspaper data from Firebase.
+        # Retrieve existing newspaper data from Firebase
         try:
             ref = db.reference(self.firebase_route)
             data = ref.get()
@@ -205,7 +229,7 @@ class NewspaperUpdater:
             return {}
 
     def compare_and_update(self, new_items, existing_data):
-        # Compare and update newspaper data in Firebase.
+        # Compare and update newspaper data in Firebase
         try:
             ref = db.reference(self.firebase_route)
             new_dict = {item.id: item.to_dict() for item in new_items}
@@ -256,7 +280,7 @@ class NewspaperUpdater:
                 self.logger.info("Synchronization completed successfully")
             else:
                 self.logger.error("Failed to fetch newspapers data")
-                raise RuntimeError(f"No newspaper data could be parsed from website: {str(e)}")
+                raise RuntimeError(f"No newspaper data could be parsed from website")
                 
         except Exception as e:
             self.logger.error(f"Error during synchronization: {str(e)}")
@@ -275,7 +299,7 @@ def main():
         return 0
     except Exception as e:
         updater.logger.error(f"Synchronization error: {str(e)}")
-        print(f"Synchronizace selhala. Pro více informací si přečtěte log soubor na adrese {updater.logs_directory / updater.log_filename}", file=sys.stderr)
+        print(f"Synchronizace selhala. Pro více informací si přečtěte záznamový soubor na adrese {updater.logs_directory / updater.log_filename}", file=sys.stderr)
         return 1
 
 if __name__ == "__main__":

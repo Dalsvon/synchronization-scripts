@@ -14,3 +14,11 @@
 2024-12-07 00:57:13,418 - INFO - Added new file: Žádost o vrácení přeplatku za psa
 2024-12-07 00:57:13,421 - INFO - Processed 2 files
 2024-12-07 00:57:13,423 - INFO - Total data processed: 128.49 KB
+2024-12-09 22:55:58,176 - INFO - Starting update process
+2024-12-09 22:55:58,197 - INFO - Working with existing folder: Psi
+2024-12-09 22:56:06,898 - INFO - Found 3 documents
+2024-12-09 22:56:06,901 - INFO - Skipping unchanged file: Přihlášení k poplatku za psa
+2024-12-09 22:56:06,901 - INFO - Skipping unchanged file: Odhlášení poplatku za psa
+2024-12-09 22:56:06,901 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku za psa
+2024-12-09 22:56:06,904 - INFO - Processed 0 files
+2024-12-09 22:56:06,904 - INFO - Total data processed: 0.00 B

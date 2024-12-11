@@ -1,0 +1,6 @@
+{
+    "schedule_contacts_to_app_sync.py": "",
+    "schedule_contacts_to_portal_obcana_sync.py": "",
+    "schedule_newspapers_to_app_sync.py": "0 0 * * 0",
+    "schedule_documents_to_portal_obcana_sync.py": ""
+}

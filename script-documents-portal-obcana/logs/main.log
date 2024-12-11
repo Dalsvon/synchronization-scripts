@@ -8,3 +8,8 @@
 2024-12-07 00:56:59,124 - INFO - Starting document update process for Psi
 2024-12-07 00:57:13,423 - INFO - Changed or added 2 files and deleted 0 in folder Psi
 2024-12-07 00:57:13,423 - INFO - Successfully finished synchronization of documents from Psi
+2024-12-09 22:55:58,090 - INFO - Checking if required database tables exist
+2024-12-09 22:55:58,175 - INFO - All required database tables exist
+2024-12-09 22:55:58,176 - INFO - Starting document update process for Psi
+2024-12-09 22:56:06,904 - INFO - Changed or added 0 files and deleted 0 in folder Psi
+2024-12-09 22:56:06,904 - INFO - Successfully finished synchronization of documents from Psi

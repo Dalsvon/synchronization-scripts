@@ -7,7 +7,7 @@ import logging
 import sys
 import importlib.util
 import re
-from contacts_to_app_API import ConfigLoader, ContactDataUpdater, setup_main_logger
+from contacts_to_app_sync import ConfigLoader, ContactDataUpdater
 from contact_item import ContactItem
 from parsers import *
 
@@ -297,8 +297,7 @@ class TestContactsToApp(unittest.TestCase):
                         self.config_loader.data_config = mock_data_config
         
         # Setup logger mocks
-        self.mock_logger = Mock(spec=logging.Logger)
-        self.updater = ContactDataUpdater(self.config_loader, self.mock_logger)
+        self.updater = ContactDataUpdater(self.config_loader)
         self.updater.logger = Mock(spec=logging.Logger)  # Add logger to updater
 
     @patch('logging.FileHandler')
@@ -473,11 +472,6 @@ class TestContactsToApp(unittest.TestCase):
         
         # Verify the logger recorded the modification
         self.updater.logger.info.assert_any_call("Modified contact: Test Contact")
-
-    def test_setup_main_logger(self):
-        with patch('logging.FileHandler'):
-            logger = setup_main_logger(Path('test.log'))
-            self.assertIsInstance(logger, logging.Logger)
 
     def test_config_loader_invalid_path(self):
         with patch('pathlib.Path.exists', return_value=False):
