@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, flash, redirect, url_for, session, g
+from flask import Flask, render_template, jsonify, request, flash, redirect, url_for, session
 import os
 import subprocess
 from crontab import CronTab
@@ -324,15 +324,8 @@ class SyncManager:
             self.logger.error("Couldn't set schedule: {e}")
             raise RuntimeError(f"Nepodařilo sa uložit plán: {e}")
 
-
 def get_sync_manager():
-    if 'sync_manager' not in g:
-        g.sync_manager = SyncManager()
-    return g.sync_manager
-
-@app.teardown_appcontext
-def teardown_sync_manager(exception):
-    sync_manager = g.pop('sync_manager', None)
+    return SyncManager()
 
 def create_app():
     # Creates the app and loads SyncManager
