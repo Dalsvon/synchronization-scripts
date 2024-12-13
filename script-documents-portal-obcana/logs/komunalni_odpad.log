@@ -1,0 +1,38 @@
+2024-12-13 21:39:02,637 - INFO - Starting update process
+2024-12-13 21:39:02,653 - INFO - Working with existing folder: Komunální odpad
+2024-12-13 21:39:10,622 - INFO - Found 3 documents
+2024-12-13 21:39:10,624 - INFO - Skipping unchanged file: Přihláška nemovitosti k poplatku
+2024-12-13 21:39:10,624 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku
+2024-12-13 21:39:10,624 - INFO - Skipping unchanged file: Čestné prohlášení - osvobození od poplatků
+2024-12-13 21:39:10,628 - INFO - Processed 0 files
+2024-12-13 21:39:10,629 - INFO - Total data processed: 0.00 B
+2024-12-13 21:46:06,590 - INFO - Starting update process
+2024-12-13 21:46:06,605 - INFO - Working with existing folder: Komunální odpad
+2024-12-13 21:46:14,538 - INFO - Found 3 documents
+2024-12-13 21:46:14,540 - INFO - Skipping unchanged file: Přihláška nemovitosti k poplatku
+2024-12-13 21:46:14,540 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku
+2024-12-13 21:46:14,540 - INFO - Skipping unchanged file: Čestné prohlášení - osvobození od poplatků
+2024-12-13 21:46:14,544 - INFO - Processed 0 files
+2024-12-13 21:46:14,544 - INFO - Total data processed: 0.00 B
+2024-12-13 22:14:10,294 - INFO - Starting update process
+2024-12-13 22:14:10,310 - INFO - Working with existing folder: Komunální odpad
+2024-12-13 22:14:18,082 - INFO - Found 3 documents
+2024-12-13 22:14:18,083 - INFO - Skipping unchanged file: Přihláška nemovitosti k poplatku
+2024-12-13 22:14:18,084 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku
+2024-12-13 22:14:18,084 - INFO - Skipping unchanged file: Čestné prohlášení - osvobození od poplatků
+2024-12-13 22:14:18,086 - INFO - Processed 0 files
+2024-12-13 22:14:18,086 - INFO - Total data processed: 0.00 B
+2024-12-13 22:17:45,633 - INFO - Starting update process
+2024-12-13 22:17:45,649 - INFO - Working with existing folder: Komunální odpad
+2024-12-13 22:17:49,925 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/komunalni-odpad/soubory/Přihláška nemovitosti k poplatku-1371.pdf
+2024-12-13 22:17:49,926 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/komunalni-odpad/soubory/Přihláška nemovitosti k poplatku-1371.pdf
+2024-12-13 22:17:51,660 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/komunalni-odpad/soubory/Žádost o vrácení přeplatku-1372.pdf
+2024-12-13 22:17:51,660 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/komunalni-odpad/soubory/Žádost o vrácení přeplatku-1372.pdf
+2024-12-13 22:17:53,565 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/komunalni-odpad/soubory/Čestné prohlášení - osvobození od poplatků-1370.pdf
+2024-12-13 22:17:53,565 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/komunalni-odpad/soubory/Čestné prohlášení - osvobození od poplatků-1370.pdf
+2024-12-13 22:17:53,566 - INFO - Found 3 documents
+2024-12-13 22:17:53,567 - INFO - Skipping unchanged file: Přihláška nemovitosti k poplatku
+2024-12-13 22:17:53,567 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku
+2024-12-13 22:17:53,567 - INFO - Skipping unchanged file: Čestné prohlášení - osvobození od poplatků
+2024-12-13 22:17:53,570 - INFO - Processed 0 files
+2024-12-13 22:17:53,571 - INFO - Total data processed: 0.00 B

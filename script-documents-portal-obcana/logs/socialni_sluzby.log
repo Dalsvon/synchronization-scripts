@@ -1,0 +1,26 @@
+2024-12-13 21:39:48,022 - INFO - Starting update process
+2024-12-13 21:39:48,036 - INFO - Working with existing folder: Sociální služby
+2024-12-13 21:39:52,382 - INFO - Found 1 documents
+2024-12-13 21:39:52,383 - INFO - Skipping unchanged file: Sociálně-právní ochrana dětí
+2024-12-13 21:39:52,389 - INFO - Processed 0 files
+2024-12-13 21:39:52,389 - INFO - Total data processed: 0.00 B
+2024-12-13 21:46:36,447 - INFO - Starting update process
+2024-12-13 21:46:36,465 - INFO - Working with existing folder: Sociální služby
+2024-12-13 21:46:41,096 - INFO - Found 1 documents
+2024-12-13 21:46:41,098 - INFO - Skipping unchanged file: Sociálně-právní ochrana dětí
+2024-12-13 21:46:41,100 - INFO - Processed 0 files
+2024-12-13 21:46:41,100 - INFO - Total data processed: 0.00 B
+2024-12-13 22:14:41,411 - INFO - Starting update process
+2024-12-13 22:14:41,429 - INFO - Working with existing folder: Sociální služby
+2024-12-13 22:14:45,656 - INFO - Found 1 documents
+2024-12-13 22:14:45,657 - INFO - Skipping unchanged file: Sociálně-právní ochrana dětí
+2024-12-13 22:14:45,660 - INFO - Processed 0 files
+2024-12-13 22:14:45,660 - INFO - Total data processed: 0.00 B
+2024-12-13 22:18:16,988 - INFO - Starting update process
+2024-12-13 22:18:17,004 - INFO - Working with existing folder: Sociální služby
+2024-12-13 22:18:21,306 - ERROR - Received content-type header: application/msword for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/socialni-sluzby/soubory/Sociálně-právní ochrana dětí-801.doc
+2024-12-13 22:18:21,306 - ERROR - Determined MIME type from header: application/msword for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/socialni-sluzby/soubory/Sociálně-právní ochrana dětí-801.doc
+2024-12-13 22:18:21,306 - INFO - Found 1 documents
+2024-12-13 22:18:21,307 - INFO - Skipping unchanged file: Sociálně-právní ochrana dětí
+2024-12-13 22:18:21,311 - INFO - Processed 0 files
+2024-12-13 22:18:21,311 - INFO - Total data processed: 0.00 B

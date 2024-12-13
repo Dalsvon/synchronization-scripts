@@ -1,0 +1,32 @@
+2024-12-13 21:39:18,225 - INFO - Starting update process
+2024-12-13 21:39:18,241 - INFO - Created new folder: Evidence obyvatel
+2024-12-13 21:39:23,900 - INFO - Found 2 documents
+2024-12-13 21:39:27,899 - INFO - Added new file: Návrh na zrušení adresy místa trvalého pobytu
+2024-12-13 21:39:31,523 - INFO - Added new file: Žádost o přidělení domovního čísla
+2024-12-13 21:39:31,526 - INFO - Processed 2 files
+2024-12-13 21:39:31,526 - INFO - Total data processed: 454.12 KB
+2024-12-13 21:46:18,682 - INFO - Starting update process
+2024-12-13 21:46:18,698 - INFO - Working with existing folder: Evidence obyvatel
+2024-12-13 21:46:24,297 - INFO - Found 2 documents
+2024-12-13 21:46:24,299 - INFO - Skipping unchanged file: Návrh na zrušení adresy místa trvalého pobytu
+2024-12-13 21:46:24,299 - INFO - Skipping unchanged file: Žádost o přidělení domovního čísla
+2024-12-13 21:46:24,302 - INFO - Processed 0 files
+2024-12-13 21:46:24,302 - INFO - Total data processed: 0.00 B
+2024-12-13 22:14:22,744 - INFO - Starting update process
+2024-12-13 22:14:22,759 - INFO - Working with existing folder: Evidence obyvatel
+2024-12-13 22:14:29,058 - INFO - Found 2 documents
+2024-12-13 22:14:29,059 - INFO - Skipping unchanged file: Návrh na zrušení adresy místa trvalého pobytu
+2024-12-13 22:14:29,060 - INFO - Skipping unchanged file: Žádost o přidělení domovního čísla
+2024-12-13 22:14:29,063 - INFO - Processed 0 files
+2024-12-13 22:14:29,063 - INFO - Total data processed: 0.00 B
+2024-12-13 22:17:58,336 - INFO - Starting update process
+2024-12-13 22:17:58,351 - INFO - Working with existing folder: Evidence obyvatel
+2024-12-13 22:18:02,578 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/evidence-obyvatel/soubory/Návrh na zrušení adresy místa trvalého pobytu-1374.pdf
+2024-12-13 22:18:02,578 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/evidence-obyvatel/soubory/Návrh na zrušení adresy místa trvalého pobytu-1374.pdf
+2024-12-13 22:18:04,462 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/evidence-obyvatel/soubory/Žádost o přidělení domovního čísla (popisné, evidenční, orientační)-1375.pdf
+2024-12-13 22:18:04,462 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/evidence-obyvatel/soubory/Žádost o přidělení domovního čísla (popisné, evidenční, orientační)-1375.pdf
+2024-12-13 22:18:04,462 - INFO - Found 2 documents
+2024-12-13 22:18:04,464 - INFO - Skipping unchanged file: Návrh na zrušení adresy místa trvalého pobytu
+2024-12-13 22:18:04,464 - INFO - Skipping unchanged file: Žádost o přidělení domovního čísla
+2024-12-13 22:18:04,467 - INFO - Processed 0 files
+2024-12-13 22:18:04,467 - INFO - Total data processed: 0.00 B

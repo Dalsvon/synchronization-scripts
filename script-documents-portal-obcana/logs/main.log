@@ -13,3 +13,135 @@
 2024-12-09 22:55:58,176 - INFO - Starting document update process for Psi
 2024-12-09 22:56:06,904 - INFO - Changed or added 0 files and deleted 0 in folder Psi
 2024-12-09 22:56:06,904 - INFO - Successfully finished synchronization of documents from Psi
+2024-12-13 21:08:47,188 - INFO - Checking if required database tables exist
+2024-12-13 21:08:47,189 - ERROR - Error during update of database: connection to server at "localhost" (127.0.0.1), port 5433 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+2024-12-13 21:09:30,430 - INFO - Checking if required database tables exist
+2024-12-13 21:09:30,508 - INFO - All required database tables exist
+2024-12-13 21:09:30,509 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:20:10,142 - INFO - Checking if required database tables exist
+2024-12-13 21:20:10,162 - INFO - All required database tables exist
+2024-12-13 21:20:10,163 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:22:50,772 - INFO - Checking if required database tables exist
+2024-12-13 21:22:50,790 - INFO - All required database tables exist
+2024-12-13 21:22:50,791 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:23:32,271 - INFO - Checking if required database tables exist
+2024-12-13 21:23:32,289 - INFO - All required database tables exist
+2024-12-13 21:23:32,290 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:27:03,475 - INFO - Changed or added 39 files and deleted 0 in folder Povinně zveřejňované informace
+2024-12-13 21:27:03,475 - INFO - Successfully finished synchronization of documents from Povinně zveřejňované informace
+2024-12-13 21:27:23,557 - INFO - Checking if required database tables exist
+2024-12-13 21:27:23,575 - INFO - All required database tables exist
+2024-12-13 21:27:23,576 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:28:33,469 - INFO - Changed or added 0 files and deleted 0 in folder Povinně zveřejňované informace
+2024-12-13 21:28:33,469 - INFO - Successfully finished synchronization of documents from Povinně zveřejňované informace
+2024-12-13 21:29:44,658 - INFO - Checking if required database tables exist
+2024-12-13 21:29:44,676 - INFO - All required database tables exist
+2024-12-13 21:29:44,677 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:30:57,548 - INFO - Changed or added 0 files and deleted 0 in folder Povinně zveřejňované informace
+2024-12-13 21:30:57,548 - INFO - Successfully finished synchronization of documents from Povinně zveřejňované informace
+2024-12-13 21:38:48,589 - INFO - Checking if required database tables exist
+2024-12-13 21:38:48,607 - INFO - All required database tables exist
+2024-12-13 21:38:48,608 - INFO - Starting document update process for Matrika
+2024-12-13 21:39:02,636 - INFO - Changed or added 0 files and deleted 0 in folder Matrika
+2024-12-13 21:39:02,636 - INFO - Successfully finished synchronization of documents from Matrika
+2024-12-13 21:39:02,636 - INFO - Starting document update process for Komunální odpad
+2024-12-13 21:39:10,629 - INFO - Changed or added 0 files and deleted 0 in folder Komunální odpad
+2024-12-13 21:39:10,629 - INFO - Successfully finished synchronization of documents from Komunální odpad
+2024-12-13 21:39:10,629 - INFO - Starting document update process for Hrobová místa
+2024-12-13 21:39:18,225 - INFO - Changed or added 1 files and deleted 0 in folder Hrobová místa
+2024-12-13 21:39:18,225 - INFO - Successfully finished synchronization of documents from Hrobová místa
+2024-12-13 21:39:18,225 - INFO - Starting document update process for Evidence obyvatel
+2024-12-13 21:39:31,526 - INFO - Changed or added 2 files and deleted 0 in folder Evidence obyvatel
+2024-12-13 21:39:31,527 - INFO - Successfully finished synchronization of documents from Evidence obyvatel
+2024-12-13 21:39:31,527 - INFO - Starting document update process for Psi
+2024-12-13 21:39:40,055 - INFO - Changed or added 0 files and deleted 0 in folder Psi
+2024-12-13 21:39:40,055 - INFO - Successfully finished synchronization of documents from Psi
+2024-12-13 21:39:40,055 - INFO - Starting document update process for Kácení dřevin
+2024-12-13 21:39:48,022 - INFO - Changed or added 1 files and deleted 0 in folder Kácení dřevin
+2024-12-13 21:39:48,022 - INFO - Successfully finished synchronization of documents from Kácení dřevin
+2024-12-13 21:39:48,022 - INFO - Starting document update process for Sociální služby
+2024-12-13 21:39:52,389 - INFO - Changed or added 0 files and deleted 0 in folder Sociální služby
+2024-12-13 21:39:52,390 - INFO - Successfully finished synchronization of documents from Sociální služby
+2024-12-13 21:39:52,390 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:41:07,421 - INFO - Changed or added 0 files and deleted 0 in folder Povinně zveřejňované informace
+2024-12-13 21:41:07,421 - INFO - Successfully finished synchronization of documents from Povinně zveřejňované informace
+2024-12-13 21:45:52,818 - INFO - Checking if required database tables exist
+2024-12-13 21:45:52,870 - INFO - All required database tables exist
+2024-12-13 21:45:52,871 - INFO - Starting document update process for Matrika
+2024-12-13 21:46:06,589 - INFO - Changed or added 0 files and deleted 0 in folder Matrika
+2024-12-13 21:46:06,590 - INFO - Successfully finished synchronization of documents from Matrika
+2024-12-13 21:46:06,590 - INFO - Starting document update process for Komunální odpad
+2024-12-13 21:46:14,544 - INFO - Changed or added 0 files and deleted 0 in folder Komunální odpad
+2024-12-13 21:46:14,544 - INFO - Successfully finished synchronization of documents from Komunální odpad
+2024-12-13 21:46:14,544 - INFO - Starting document update process for Hrobová místa
+2024-12-13 21:46:18,682 - INFO - Changed or added 0 files and deleted 0 in folder Hrobová místa
+2024-12-13 21:46:18,682 - INFO - Successfully finished synchronization of documents from Hrobová místa
+2024-12-13 21:46:18,682 - INFO - Starting document update process for Evidence obyvatel
+2024-12-13 21:46:24,302 - INFO - Changed or added 0 files and deleted 0 in folder Evidence obyvatel
+2024-12-13 21:46:24,302 - INFO - Successfully finished synchronization of documents from Evidence obyvatel
+2024-12-13 21:46:24,303 - INFO - Starting document update process for Psi
+2024-12-13 21:46:32,159 - INFO - Changed or added 0 files and deleted 0 in folder Psi
+2024-12-13 21:46:32,159 - INFO - Successfully finished synchronization of documents from Psi
+2024-12-13 21:46:32,159 - INFO - Starting document update process for Kácení dřevin
+2024-12-13 21:46:36,446 - INFO - Changed or added 0 files and deleted 0 in folder Kácení dřevin
+2024-12-13 21:46:36,446 - INFO - Successfully finished synchronization of documents from Kácení dřevin
+2024-12-13 21:46:36,447 - INFO - Starting document update process for Sociální služby
+2024-12-13 21:46:41,100 - INFO - Changed or added 0 files and deleted 0 in folder Sociální služby
+2024-12-13 21:46:41,101 - INFO - Successfully finished synchronization of documents from Sociální služby
+2024-12-13 21:46:41,101 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 21:50:13,941 - INFO - Changed or added 39 files and deleted 0 in folder Povinně zveřejňované informace
+2024-12-13 21:50:13,941 - INFO - Successfully finished synchronization of documents from Povinně zveřejňované informace
+2024-12-13 22:13:55,936 - INFO - Checking if required database tables exist
+2024-12-13 22:13:55,955 - INFO - All required database tables exist
+2024-12-13 22:13:55,956 - INFO - Starting document update process for Matrika
+2024-12-13 22:14:10,294 - INFO - Changed or added 0 files and deleted 0 in folder Matrika
+2024-12-13 22:14:10,294 - INFO - Successfully finished synchronization of documents from Matrika
+2024-12-13 22:14:10,294 - INFO - Starting document update process for Komunální odpad
+2024-12-13 22:14:18,086 - INFO - Changed or added 0 files and deleted 0 in folder Komunální odpad
+2024-12-13 22:14:18,086 - INFO - Successfully finished synchronization of documents from Komunální odpad
+2024-12-13 22:14:18,087 - INFO - Starting document update process for Hrobová místa
+2024-12-13 22:14:22,743 - INFO - Changed or added 0 files and deleted 0 in folder Hrobová místa
+2024-12-13 22:14:22,744 - INFO - Successfully finished synchronization of documents from Hrobová místa
+2024-12-13 22:14:22,744 - INFO - Starting document update process for Evidence obyvatel
+2024-12-13 22:14:29,063 - INFO - Changed or added 0 files and deleted 0 in folder Evidence obyvatel
+2024-12-13 22:14:29,063 - INFO - Successfully finished synchronization of documents from Evidence obyvatel
+2024-12-13 22:14:29,063 - INFO - Starting document update process for Psi
+2024-12-13 22:14:36,850 - INFO - Changed or added 0 files and deleted 0 in folder Psi
+2024-12-13 22:14:36,850 - INFO - Successfully finished synchronization of documents from Psi
+2024-12-13 22:14:36,850 - INFO - Starting document update process for Kácení dřevin
+2024-12-13 22:14:41,410 - INFO - Changed or added 0 files and deleted 0 in folder Kácení dřevin
+2024-12-13 22:14:41,410 - INFO - Successfully finished synchronization of documents from Kácení dřevin
+2024-12-13 22:14:41,411 - INFO - Starting document update process for Sociální služby
+2024-12-13 22:14:45,661 - INFO - Changed or added 0 files and deleted 0 in folder Sociální služby
+2024-12-13 22:14:45,661 - INFO - Successfully finished synchronization of documents from Sociální služby
+2024-12-13 22:14:45,661 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 22:15:59,251 - INFO - Changed or added 0 files and deleted 0 in folder Povinně zveřejňované informace
+2024-12-13 22:15:59,251 - INFO - Successfully finished synchronization of documents from Povinně zveřejňované informace
+2024-12-13 22:17:31,084 - INFO - Checking if required database tables exist
+2024-12-13 22:17:31,102 - INFO - All required database tables exist
+2024-12-13 22:17:31,103 - INFO - Starting document update process for Matrika
+2024-12-13 22:17:45,632 - INFO - Changed or added 0 files and deleted 0 in folder Matrika
+2024-12-13 22:17:45,632 - INFO - Successfully finished synchronization of documents from Matrika
+2024-12-13 22:17:45,633 - INFO - Starting document update process for Komunální odpad
+2024-12-13 22:17:53,571 - INFO - Changed or added 0 files and deleted 0 in folder Komunální odpad
+2024-12-13 22:17:53,571 - INFO - Successfully finished synchronization of documents from Komunální odpad
+2024-12-13 22:17:53,571 - INFO - Starting document update process for Hrobová místa
+2024-12-13 22:17:58,336 - INFO - Changed or added 0 files and deleted 0 in folder Hrobová místa
+2024-12-13 22:17:58,336 - INFO - Successfully finished synchronization of documents from Hrobová místa
+2024-12-13 22:17:58,336 - INFO - Starting document update process for Evidence obyvatel
+2024-12-13 22:18:04,467 - INFO - Changed or added 0 files and deleted 0 in folder Evidence obyvatel
+2024-12-13 22:18:04,467 - INFO - Successfully finished synchronization of documents from Evidence obyvatel
+2024-12-13 22:18:04,468 - INFO - Starting document update process for Psi
+2024-12-13 22:18:12,553 - INFO - Changed or added 0 files and deleted 0 in folder Psi
+2024-12-13 22:18:12,553 - INFO - Successfully finished synchronization of documents from Psi
+2024-12-13 22:18:12,553 - INFO - Starting document update process for Kácení dřevin
+2024-12-13 22:18:16,988 - INFO - Changed or added 0 files and deleted 0 in folder Kácení dřevin
+2024-12-13 22:18:16,988 - INFO - Successfully finished synchronization of documents from Kácení dřevin
+2024-12-13 22:18:16,988 - INFO - Starting document update process for Sociální služby
+2024-12-13 22:18:21,311 - INFO - Changed or added 0 files and deleted 0 in folder Sociální služby
+2024-12-13 22:18:21,311 - INFO - Successfully finished synchronization of documents from Sociální služby
+2024-12-13 22:18:21,311 - INFO - Starting document update process for Povinně zveřejňované informace
+2024-12-13 22:19:35,584 - INFO - Changed or added 0 files and deleted 0 in folder Povinně zveřejňované informace
+2024-12-13 22:19:35,584 - INFO - Successfully finished synchronization of documents from Povinně zveřejňované informace

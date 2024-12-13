@@ -22,3 +22,41 @@
 2024-12-09 22:56:06,901 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku za psa
 2024-12-09 22:56:06,904 - INFO - Processed 0 files
 2024-12-09 22:56:06,904 - INFO - Total data processed: 0.00 B
+2024-12-13 21:39:31,527 - INFO - Starting update process
+2024-12-13 21:39:31,542 - INFO - Working with existing folder: Psi
+2024-12-13 21:39:40,050 - INFO - Found 3 documents
+2024-12-13 21:39:40,052 - INFO - Skipping unchanged file: Přihlášení k poplatku za psa
+2024-12-13 21:39:40,052 - INFO - Skipping unchanged file: Odhlášení poplatku za psa
+2024-12-13 21:39:40,052 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku za psa
+2024-12-13 21:39:40,055 - INFO - Processed 0 files
+2024-12-13 21:39:40,055 - INFO - Total data processed: 0.00 B
+2024-12-13 21:46:24,303 - INFO - Starting update process
+2024-12-13 21:46:24,319 - INFO - Working with existing folder: Psi
+2024-12-13 21:46:32,154 - INFO - Found 3 documents
+2024-12-13 21:46:32,156 - INFO - Skipping unchanged file: Přihlášení k poplatku za psa
+2024-12-13 21:46:32,156 - INFO - Skipping unchanged file: Odhlášení poplatku za psa
+2024-12-13 21:46:32,156 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku za psa
+2024-12-13 21:46:32,159 - INFO - Processed 0 files
+2024-12-13 21:46:32,159 - INFO - Total data processed: 0.00 B
+2024-12-13 22:14:29,063 - INFO - Starting update process
+2024-12-13 22:14:29,079 - INFO - Working with existing folder: Psi
+2024-12-13 22:14:36,845 - INFO - Found 3 documents
+2024-12-13 22:14:36,846 - INFO - Skipping unchanged file: Přihlášení k poplatku za psa
+2024-12-13 22:14:36,846 - INFO - Skipping unchanged file: Odhlášení poplatku za psa
+2024-12-13 22:14:36,846 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku za psa
+2024-12-13 22:14:36,850 - INFO - Processed 0 files
+2024-12-13 22:14:36,850 - INFO - Total data processed: 0.00 B
+2024-12-13 22:18:04,468 - INFO - Starting update process
+2024-12-13 22:18:04,483 - INFO - Working with existing folder: Psi
+2024-12-13 22:18:08,698 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/psi/soubory/Přihlášení k poplatku za psa-1368.pdf
+2024-12-13 22:18:08,698 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/psi/soubory/Přihlášení k poplatku za psa-1368.pdf
+2024-12-13 22:18:10,610 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/psi/soubory/Odhlášení poplatku za psa-1367.pdf
+2024-12-13 22:18:10,611 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/psi/soubory/Odhlášení poplatku za psa-1367.pdf
+2024-12-13 22:18:12,542 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/psi/soubory/Žádost o vrácení přeplatku za psa-1369.pdf
+2024-12-13 22:18:12,542 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/psi/soubory/Žádost o vrácení přeplatku za psa-1369.pdf
+2024-12-13 22:18:12,543 - INFO - Found 3 documents
+2024-12-13 22:18:12,545 - INFO - Skipping unchanged file: Přihlášení k poplatku za psa
+2024-12-13 22:18:12,545 - INFO - Skipping unchanged file: Odhlášení poplatku za psa
+2024-12-13 22:18:12,545 - INFO - Skipping unchanged file: Žádost o vrácení přeplatku za psa
+2024-12-13 22:18:12,553 - INFO - Processed 0 files
+2024-12-13 22:18:12,553 - INFO - Total data processed: 0.00 B

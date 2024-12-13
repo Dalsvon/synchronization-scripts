@@ -31,11 +31,6 @@
       "log_name": "kaceni_drevin.log"
     },
     {
-      "name": "Stavební záležitosti",
-      "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/stavebni-zalezitosti/",
-      "log_name": "stavebni_zalezitosti.log"
-    },
-    {
       "name": "Sociální služby",
       "url": "https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/socialni-sluzby/",
       "log_name": "socialni_sluzby.log"

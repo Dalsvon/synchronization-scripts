@@ -1,0 +1,26 @@
+2024-12-13 21:39:40,055 - INFO - Starting update process
+2024-12-13 21:39:40,069 - INFO - Working with existing folder: Kácení dřevin
+2024-12-13 21:39:44,308 - INFO - Found 1 documents
+2024-12-13 21:39:48,014 - INFO - Added new file: Žádost o povolení kácení dřevin rostoucích mimo les
+2024-12-13 21:39:48,021 - INFO - Processed 1 files
+2024-12-13 21:39:48,021 - INFO - Total data processed: 37.09 KB
+2024-12-13 21:46:32,159 - INFO - Starting update process
+2024-12-13 21:46:32,178 - INFO - Working with existing folder: Kácení dřevin
+2024-12-13 21:46:36,442 - INFO - Found 1 documents
+2024-12-13 21:46:36,443 - INFO - Skipping unchanged file: Žádost o povolení kácení dřevin rostoucích mimo les
+2024-12-13 21:46:36,446 - INFO - Processed 0 files
+2024-12-13 21:46:36,446 - INFO - Total data processed: 0.00 B
+2024-12-13 22:14:36,850 - INFO - Starting update process
+2024-12-13 22:14:36,865 - INFO - Working with existing folder: Kácení dřevin
+2024-12-13 22:14:41,405 - INFO - Found 1 documents
+2024-12-13 22:14:41,407 - INFO - Skipping unchanged file: Žádost o povolení kácení dřevin rostoucích mimo les
+2024-12-13 22:14:41,410 - INFO - Processed 0 files
+2024-12-13 22:14:41,410 - INFO - Total data processed: 0.00 B
+2024-12-13 22:18:12,553 - INFO - Starting update process
+2024-12-13 22:18:12,570 - INFO - Working with existing folder: Kácení dřevin
+2024-12-13 22:18:16,982 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/kaceni-drevin/soubory/Žádost o povolení kácení dřevin rostoucích mimo les-1373.pdf
+2024-12-13 22:18:16,982 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/kaceni-drevin/soubory/Žádost o povolení kácení dřevin rostoucích mimo les-1373.pdf
+2024-12-13 22:18:16,983 - INFO - Found 1 documents
+2024-12-13 22:18:16,984 - INFO - Skipping unchanged file: Žádost o povolení kácení dřevin rostoucích mimo les
+2024-12-13 22:18:16,987 - INFO - Processed 0 files
+2024-12-13 22:18:16,987 - INFO - Total data processed: 0.00 B

@@ -1,0 +1,56 @@
+2024-12-13 21:38:48,609 - INFO - Starting update process
+2024-12-13 21:38:48,624 - INFO - Working with existing folder: Matrika
+2024-12-13 21:39:02,630 - INFO - Found 6 documents
+2024-12-13 21:39:02,632 - INFO - Skipping unchanged file: Žádost o církevní sňatek
+2024-12-13 21:39:02,632 - INFO - Skipping unchanged file: Nahlížení do matričních knih
+2024-12-13 21:39:02,632 - INFO - Skipping unchanged file: Žádost o vydání druhopisu matričního dokladu
+2024-12-13 21:39:02,632 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení
+2024-12-13 21:39:02,632 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení dítěte
+2024-12-13 21:39:02,632 - INFO - Skipping unchanged file: Žádost o vysvědčení o právní způsobilosti k uzavření manželství
+2024-12-13 21:39:02,636 - INFO - Processed 0 files
+2024-12-13 21:39:02,636 - INFO - Total data processed: 0.00 B
+2024-12-13 21:45:52,871 - INFO - Starting update process
+2024-12-13 21:45:52,888 - INFO - Working with existing folder: Matrika
+2024-12-13 21:46:06,584 - INFO - Found 6 documents
+2024-12-13 21:46:06,585 - INFO - Skipping unchanged file: Žádost o církevní sňatek
+2024-12-13 21:46:06,586 - INFO - Skipping unchanged file: Nahlížení do matričních knih
+2024-12-13 21:46:06,586 - INFO - Skipping unchanged file: Žádost o vydání druhopisu matričního dokladu
+2024-12-13 21:46:06,586 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení
+2024-12-13 21:46:06,586 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení dítěte
+2024-12-13 21:46:06,586 - INFO - Skipping unchanged file: Žádost o vysvědčení o právní způsobilosti k uzavření manželství
+2024-12-13 21:46:06,589 - INFO - Processed 0 files
+2024-12-13 21:46:06,589 - INFO - Total data processed: 0.00 B
+2024-12-13 22:13:55,956 - INFO - Starting update process
+2024-12-13 22:13:55,972 - INFO - Working with existing folder: Matrika
+2024-12-13 22:14:10,289 - INFO - Found 6 documents
+2024-12-13 22:14:10,291 - INFO - Skipping unchanged file: Žádost o církevní sňatek
+2024-12-13 22:14:10,291 - INFO - Skipping unchanged file: Nahlížení do matričních knih
+2024-12-13 22:14:10,291 - INFO - Skipping unchanged file: Žádost o vydání druhopisu matričního dokladu
+2024-12-13 22:14:10,291 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení
+2024-12-13 22:14:10,291 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení dítěte
+2024-12-13 22:14:10,291 - INFO - Skipping unchanged file: Žádost o vysvědčení o právní způsobilosti k uzavření manželství
+2024-12-13 22:14:10,294 - INFO - Processed 0 files
+2024-12-13 22:14:10,294 - INFO - Total data processed: 0.00 B
+2024-12-13 22:17:31,104 - INFO - Starting update process
+2024-12-13 22:17:31,120 - INFO - Working with existing folder: Matrika
+2024-12-13 22:17:35,933 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o církevní sňatek-1376.pdf
+2024-12-13 22:17:35,935 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o církevní sňatek-1376.pdf
+2024-12-13 22:17:38,049 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Nahlížení do matričních knih-1377.pdf
+2024-12-13 22:17:38,049 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Nahlížení do matričních knih-1377.pdf
+2024-12-13 22:17:40,025 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o vydání druhopisu matričního dokladu-1378.pdf
+2024-12-13 22:17:40,025 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o vydání druhopisu matričního dokladu-1378.pdf
+2024-12-13 22:17:41,919 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o změnu jména/příjmení-1379.pdf
+2024-12-13 22:17:41,919 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o změnu jména/příjmení-1379.pdf
+2024-12-13 22:17:43,959 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o změnu jména/příjmení dítěte-1380.pdf
+2024-12-13 22:17:43,959 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o změnu jména/příjmení dítěte-1380.pdf
+2024-12-13 22:17:45,628 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o vysvědčení o právní způsobilosti k uzavření manželství-1627.pdf
+2024-12-13 22:17:45,628 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/matrika/soubory/Žádost o vysvědčení o právní způsobilosti k uzavření manželství-1627.pdf
+2024-12-13 22:17:45,628 - INFO - Found 6 documents
+2024-12-13 22:17:45,629 - INFO - Skipping unchanged file: Žádost o církevní sňatek
+2024-12-13 22:17:45,629 - INFO - Skipping unchanged file: Nahlížení do matričních knih
+2024-12-13 22:17:45,629 - INFO - Skipping unchanged file: Žádost o vydání druhopisu matričního dokladu
+2024-12-13 22:17:45,629 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení
+2024-12-13 22:17:45,629 - INFO - Skipping unchanged file: Žádost o změnu jména/příjmení dítěte
+2024-12-13 22:17:45,629 - INFO - Skipping unchanged file: Žádost o vysvědčení o právní způsobilosti k uzavření manželství
+2024-12-13 22:17:45,632 - INFO - Processed 0 files
+2024-12-13 22:17:45,632 - INFO - Total data processed: 0.00 B

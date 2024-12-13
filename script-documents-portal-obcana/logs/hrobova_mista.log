@@ -1,0 +1,26 @@
+2024-12-13 21:39:10,629 - INFO - Starting update process
+2024-12-13 21:39:10,646 - INFO - Created new folder: Hrobová místa
+2024-12-13 21:39:14,828 - INFO - Found 1 documents
+2024-12-13 21:39:18,218 - INFO - Added new file: Hřbitovní řád
+2024-12-13 21:39:18,225 - INFO - Processed 1 files
+2024-12-13 21:39:18,225 - INFO - Total data processed: 228.42 KB
+2024-12-13 21:46:14,544 - INFO - Starting update process
+2024-12-13 21:46:14,559 - INFO - Working with existing folder: Hrobová místa
+2024-12-13 21:46:18,678 - INFO - Found 1 documents
+2024-12-13 21:46:18,679 - INFO - Skipping unchanged file: Hřbitovní řád
+2024-12-13 21:46:18,682 - INFO - Processed 0 files
+2024-12-13 21:46:18,682 - INFO - Total data processed: 0.00 B
+2024-12-13 22:14:18,087 - INFO - Starting update process
+2024-12-13 22:14:18,101 - INFO - Working with existing folder: Hrobová místa
+2024-12-13 22:14:22,739 - INFO - Found 1 documents
+2024-12-13 22:14:22,740 - INFO - Skipping unchanged file: Hřbitovní řád
+2024-12-13 22:14:22,743 - INFO - Processed 0 files
+2024-12-13 22:14:22,743 - INFO - Total data processed: 0.00 B
+2024-12-13 22:17:53,571 - INFO - Starting update process
+2024-12-13 22:17:53,588 - INFO - Working with existing folder: Hrobová místa
+2024-12-13 22:17:58,331 - ERROR - Received content-type header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/hrobova-mista/soubory/Hřbitovní řád-1140.pdf
+2024-12-13 22:17:58,332 - ERROR - Determined MIME type from header: application/pdf for https://www.orechovubrna.cz/obecni-urad/potrebuji-vyridit/hrobova-mista/soubory/Hřbitovní řád-1140.pdf
+2024-12-13 22:17:58,332 - INFO - Found 1 documents
+2024-12-13 22:17:58,333 - INFO - Skipping unchanged file: Hřbitovní řád
+2024-12-13 22:17:58,336 - INFO - Processed 0 files
+2024-12-13 22:17:58,336 - INFO - Total data processed: 0.00 B
