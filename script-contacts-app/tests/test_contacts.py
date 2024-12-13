@@ -210,7 +210,7 @@ class TestParsers(unittest.TestCase):
 
 class TestDataConfig(unittest.TestCase):
     def setUp(self):
-        with open('config/data_config.json', 'r', encoding='utf-8') as f:
+        with open('data_config.json', 'r', encoding='utf-8') as f:
             self.config = json.load(f)
 
     def test_config_structure(self):
@@ -288,6 +288,9 @@ class TestContactsToApp(unittest.TestCase):
             }
         }
         
+        self.makedirs_patcher = patch('os.makedirs')
+        self.makedirs_patcher.start()
+        
         with patch('builtins.open', mock_open(read_data=json.dumps(mock_data_config))):
             with patch.object(Path, 'exists', return_value=True):
                 with patch.object(Path, 'mkdir'):
@@ -299,6 +302,11 @@ class TestContactsToApp(unittest.TestCase):
         # Setup logger mocks
         self.updater = ContactDataUpdater(self.config_loader)
         self.updater.logger = Mock(spec=logging.Logger)  # Add logger to updater
+        
+    
+    def tearDown(self):
+        # Stop the makedirs patcher
+        self.makedirs_patcher.stop()
 
     @patch('logging.FileHandler')
     def test_set_contact_type_valid(self, mock_handler):

@@ -1,7 +1,7 @@
-This folder contains script to synchronize contacts from Orechov website to Orechov app.
-You can change firebase credentials path and other config details and paths in config.txt.
+The contacts_to_app_sync.py script synchronizes contacts from the Ořechov municipality website to Realtime Firebase database of mobile app of Ořechov.
+The script takes the contacts from API provided by the website, validates them, and updates the database accordingly, maintaining data consistency across platforms.
+
+The config.txt file contains configuration for the script. Remember to first download necessary Python libraries listed in requirements.txt.
 Config folder holds parsers and data_config for each type of contact synchronized.
-Tests folder holds tests for the script and other files.
 
-
-Download python library requirements from requirements.txt and then run contacts_to_app_API.py script.
+Folder key contains service key for database of the mobile app. Folder tests contains unit tests for this script.

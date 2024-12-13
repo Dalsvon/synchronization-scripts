@@ -140,7 +140,7 @@
                     showError(result.message);
                 }
             } catch (error) {
-                showError('Chyba při obnovení statusu. Skuste refresh stránky.');
+                showError('Chyba při obnovení statusu. Skuste refresh stránky');
             }
         }
 
@@ -168,14 +168,14 @@
             } catch (error) {
                 isRunning = false;
                 updateControls();
-                showError('Chyba při spuštění skriptu. Skuste refresh stránky.');
+                showError('Chyba při spuštění skriptu. Skuste refresh stránky');
             }
         }
 
         // Saves a cron schedule for a script
         async function saveSchedule(scriptName) {
             if (isRunning) {
-                showError('Počkejte na dokončení běžícího skriptu.');
+                showError('Počkejte na dokončení běžícího skriptu');
                 return;
             }
 
@@ -198,7 +198,7 @@
                     showError(result.message);
                 }
             } catch (error) {
-                showError('Chyba při ukládání plánu. Skuste refresh stránky.');
+                showError('Chyba při ukládání plánu. Skuste refresh stránky');
             }
         }
 

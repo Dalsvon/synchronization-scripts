@@ -15,6 +15,90 @@ from dotenv import load_dotenv
 import logging
 logging.getLogger('dotenv.main').setLevel(logging.ERROR)
 
+class TestFoldersConfig(unittest.TestCase):
+    def setUp(self):
+        self.config_path = Path(__file__).parent / 'folders_config.json'
+        with open(self.config_path, encoding='utf-8') as f:
+            self.config = json.load(f)
+
+    def test_config_structure(self):
+        """Test basic structure of the config file"""
+        self.assertIn('folders', self.config, 
+                     "Configuration must have 'folders' key")
+        self.assertIsInstance(self.config['folders'], list,
+                            "'folders' must be a list")
+        self.assertTrue(len(self.config['folders']) > 0,
+                       "Configuration must have at least one folder")
+
+    def test_required_fields(self):
+        """Test that all folders have required fields"""
+        required_keys = ['name', 'url', 'log_name']
+        
+        for folder in self.config['folders']:
+            for key in required_keys:
+                self.assertIn(key, folder, 
+                            f"Missing required key '{key}' in folder configuration")
+                self.assertIsNotNone(folder[key], 
+                                   f"'{key}' cannot be None in folder configuration")
+                self.assertNotEqual(folder[key], '', 
+                                  f"'{key}' cannot be empty in folder configuration")
+
+    def test_unique_names(self):
+        """Test that folder names are unique"""
+        names = [folder['name'] for folder in self.config['folders']]
+        self.assertEqual(len(names), len(set(names)), 
+                        "Folder names must be unique")
+
+    def test_url_format(self):
+        """Test URL format and structure"""
+        for folder in self.config['folders']:
+            url = folder['url']
+            # Test HTTPS
+            self.assertTrue(url.startswith('https://'),
+                          f"URL must use HTTPS: {url}")
+            # Test domain
+            self.assertTrue('orechovubrna.cz' in url,
+                          f"URL must be from orechovubrna.cz domain: {url}")
+            # Test trailing slash
+            self.assertTrue(url.endswith('/'),
+                          f"URL must end with forward slash: {url}")
+            # Test path structure
+            path = url.replace('https://www.orechovubrna.cz/', '')
+            self.assertTrue(path.startswith('obecni-urad/'),
+                          f"URL path must start with 'obecni-urad/': {url}")
+
+    def test_log_name_format(self):
+        """Test log file naming format"""
+        for folder in self.config['folders']:
+            log_name = folder['log_name']
+            # Test extension
+            self.assertTrue(log_name.endswith('.log'),
+                          f"Log name must end with .log: {log_name}")
+            # Test valid characters
+            base_name = log_name.replace('.log', '').replace(' ', '_')
+            self.assertTrue(base_name.replace('_', '').isalnum(),
+                          f"Log name should only contain alphanumeric chars and underscores: {log_name}")
+
+    def test_url_paths(self):
+        """Test URL path structure in detail"""
+        valid_prefixes = {
+            'obecni-urad/potrebuji-vyridit/',
+            'obecni-urad/'
+        }
+        
+        for folder in self.config['folders']:
+            url = folder['url']
+            path = url.replace('https://www.orechovubrna.cz/', '')
+            
+            self.assertTrue(
+                any(path.startswith(prefix) for prefix in valid_prefixes),
+                f"URL must start with valid prefix: {url}"
+            )
+            
+            path_parts = path.rstrip('/').split('/')
+            self.assertGreaterEqual(len(path_parts), 2,
+                                  f"URL path must have at least 2 parts: {url}")
+
 class TestDocumentsSync(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -98,6 +182,9 @@ class TestDocumentsSync(unittest.TestCase):
         self.mock_connection.cursor.return_value.__enter__.return_value = self.mock_cursor
         self.mock_db.return_value.__enter__.return_value = self.mock_connection
         self.mock_cursor.fetchone.return_value = [True]
+        
+        self.makedirs_patcher = patch('os.makedirs')
+        self.makedirs_patcher.start()
 
     def tearDown(self):
         # Stop all patches
@@ -109,6 +196,7 @@ class TestDocumentsSync(unittest.TestCase):
         self.open_patcher.stop()
         self.db_patcher.stop()
         self.dotenv_patcher.stop()
+        self.makedirs_patcher.stop()
 
     def _create_test_updater(self):
         """Helper method to create a properly initialized updater with logger"""

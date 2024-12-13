@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 import requests
 from newspapers_to_app_sync import NewspaperUpdater, NewspaperItem
 from datetime import datetime
+from io import StringIO
 
 class TestNewspapers(unittest.TestCase):
     @classmethod
@@ -72,6 +73,9 @@ class TestNewspapers(unittest.TestCase):
         # Mock credentials
         self.cred_patcher = patch('firebase_admin.credentials.Certificate')
         self.cred_patcher.start()
+        
+        self.makedirs_patcher = patch('os.makedirs')
+        self.makedirs_patcher.start()
 
     def tearDown(self):
         self.config_patcher.stop()
@@ -80,6 +84,7 @@ class TestNewspapers(unittest.TestCase):
         self.logging_patcher.stop()
         self.firebase_patcher.stop()
         self.cred_patcher.stop()
+        self.makedirs_patcher.stop()
 
     def test_parse_newspaper_item_valid_numeric(self):
         updater = NewspaperUpdater()
@@ -279,7 +284,13 @@ class TestNewspapers(unittest.TestCase):
         mock_ref.child().child().set.assert_called_with("https://www.orechovubrna.cz/new_link.pdf")
 
     def test_newspaper_item_validation(self):
-        logger = logging.getLogger('test')
+        """Test NewspaperItem validation with various inputs"""
+        # Create a logger that writes to a StringIO buffer
+        log_stream = StringIO()
+        handler = logging.StreamHandler(log_stream)
+        logger = logging.getLogger('test_validation')
+        logger.addHandler(handler)
+        logger.setLevel(logging.ERROR)
         
         # Test valid input
         item = NewspaperItem(202401, "test.pdf", 1, 2024, logger)
@@ -296,6 +307,10 @@ class TestNewspapers(unittest.TestCase):
         # Test invalid link format
         with self.assertRaises(ValueError):
             NewspaperItem(202401, "test.doc", 1, 2024, logger)
+        
+        # Clean up
+        logger.removeHandler(handler)
+        handler.close()
 
     def test_config_loader_missing_config(self):
         with patch.object(Path, 'exists', return_value=False):

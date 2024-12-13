@@ -151,7 +151,7 @@ class SyncManager:
             
         except Exception as e:
             self.logger.error(f"Error while creating initial config: {str(e)}")
-            raise ValueError(f"Chyba inicializace konfigurace: {e}.")
+            raise ValueError(f"Chyba inicializace konfigurace: {e}")
 
     def save_config(self) -> None:
         # Saves new schedules for the scripts in config
@@ -161,7 +161,7 @@ class SyncManager:
                 json.dump(self.config, f, indent=2)
         except Exception as e:
             self.logger.error(f"Failed to save config: {e}")
-            raise ValueError(f"Chyba při ukádání konfigurace {e}.")
+            raise ValueError(f"Chyba při ukádání konfigurace {e}")
 
     def get_script_path(self, script: ScriptInfo) -> Tuple[str, bool]:
         # Returns absolute path to a script
@@ -209,7 +209,7 @@ class SyncManager:
         
         except Exception as e:
             self.logger.error(f"Error during validation of folder: {e}")
-            raise ValueError(f"Chyba při validaci složky.")
+            raise ValueError(f"Chyba při validaci složky")
 
     def get_current_schedule(self, script_name: str) -> str:
         # Returns readable name for schedule of a script
@@ -224,12 +224,12 @@ class SyncManager:
         script = next((s for s in self.SCRIPTS if s.name == script_name), None)
         if not script:
             self.logger.error(f"Script with name {script_name} does not exist")
-            raise ValueError(f"Skript tohto jména nebyl nalezen: {script_name}.")
+            raise ValueError(f"Skript tohto jména nebyl nalezen: {script_name}")
 
         script_path, exists = self.get_script_path(script)
         if not exists:
             self.logger.error(f"Script with name {script_name} couldn't be found")
-            raise ValueError(f"Skript nebyl nalezen: {script_path}. Skuste skontrolovat existenci skriptů.")
+            raise ValueError(f"Skript nebyl nalezen: {script_path}. Skuste skontrolovat existenci skriptů")
 
         try:
             script_dir = os.path.dirname(script_path)
@@ -264,17 +264,17 @@ class SyncManager:
             
             # Truncates too long messages
             output = process.stdout[:200] + "..." if len(process.stdout) > 200 else process.stdout
-            message = f"Synchronizace proběhla úspěšne: {script.display_name}."
+            message = f"Synchronizace proběhla úspěšne: {script.display_name}"
                 
             return {'success': True, 'message': message}
             
         except subprocess.CalledProcessError as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
-            raise RuntimeError(f"Nastala neznámá chyba během provádění skriptu {script_name}: {e}.")
+            raise RuntimeError(f"Nastala neznámá chyba během provádění skriptu {script_name}: {e}")
         
         except Exception as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
-            raise RuntimeError(f"Nastala neznámá chyba: {e}.")
+            raise RuntimeError(f"Nastala neznámá chyba: {e}")
         
 
     def save_schedule(self, script_name: str, schedule_name: str) -> Dict:
@@ -286,12 +286,12 @@ class SyncManager:
         script = next((s for s in self.SCRIPTS if s.name == script_name), None)
         if not script:
             self.logger.error(f"Script not found: {script_name}")
-            raise ValueError(f"Skript {script_name} nebyl nalezen.")
+            raise ValueError(f"Skript {script_name} nebyl nalezen")
 
         script_path, exists = self.get_script_path(script)
         if not exists:
             self.logger.error("Cannot set schedule: Script file not found")
-            raise ValueError(f"Skript nebyl nalezen: {script_path}. Skuste prohledat souborový system.")
+            raise ValueError(f"Skript nebyl nalezen: {script_path}. Skuste prohledat souborový system")
 
         try:
             cron = CronTab(user=True)
@@ -443,7 +443,7 @@ def save_schedule(script_name):
         sync_manager = get_sync_manager()
         schedule_name = request.json.get('schedule')
         if not schedule_name:
-            return jsonify({'success': False, 'message': 'Nebyl zadán plán pro synchronizaci.'}), 400
+            return jsonify({'success': False, 'message': 'Nebyl zadán plán pro synchronizaci'}), 400
             
         result = sync_manager.save_schedule(script_name, schedule_name)
         return jsonify(result)

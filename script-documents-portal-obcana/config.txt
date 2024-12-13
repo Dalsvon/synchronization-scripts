@@ -1,5 +1,5 @@
 [Application]
-folders_config = folders_config0.json
+folders_config = folders_config.json
 file_size_limit_KB = 30000
 
 [Logs]
