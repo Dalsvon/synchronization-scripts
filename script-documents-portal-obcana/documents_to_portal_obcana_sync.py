@@ -247,15 +247,12 @@ class DocumentSyncUpdater:
             content_length = int(response.headers.get('content-length', 0))
             content_type = response.headers.get('content-type', '').lower()
             
-            self.logger.error(f"Received content-type header: {content_type} for {url}")
-            
             # First try to get MIME type from Content-Type header
             if content_type and content_type != 'application/octet-stream':
                 mime_type = content_type.split(';')[0].strip()
                 # Get file type from MIME type
                 file_type = mimetypes.guess_extension(mime_type)
                 if file_type:
-                    self.logger.error(f"Determined MIME type from header: {mime_type} for {url}")
                     return content_length, mime_type, file_type[1:]
             
             extension_to_mime = {
@@ -271,7 +268,6 @@ class DocumentSyncUpdater:
             if ext in extension_to_mime:
                 mime_type = extension_to_mime[ext]
                 file_type = ext[1:]
-                self.logger.error(f"Determined MIME type from extension: {mime_type} for {url}")
                 return content_length, mime_type, file_type
                 
             self.logger.error(f"Could not determine MIME type for {url}, using default")
