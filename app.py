@@ -270,7 +270,7 @@ class SyncManager:
             
         except subprocess.CalledProcessError as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
-            raise RuntimeError(f"Nastala neznámá chyba během provádění skriptu {script_name}: {e}")
+            return {'success': False, 'message': e.stderr}
         
         except Exception as e:
             self.logger.error(f"Unknown error {e} durning the run of {script_name}")
