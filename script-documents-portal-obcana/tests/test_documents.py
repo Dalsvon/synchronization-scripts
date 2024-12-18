@@ -7,17 +7,24 @@ import logging
 import sys
 import requests
 from bs4 import BeautifulSoup
-from documents_to_portal_obcana_sync import DocumentSyncUpdater, ConfigLoader, DocumentFile
 import uuid
 import os
 from datetime import datetime
 from dotenv import load_dotenv
 import logging
+
+# We need to import files from parent directory
+current_dir = Path(__file__).resolve().parent
+parent_dir = current_dir.parent
+sys.path.insert(0, str(parent_dir))
+
+from documents_to_portal_obcana_sync import DocumentSyncUpdater, ConfigLoader, DocumentFile
+
 logging.getLogger('dotenv.main').setLevel(logging.ERROR)
 
 class TestFoldersConfig(unittest.TestCase):
     def setUp(self):
-        self.config_path = Path(__file__).parent / 'folders_config.json'
+        self.config_path = parent_dir / 'folders_config.json'
         with open(self.config_path, encoding='utf-8') as f:
             self.config = json.load(f)
 
@@ -452,4 +459,5 @@ class TestDocumentsSync(unittest.TestCase):
         self.assertIsNone(updater.folder_config)
 
 if __name__ == '__main__':
+    os.chdir(current_dir)
     unittest.main()

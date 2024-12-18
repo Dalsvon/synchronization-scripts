@@ -10,8 +10,8 @@ Prerequisites
 
 Installation Steps
  1. Install required system packages:
-   sudo apt-get update
-   sudo apt-get install postgresql-server-dev-all python3-dev python3.8-venv
+    sudo apt-get update
+    sudo apt-get install postgresql-server-dev-all python3-dev python3.8-venv
 
  2. Create and activate virtual environment:
     python3.8 -m venv venv
@@ -28,7 +28,6 @@ Installation Steps
 
  5. Set up your web server configuration with use of wsgi modules
 
-Permissions
 The application looks for synchronization scripts based on the configuration in scripts_config.json.
 Ensure all scripts are placed in their respective folders as defined in the configuration.
 

@@ -5,8 +5,17 @@ from pathlib import Path
 import firebase_admin
 import logging
 import sys
+import os
 import importlib.util
 import re
+
+# We need to import files from parent directory and configs
+current_dir = Path(__file__).resolve().parent
+parent_dir = current_dir.parent
+config_dir = parent_dir / 'config'
+sys.path.insert(0, str(parent_dir))
+sys.path.insert(0, str(config_dir))
+
 from contacts_to_app_sync import ConfigLoader, ContactDataUpdater
 from contact_item import ContactItem
 from parsers import *
@@ -210,7 +219,7 @@ class TestParsers(unittest.TestCase):
 
 class TestDataConfig(unittest.TestCase):
     def setUp(self):
-        with open('data_config.json', 'r', encoding='utf-8') as f:
+        with open(config_dir / 'data_config.json', 'r', encoding='utf-8') as f:
             self.config = json.load(f)
 
     def test_config_structure(self):
@@ -261,11 +270,11 @@ class TestContactsToApp(unittest.TestCase):
         mock_config = {
             'Database': {
                 'database_url': 'mock://database.url',
-                'credentials_path': 'mock_credentials.json'
+                'credentials_path': str(current_dir / 'mock_credentials.json')
             },
             'Files': {
-                'data_config': 'data_config.json',
-                'parsers_module': 'parsers.py'
+                'data_config': str(config_dir / 'data_config.json'),
+                'parsers_module': str(config_dir / 'parsers.py')
             },
             'Logs': {
                 'directory': 'logs',
@@ -488,4 +497,5 @@ class TestContactsToApp(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    os.chdir(current_dir)
     unittest.main()

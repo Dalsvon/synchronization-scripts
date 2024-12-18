@@ -5,9 +5,16 @@ from pathlib import Path
 import psycopg2
 import logging
 import sys
-from contacts_to_portal_obcana_sync import ContactUpdater, Employee, OfficeHours, Contact
+import os
 from datetime import datetime
 import requests
+
+# We need to import files from parent directory
+current_dir = Path(__file__).resolve().parent
+parent_dir = current_dir.parent
+sys.path.insert(0, str(parent_dir))
+
+from contacts_to_portal_obcana_sync import ContactUpdater, Employee, OfficeHours, Contact
 
 class TestPortalContacts(unittest.TestCase):
     @classmethod
@@ -300,4 +307,5 @@ class TestPortalContacts(unittest.TestCase):
                 ContactUpdater('nonexistent/config.txt')
 
 if __name__ == '__main__':
+    os.chdir(current_dir)
     unittest.main()

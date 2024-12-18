@@ -6,11 +6,18 @@ import firebase_admin
 from firebase_admin import credentials, db
 import logging
 import sys
+import os
 from bs4 import BeautifulSoup
 import requests
-from newspapers_to_app_sync import NewspaperUpdater, NewspaperItem
 from datetime import datetime
 from io import StringIO
+
+# We need to import files from parent directory
+current_dir = Path(__file__).resolve().parent
+parent_dir = current_dir.parent
+sys.path.insert(0, str(parent_dir))
+
+from newspapers_to_app_sync import NewspaperUpdater, NewspaperItem
 
 class TestNewspapers(unittest.TestCase):
     @classmethod
@@ -342,4 +349,5 @@ class TestNewspapers(unittest.TestCase):
         self.assertIsNone(results)
 
 if __name__ == '__main__':
+    os.chdir(current_dir)
     unittest.main()
