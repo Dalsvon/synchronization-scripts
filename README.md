@@ -1,11 +1,12 @@
 Sync Manager - Municipality of Ořechov
+
 This is a web application that manages synchronization scripts for the Municipality of Ořechov. 
 It provides a web interface for managing and scheduling various synchronization tasks between different systems (mobile app, citizen portal, etc.).
 
 Prerequisites
-- Debian based Linux distribution
+- Debian-based Linux distribution
 - Python 3.8 or higher
-- Apache2, Nginx or another web server
+- Apache2, Nginx, or another web server
 - System packages for PostgreSQL and Python development
 
 Installation Steps
@@ -13,20 +14,20 @@ Installation Steps
     sudo apt-get update
     sudo apt-get install postgresql-server-dev-all python3-dev python3.8-venv
 
- 2. Create and activate virtual environment:
+ 2. Create and activate a virtual environment:
     python3.8 -m venv venv
     source venv/bin/activate
 
- 3.Upgrade pip and install dependencies:
+ 3. Upgrade pip and install dependencies:
     pip install --upgrade pip setuptools wheel
     pip install -r requirements.txt
 
- 4.Create .env file in the project root with the following variables:
+ 4. Create .env file in the project root with the following variables:
     FLASK_SECRET_KEY=your_secret_key_here
     ADMIN_USERNAME=your_admin_username
     ADMIN_PASSWORD=your_admin_password
 
- 5. Set up your web server configuration with use of wsgi modules
+ 5. Set up your web server configuration using WSGI modules
 
 The application looks for synchronization scripts based on the configuration in scripts_config.json.
 Ensure all scripts are placed in their respective folders as defined in the configuration.
